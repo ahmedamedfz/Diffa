@@ -13,6 +13,7 @@ struct OnboardingScreenView: View {
     
     @Environment(\.mainWindowSize) var mainWindowSize
     
+    /// - Parameter finishedOnboardingHandler: Called when a user has finished or skip the onboarding
     init(finishedOnboardingHandler: @escaping () -> Void) {
         self._vm = StateObject(wrappedValue: OnboardingScreenViewModel(finishedOnboardingHandler: finishedOnboardingHandler))
     }
