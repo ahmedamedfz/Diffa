@@ -52,10 +52,11 @@
 		49E4B9FB29F7ACBB00830C61 /* ddiffa */ = {
 			isa = PBXGroup;
 			children = (
-				49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */,
-				49E4B9FE29F7ACBB00830C61 /* ContentView.swift */,
 				49E4BA0029F7ACBB00830C61 /* Assets.xcassets */,
+				49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */,
 				49E4BA0229F7ACBB00830C61 /* ddiffa.entitlements */,
+				49E4BA0C29F7B3EB00830C61 /* Platform */,
+				49E4BA0F29F7B4B300830C61 /* Shared */,
 				49E4BA0329F7ACBB00830C61 /* Preview Content */,
 			);
 			path = ddiffa;
@@ -67,6 +68,142 @@
 				49E4BA0429F7ACBB00830C61 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		49E4BA0B29F7B3CE00830C61 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		49E4BA0C29F7B3EB00830C61 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				49E4BA0E29F7B45400830C61 /* watchOS */,
+				49E4BA0D29F7B44800830C61 /* macOS */,
+				49E4BA0B29F7B3CE00830C61 /* iOS */,
+			);
+			name = Platform;
+			path = PiOS;
+			sourceTree = "<group>";
+		};
+		49E4BA0D29F7B44800830C61 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		49E4BA0E29F7B45400830C61 /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = watchOS;
+			sourceTree = "<group>";
+		};
+		49E4BA0F29F7B4B300830C61 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				49E4BA1029F7B4BC00830C61 /* Lifecycle */,
+				49E4BA1829F7B59400830C61 /* Views */,
+				49E4BA1729F7B56200830C61 /* Theme */,
+				49E4BA1629F7B55000830C61 /* ViewModels */,
+				49E4BA1329F7B50900830C61 /* Helpers */,
+				49E4BA1129F7B4D300830C61 /* Managers */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		49E4BA1029F7B4BC00830C61 /* Lifecycle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lifecycle;
+			sourceTree = "<group>";
+		};
+		49E4BA1129F7B4D300830C61 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				49E4BA1229F7B4F400830C61 /* CoreData */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		49E4BA1229F7B4F400830C61 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		49E4BA1329F7B50900830C61 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				49E4BA1529F7B52400830C61 /* Extensions */,
+				49E4BA1429F7B51400830C61 /* Constansts */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		49E4BA1429F7B51400830C61 /* Constansts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constansts;
+			sourceTree = "<group>";
+		};
+		49E4BA1529F7B52400830C61 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		49E4BA1629F7B55000830C61 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		49E4BA1729F7B56200830C61 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		49E4BA1829F7B59400830C61 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49E4BA1B29F7B5DF00830C61 /* ViewModifiers */,
+				49E4BA1A29F7B5C700830C61 /* Components */,
+				49E4BA1929F7B5B400830C61 /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		49E4BA1929F7B5B400830C61 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				49E4B9FE29F7ACBB00830C61 /* ContentView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		49E4BA1A29F7B5C700830C61 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		49E4BA1B29F7B5DF00830C61 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +406,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -307,6 +445,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
