@@ -1,14 +1,14 @@
 //
-//  DiffaApp.swift
-//  Diffa
+//  ddiffaApp.swift
+//  ddiffa
 //
-//  Created by Ahmad Fariz on 04/04/23.
+//  Created by Ahmad Fariz on 25/04/23.
 //
 
 import SwiftUI
 
 @main
-struct DiffaApp: App {
+struct ddiffaApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
