@@ -18,5 +18,6 @@ extension Color {
     
     struct background {
         static let base = Color("background-base")
+        static let translucent = Color("background-translucent")
     }
 }
