@@ -101,7 +101,7 @@ struct OnboardingScreenView: View {
                     .font(.system(.body, design: .rounded))
                     .foregroundColor(.text.tertiary)
                     .frame(width: 327)
-                    .padding(.top, 16)
+                    .padding(.top, 24)
                             
                 Spacer()
                 
