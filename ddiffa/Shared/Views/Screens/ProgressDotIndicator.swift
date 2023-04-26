@@ -24,7 +24,7 @@ struct ProgressDotIndicator: View {
         HStack(spacing: 8) {
             ForEach(0..<total, id: \.self) { i in
                 RoundedRectangle(cornerSize: .init(width: 100, height: 100))
-                    .fill(currentIndex == i ? Color.primaryColor : Color.primaryTransluctent)
+                    .fill(currentIndex == i ? Color.primaryColor : Color.primaryTransluctent48)
                     .frame(
                         width: currentIndex == i ? 40 : 12,
                         height: 12
