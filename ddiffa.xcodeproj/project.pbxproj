@@ -21,6 +21,7 @@
 		49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FE29F7ACBB00830C61 /* ContentView.swift */; };
 		49E4BA0129F7ACBB00830C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E4BA0029F7ACBB00830C61 /* Assets.xcassets */; };
 		49E4BA0529F7ACBB00830C61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E4BA0429F7ACBB00830C61 /* Preview Assets.xcassets */; };
+		4CB3501529FA5B93002260D2 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3501429FA5B93002260D2 /* CircularProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		49E4BA0029F7ACBB00830C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49E4BA0229F7ACBB00830C61 /* ddiffa.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ddiffa.entitlements; sourceTree = "<group>"; };
 		49E4BA0429F7ACBB00830C61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4CB3501429FA5B93002260D2 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 				13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */,
 				13474D2729F7E3F50034F2C0 /* Onboarding */,
 				133AED9229F814950092FC46 /* TabbedScreenView */,
+				4CB3501429FA5B93002260D2 /* CircularProgressView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */,
 				49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */,
 				13474D2929F7E4120034F2C0 /* OnboardingScreenViewModel.swift in Sources */,
+				4CB3501529FA5B93002260D2 /* CircularProgressView.swift in Sources */,
 				133AED9629F8157E0092FC46 /* SettingsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
