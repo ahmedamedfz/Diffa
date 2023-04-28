@@ -29,7 +29,7 @@ struct TabbedScreenView: View {
     
     var body: some View {
         TabView(selection: $activeTab) {
-            Text("TODO: pomodoro")
+            PomodoroNotStartedScreenView()
                 .tabItem {
                     Image(systemName: activeTab == .pomodoro ? "clock.fill" : "clock")
                         .environment(\.symbolVariants, .none)

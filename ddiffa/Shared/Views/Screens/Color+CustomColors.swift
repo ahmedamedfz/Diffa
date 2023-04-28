@@ -19,6 +19,11 @@ extension Color {
     
     struct background {
         static let base = Color("background-base")
+        static let secondary = Color("background-secondary")
         static let translucent = Color("background-translucent")
+    }
+    
+    struct tags {
+        static let orange = Color("tag-orange")
     }
 }
