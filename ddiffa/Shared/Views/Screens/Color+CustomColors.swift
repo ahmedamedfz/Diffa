@@ -10,6 +10,7 @@ import SwiftUI
 extension Color {
     static let primaryColor = Color("primary-foreground")
     static let primaryTransluctent = Color("primary-transluctent")
+    static let secondaryColor = Color("secondary-foreground")
     
     struct text {
         static let primary = Color("text-primary")
