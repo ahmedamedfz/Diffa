@@ -7,10 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
 		493AB5DE29F98821005CB210 /* DummyOngoingPomodoroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AB5DD29F98821005CB210 /* DummyOngoingPomodoroView.swift */; };
 		493AB5E029F98A24005CB210 /* EditOngoingBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AB5DF29F98A24005CB210 /* EditOngoingBanner.swift */; };
 		493AB60A29F9A909005CB210 /* TagCloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AB60929F9A909005CB210 /* TagCloudView.swift */; };
 		493AB60C29F9A952005CB210 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AB60B29F9A952005CB210 /* TagView.swift */; };
+
+		133AED9429F814E00092FC46 /* TabbedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9329F814E00092FC46 /* TabbedScreenView.swift */; };
+		133AED9629F8157E0092FC46 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9529F8157E0092FC46 /* SettingsManager.swift */; };
+		133AED9829F815F30092FC46 /* UserDefaults+customKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9729F815F30092FC46 /* UserDefaults+customKeys.swift */; };
+		13474D2529F7E1380034F2C0 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13474D2429F7E1380034F2C0 /* OnboardingModel.swift */; };
+		13474D2929F7E4120034F2C0 /* OnboardingScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13474D2829F7E4120034F2C0 /* OnboardingScreenViewModel.swift */; };
+		135460F129F7C85F00413F74 /* Color+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135460F029F7C85F00413F74 /* Color+CustomColors.swift */; };
+		135460F329F7C96C00413F74 /* ProgressDotIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135460F229F7C96C00413F74 /* ProgressDotIndicator.swift */; };
+		135EF6A229F7C40A00C8D41D /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135EF6A129F7C40A00C8D41D /* OnboardingScreenView.swift */; };
+		13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */; };
+		13A1E4B329F8272A00BEB26A /* SpringToTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A1E4B229F8272900BEB26A /* SpringToTop.swift */; };
+
 		49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */; };
 		49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FE29F7ACBB00830C61 /* ContentView.swift */; };
 		49E4BA0129F7ACBB00830C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E4BA0029F7ACBB00830C61 /* Assets.xcassets */; };
@@ -18,10 +31,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
 		493AB5DD29F98821005CB210 /* DummyOngoingPomodoroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyOngoingPomodoroView.swift; sourceTree = "<group>"; };
 		493AB5DF29F98A24005CB210 /* EditOngoingBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOngoingBanner.swift; sourceTree = "<group>"; };
 		493AB60929F9A909005CB210 /* TagCloudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCloudView.swift; sourceTree = "<group>"; };
 		493AB60B29F9A952005CB210 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+
+		133AED9329F814E00092FC46 /* TabbedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedScreenView.swift; sourceTree = "<group>"; };
+		133AED9529F8157E0092FC46 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsManager.swift; path = ddiffa/Shared/Views/Screens/TabbedScreenView/SettingsManager.swift; sourceTree = SOURCE_ROOT; };
+		133AED9729F815F30092FC46 /* UserDefaults+customKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserDefaults+customKeys.swift"; path = "ddiffa/Shared/Views/Screens/TabbedScreenView/UserDefaults+customKeys.swift"; sourceTree = SOURCE_ROOT; };
+		13474D2429F7E1380034F2C0 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		13474D2829F7E4120034F2C0 /* OnboardingScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenViewModel.swift; sourceTree = "<group>"; };
+		135460F029F7C85F00413F74 /* Color+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Color+CustomColors.swift"; path = "ddiffa/Shared/Views/Screens/Color+CustomColors.swift"; sourceTree = SOURCE_ROOT; };
+		135460F229F7C96C00413F74 /* ProgressDotIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgressDotIndicator.swift; path = ddiffa/Shared/Views/Screens/ProgressDotIndicator.swift; sourceTree = SOURCE_ROOT; };
+		135EF6A129F7C40A00C8D41D /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
+		13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		13A1E4B229F8272900BEB26A /* SpringToTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpringToTop.swift; path = ddiffa/Shared/Views/Screens/SpringToTop.swift; sourceTree = SOURCE_ROOT; };
+
 		49E4B9F929F7ACBB00830C61 /* ddiffa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddiffa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ddiffaApp.swift; sourceTree = "<group>"; };
 		49E4B9FE29F7ACBB00830C61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,12 +67,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+
 		493AB5E129F98DC1005CB210 /* EditOngoingBannerDummyDependencies */ = {
 			isa = PBXGroup;
 			children = (
 				493AB5DD29F98821005CB210 /* DummyOngoingPomodoroView.swift */,
 			);
 			path = EditOngoingBannerDummyDependencies;
+
+		133AED9229F814950092FC46 /* TabbedScreenView */ = {
+			isa = PBXGroup;
+			children = (
+				133AED9329F814E00092FC46 /* TabbedScreenView.swift */,
+			);
+			path = TabbedScreenView;
+			sourceTree = "<group>";
+		};
+		13474D2629F7E13D0034F2C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				13474D2429F7E1380034F2C0 /* OnboardingModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		13474D2729F7E3F50034F2C0 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				135EF6A129F7C40A00C8D41D /* OnboardingScreenView.swift */,
+				13474D2829F7E4120034F2C0 /* OnboardingScreenViewModel.swift */,
+			);
+			path = Onboarding;
+
 			sourceTree = "<group>";
 		};
 		49E4B9F029F7ACBB00830C61 = {
@@ -123,8 +175,9 @@
 			children = (
 				49E4BA1029F7B4BC00830C61 /* Lifecycle */,
 				49E4BA1829F7B59400830C61 /* Views */,
-				49E4BA1729F7B56200830C61 /* Theme */,
+				13474D2629F7E13D0034F2C0 /* Models */,
 				49E4BA1629F7B55000830C61 /* ViewModels */,
+				49E4BA1729F7B56200830C61 /* Theme */,
 				49E4BA1329F7B50900830C61 /* Helpers */,
 				49E4BA1129F7B4D300830C61 /* Managers */,
 			);
@@ -142,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				49E4BA1229F7B4F400830C61 /* CoreData */,
+				133AED9529F8157E0092FC46 /* SettingsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -165,6 +219,7 @@
 		49E4BA1429F7B51400830C61 /* Constansts */ = {
 			isa = PBXGroup;
 			children = (
+				133AED9729F815F30092FC46 /* UserDefaults+customKeys.swift */,
 			);
 			path = Constansts;
 			sourceTree = "<group>";
@@ -186,6 +241,7 @@
 		49E4BA1729F7B56200830C61 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				135460F029F7C85F00413F74 /* Color+CustomColors.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -204,6 +260,9 @@
 			isa = PBXGroup;
 			children = (
 				49E4B9FE29F7ACBB00830C61 /* ContentView.swift */,
+				13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */,
+				13474D2729F7E3F50034F2C0 /* Onboarding */,
+				133AED9229F814950092FC46 /* TabbedScreenView */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -211,10 +270,14 @@
 		49E4BA1A29F7B5C700830C61 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+
 				493AB5E129F98DC1005CB210 /* EditOngoingBannerDummyDependencies */,
 				493AB5DF29F98A24005CB210 /* EditOngoingBanner.swift */,
 				493AB60929F9A909005CB210 /* TagCloudView.swift */,
 				493AB60B29F9A952005CB210 /* TagView.swift */,
+
+				135460F229F7C96C00413F74 /* ProgressDotIndicator.swift */,
+
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -222,6 +285,7 @@
 		49E4BA1B29F7B5DF00830C61 /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
+				13A1E4B229F8272900BEB26A /* SpringToTop.swift */,
 			);
 			path = ViewModifiers;
 			sourceTree = "<group>";
@@ -297,11 +361,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */,
+				133AED9829F815F30092FC46 /* UserDefaults+customKeys.swift in Sources */,
+				13A1E4B329F8272A00BEB26A /* SpringToTop.swift in Sources */,
+				135EF6A229F7C40A00C8D41D /* OnboardingScreenView.swift in Sources */,
+				133AED9429F814E00092FC46 /* TabbedScreenView.swift in Sources */,
+				13474D2529F7E1380034F2C0 /* OnboardingModel.swift in Sources */,
+				135460F329F7C96C00413F74 /* ProgressDotIndicator.swift in Sources */,
+				135460F129F7C85F00413F74 /* Color+CustomColors.swift in Sources */,
+				13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */,
 				49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */,
+
 				493AB5DE29F98821005CB210 /* DummyOngoingPomodoroView.swift in Sources */,
 				493AB60A29F9A909005CB210 /* TagCloudView.swift in Sources */,
 				493AB5E029F98A24005CB210 /* EditOngoingBanner.swift in Sources */,
 				493AB60C29F9A952005CB210 /* TagView.swift in Sources */,
+
+				13474D2929F7E4120034F2C0 /* OnboardingScreenViewModel.swift in Sources */,
+				133AED9629F8157E0092FC46 /* SettingsManager.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +503,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ddiffa/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = H9PJ7U2A6K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -441,7 +518,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -465,7 +542,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ddiffa/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = H9PJ7U2A6K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -480,7 +557,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
