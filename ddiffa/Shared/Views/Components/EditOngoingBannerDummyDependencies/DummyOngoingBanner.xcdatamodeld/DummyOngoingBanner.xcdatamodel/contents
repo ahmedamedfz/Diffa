@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E252" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ProjectsName" representedClassName="ProjectsName" syncable="YES" codeGenerationType="class">
+        <attribute name="projectsName" optional="YES" attributeType="String"/>
+        <relationship name="projectsTags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProjectTags" inverseName="projectsName" inverseEntity="ProjectTags"/>
+    </entity>
+    <entity name="ProjectTags" representedClassName="ProjectTags" syncable="YES" codeGenerationType="class">
+        <attribute name="tags" optional="YES" attributeType="String"/>
+        <relationship name="projectsName" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProjectsName" inverseName="projectsTags" inverseEntity="ProjectsName"/>
+    </entity>
+</model>

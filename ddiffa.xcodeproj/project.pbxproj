@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		493AB5DE29F98821005CB210 /* DummyOngoingPomodoroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AB5DD29F98821005CB210 /* DummyOngoingPomodoroView.swift */; };
+		493AB5E029F98A24005CB210 /* EditOngoingBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AB5DF29F98A24005CB210 /* EditOngoingBanner.swift */; };
+		493AB60A29F9A909005CB210 /* TagCloudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AB60929F9A909005CB210 /* TagCloudView.swift */; };
+		493AB60C29F9A952005CB210 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493AB60B29F9A952005CB210 /* TagView.swift */; };
+
 		133AED9429F814E00092FC46 /* TabbedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9329F814E00092FC46 /* TabbedScreenView.swift */; };
 		133AED9629F8157E0092FC46 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9529F8157E0092FC46 /* SettingsManager.swift */; };
 		133AED9829F815F30092FC46 /* UserDefaults+customKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9729F815F30092FC46 /* UserDefaults+customKeys.swift */; };
@@ -17,8 +23,7 @@
 		135EF6A229F7C40A00C8D41D /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135EF6A129F7C40A00C8D41D /* OnboardingScreenView.swift */; };
 		13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */; };
 		13A1E4B329F8272A00BEB26A /* SpringToTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A1E4B229F8272900BEB26A /* SpringToTop.swift */; };
-		4977DCD629FB9CEE00E435C5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4977DCD529FB9CEE00E435C5 /* Persistence.swift */; };
-		4977DCE129FBAAEC00E435C5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4977DCDF29FBAAEC00E435C5 /* Model.xcdatamodeld */; };
+
 		49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */; };
 		49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FE29F7ACBB00830C61 /* ContentView.swift */; };
 		49E4BA0129F7ACBB00830C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E4BA0029F7ACBB00830C61 /* Assets.xcassets */; };
@@ -26,6 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
+		493AB5DD29F98821005CB210 /* DummyOngoingPomodoroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyOngoingPomodoroView.swift; sourceTree = "<group>"; };
+		493AB5DF29F98A24005CB210 /* EditOngoingBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOngoingBanner.swift; sourceTree = "<group>"; };
+		493AB60929F9A909005CB210 /* TagCloudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCloudView.swift; sourceTree = "<group>"; };
+		493AB60B29F9A952005CB210 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+
 		133AED9329F814E00092FC46 /* TabbedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedScreenView.swift; sourceTree = "<group>"; };
 		133AED9529F8157E0092FC46 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsManager.swift; path = ddiffa/Shared/Views/Screens/TabbedScreenView/SettingsManager.swift; sourceTree = SOURCE_ROOT; };
 		133AED9729F815F30092FC46 /* UserDefaults+customKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserDefaults+customKeys.swift"; path = "ddiffa/Shared/Views/Screens/TabbedScreenView/UserDefaults+customKeys.swift"; sourceTree = SOURCE_ROOT; };
@@ -36,8 +47,7 @@
 		135EF6A129F7C40A00C8D41D /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
 		13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		13A1E4B229F8272900BEB26A /* SpringToTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpringToTop.swift; path = ddiffa/Shared/Views/Screens/SpringToTop.swift; sourceTree = SOURCE_ROOT; };
-		4977DCD529FB9CEE00E435C5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		4977DCE029FBAAEC00E435C5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+
 		49E4B9F929F7ACBB00830C61 /* ddiffa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddiffa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ddiffaApp.swift; sourceTree = "<group>"; };
 		49E4B9FE29F7ACBB00830C61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+
+		493AB5E129F98DC1005CB210 /* EditOngoingBannerDummyDependencies */ = {
+			isa = PBXGroup;
+			children = (
+				493AB5DD29F98821005CB210 /* DummyOngoingPomodoroView.swift */,
+			);
+			path = EditOngoingBannerDummyDependencies;
+
 		133AED9229F814950092FC46 /* TabbedScreenView */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +98,7 @@
 				13474D2829F7E4120034F2C0 /* OnboardingScreenViewModel.swift */,
 			);
 			path = Onboarding;
+
 			sourceTree = "<group>";
 		};
 		49E4B9F029F7ACBB00830C61 = {
@@ -184,8 +203,6 @@
 		49E4BA1229F7B4F400830C61 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				4977DCD529FB9CEE00E435C5 /* Persistence.swift */,
-				4977DCDF29FBAAEC00E435C5 /* Model.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -253,7 +270,14 @@
 		49E4BA1A29F7B5C700830C61 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+
+				493AB5E129F98DC1005CB210 /* EditOngoingBannerDummyDependencies */,
+				493AB5DF29F98A24005CB210 /* EditOngoingBanner.swift */,
+				493AB60929F9A909005CB210 /* TagCloudView.swift */,
+				493AB60B29F9A952005CB210 /* TagView.swift */,
+
 				135460F229F7C96C00413F74 /* ProgressDotIndicator.swift */,
+
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -339,17 +363,22 @@
 				49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */,
 				133AED9829F815F30092FC46 /* UserDefaults+customKeys.swift in Sources */,
 				13A1E4B329F8272A00BEB26A /* SpringToTop.swift in Sources */,
-				4977DCE129FBAAEC00E435C5 /* Model.xcdatamodeld in Sources */,
 				135EF6A229F7C40A00C8D41D /* OnboardingScreenView.swift in Sources */,
 				133AED9429F814E00092FC46 /* TabbedScreenView.swift in Sources */,
 				13474D2529F7E1380034F2C0 /* OnboardingModel.swift in Sources */,
 				135460F329F7C96C00413F74 /* ProgressDotIndicator.swift in Sources */,
-				4977DCD629FB9CEE00E435C5 /* Persistence.swift in Sources */,
 				135460F129F7C85F00413F74 /* Color+CustomColors.swift in Sources */,
 				13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */,
 				49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */,
+
+				493AB5DE29F98821005CB210 /* DummyOngoingPomodoroView.swift in Sources */,
+				493AB60A29F9A909005CB210 /* TagCloudView.swift in Sources */,
+				493AB5E029F98A24005CB210 /* EditOngoingBanner.swift in Sources */,
+				493AB60C29F9A952005CB210 /* TagView.swift in Sources */,
+
 				13474D2929F7E4120034F2C0 /* OnboardingScreenViewModel.swift in Sources */,
 				133AED9629F8157E0092FC46 /* SettingsManager.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +503,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ddiffa/Preview Content\"";
-				DEVELOPMENT_TEAM = C5V5PAM88P;
+				DEVELOPMENT_TEAM = H9PJ7U2A6K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -513,7 +542,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ddiffa/Preview Content\"";
-				DEVELOPMENT_TEAM = C5V5PAM88P;
+				DEVELOPMENT_TEAM = H9PJ7U2A6K;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -565,19 +594,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		4977DCDF29FBAAEC00E435C5 /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				4977DCE029FBAAEC00E435C5 /* Model.xcdatamodel */,
-			);
-			currentVersion = 4977DCE029FBAAEC00E435C5 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 49E4B9F129F7ACBB00830C61 /* Project object */;
 }
