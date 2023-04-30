@@ -9,12 +9,15 @@ import SwiftUI
 
 @main
 struct ddiffaApp: App {
+    let persistenceController = PersistenceController.shared
+    
     var body: some Scene {
         WindowGroup {
             GeometryReader { proxy in
                 ContentView()
                     .preferredColorScheme(.dark)
                     .environment(\.mainWindowSize, proxy.size)
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
         }
     }
