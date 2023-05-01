@@ -95,22 +95,22 @@ struct SessionInformationView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             // MARK: Tag when not active
-
+            
             ScrollView(.horizontal) {
                 tagViews
             }
             .scrollIndicators(.never)
             .frame(height: !vm.isExpanded ? nil : 0)
             .opacity(vm.isExpanded ? 0 : 1)
-                .clipped()
+            .clipped()
             
             // MARK: Project
             
-                Text("Project")
-                    .font(.system(.title3, design: .rounded))
-                    .foregroundColor(.text.primary)
-                    .frame(height: vm.isExpanded ? nil : 0)
-                    .opacity(vm.isExpanded ? 1 : 0)
+            Text("Project")
+                .font(.system(.title3, design: .rounded))
+                .foregroundColor(.text.primary)
+                .frame(height: vm.isExpanded ? nil : 0)
+                .opacity(vm.isExpanded ? 1 : 0)
             
             HStack(spacing: 16) {
                 TextField(text: $vm.projectQuery) {
