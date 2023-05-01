@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct ddiffaApp: App {
-    
     var body: some Scene {
         WindowGroup {
             GeometryReader { proxy in
