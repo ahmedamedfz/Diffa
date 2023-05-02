@@ -17,6 +17,8 @@
 		135EF6A229F7C40A00C8D41D /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135EF6A129F7C40A00C8D41D /* OnboardingScreenView.swift */; };
 		13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */; };
 		13A1E4B329F8272A00BEB26A /* SpringToTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A1E4B229F8272900BEB26A /* SpringToTop.swift */; };
+		13EBBBF829F8B04400141F3B /* PomodoroNotStartedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBBBF729F8B04400141F3B /* PomodoroNotStartedScreenView.swift */; };
+		13EBBC1929FFE9C000141F3B /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBBC1829FFE9C000141F3B /* TagView.swift */; };
 		49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */; };
 		49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FE29F7ACBB00830C61 /* ContentView.swift */; };
 		49E4BA0129F7ACBB00830C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E4BA0029F7ACBB00830C61 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		135EF6A129F7C40A00C8D41D /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
 		13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		13A1E4B229F8272900BEB26A /* SpringToTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpringToTop.swift; path = ddiffa/Shared/Views/Screens/SpringToTop.swift; sourceTree = SOURCE_ROOT; };
+		13EBBBF729F8B04400141F3B /* PomodoroNotStartedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroNotStartedScreenView.swift; sourceTree = "<group>"; };
+		13EBBC1829FFE9C000141F3B /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TagView.swift; path = ddiffa/Shared/Views/TagView.swift; sourceTree = SOURCE_ROOT; };
 		49E4B9F929F7ACBB00830C61 /* ddiffa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddiffa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ddiffaApp.swift; sourceTree = "<group>"; };
 		49E4B9FE29F7ACBB00830C61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +84,14 @@
 				13474D2829F7E4120034F2C0 /* OnboardingScreenViewModel.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		13EBBBF429F8B00400141F3B /* Pomodoro */ = {
+			isa = PBXGroup;
+			children = (
+				13EBBBF729F8B04400141F3B /* PomodoroNotStartedScreenView.swift */,
+			);
+			path = Pomodoro;
 			sourceTree = "<group>";
 		};
 		49E4B9F029F7ACBB00830C61 = {
@@ -246,6 +258,7 @@
 				13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */,
 				13474D2729F7E3F50034F2C0 /* Onboarding */,
 				133AED9229F814950092FC46 /* TabbedScreenView */,
+				13EBBBF429F8B00400141F3B /* Pomodoro */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -254,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				135460F229F7C96C00413F74 /* ProgressDotIndicator.swift */,
+				13EBBC1829FFE9C000141F3B /* TagView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -337,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */,
+				13EBBBF829F8B04400141F3B /* PomodoroNotStartedScreenView.swift in Sources */,
 				133AED9829F815F30092FC46 /* UserDefaults+customKeys.swift in Sources */,
 				13A1E4B329F8272A00BEB26A /* SpringToTop.swift in Sources */,
 				49F6CC0B29FFF20D00ABC9C9 /* Model.xcdatamodeld in Sources */,
@@ -348,6 +363,7 @@
 				135460F129F7C85F00413F74 /* Color+CustomColors.swift in Sources */,
 				13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */,
 				49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */,
+				13EBBC1929FFE9C000141F3B /* TagView.swift in Sources */,
 				13474D2929F7E4120034F2C0 /* OnboardingScreenViewModel.swift in Sources */,
 				133AED9629F8157E0092FC46 /* SettingsManager.swift in Sources */,
 			);
@@ -496,7 +512,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.ddiffa.ddiffa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -535,7 +551,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.ddiffa.ddiffa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
+				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
