@@ -8,16 +8,20 @@
 import SwiftUI
 
 enum FocusedField {
-    case tag, project, information
+    case tag, projectField, information
 }
 
 struct PomodoroNotStartedScreenView: View {
     
     // MOCK
-    @State var tagsMock = [
-        Tag(name: "Work", colorString: "orange"),
-        Tag(name: "Programming", colorString: "rose")
-    ]
+//    @State var tagsMock = [
+//        Tag(name: "Work", colorString: "orange"),
+//        Tag(name: "Programming", colorString: "rose")
+//    ]
+    
+    @FetchRequest(sortDescriptors: [
+        SortDescriptor(\.startTime)
+    ]) var lastPomodoroSessions: FetchedResults<Pomodoro>
     
     @State private var projectQuery = ""
     @State private var tagQuery = ""
@@ -39,7 +43,7 @@ struct PomodoroNotStartedScreenView: View {
                 focusedField: $focusedField,
                 isExpanded: $isExpandInformation,
                 projectQuery: $projectQuery,
-                tags: $tagsMock,
+//                tags: $tagsMock,
                 tagQuery: $tagQuery
             )
             .focused($focusedField, equals: .information)
@@ -64,24 +68,25 @@ struct SessionInformationView: View {
         focusedField: FocusState<FocusedField?>.Binding,
         isExpanded: Binding<Bool>,
         projectQuery: Binding<String>,
-        tags: Binding<[Tag]>,
+//        tags: Binding<[Tag]>,
         tagQuery: Binding<String>
     ) {
         self.focusedField = focusedField
         self._vm = ObservedObject(
             wrappedValue: ViewModel(isExpanded: isExpanded,
                                     projectQuery: projectQuery,
-                                    tags: tags,
+//                                    tags: tags,
                                     tagQuery: tagQuery)
         )
     }
     
     var tagViews: some View {
-        HStack(spacing: 8) {
-            ForEach(vm.tags, id: \.self) { tag in
-                TagView(tag: tag)
-            }
-        }
+//        HStack(spacing: 8) {
+//            ForEach(vm.tags, id: \.self) { tag in
+//                TagView(tag: tag)
+//            }
+//        }
+        Text("TODO")
     }
     
     var body: some View {
@@ -112,14 +117,14 @@ struct SessionInformationView: View {
                 .frame(height: 56)
                 .background(Color.background.secondary)
                 .cornerRadius(8)
-                .focused(focusedField, equals: .project)
+                .focused(focusedField, equals: .projectField)
                 .overlay {
                     RoundedRectangle(cornerRadius: 8)
-                        .stroke(focusedField.wrappedValue == .project ? Color.primaryColor : Color.clear, lineWidth: 1.5)
+                        .stroke(focusedField.wrappedValue == .projectField ? Color.primaryColor : Color.clear, lineWidth: 1.5)
                 }
                 .onTapGesture {
                     withAnimation(.easeIn(duration: 3)) {
-                        focusedField.wrappedValue = .project
+                        focusedField.wrappedValue = .projectField
                     }
                 }
                 
@@ -204,7 +209,7 @@ struct SessionInformationView: View {
         })
         .onChange(of: focusedField.wrappedValue, perform: { newValue in
             withAnimation(.default.delay(0.1)) {
-                if newValue == .project {
+                if newValue == .projectField {
                     vm.isProjectFocused = true
                 } else {
                     vm.isProjectFocused = false
@@ -230,13 +235,13 @@ extension SessionInformationView {
         @Published var needToHandleKeyboardDissmiss = false
         
         @Binding var projectQuery: String
-        @Binding var tags: [Tag]
+//        @Binding var tags: [Tag]
         @Binding var tagQuery: String
         
-        init(isExpanded: Binding<Bool>, projectQuery: Binding<String>, tags: Binding<[Tag]>, tagQuery: Binding<String>) {
+        init(isExpanded: Binding<Bool>, projectQuery: Binding<String>, tagQuery: Binding<String>) {
             self._isExpanded = isExpanded
             self._projectQuery = projectQuery
-            self._tags = tags
+//            self._tags = tags
             self._tagQuery = tagQuery
         }
     }
@@ -251,7 +256,7 @@ struct PomodoroNotStartedScreenView_Previews: PreviewProvider {
 
 // MARK: Mocks
 
-struct Tag: Hashable {
-    let name: String
-    let colorString: String
-}
+//struct Tag: Hashable {
+//    let name: String
+//    let colorString: String
+//}

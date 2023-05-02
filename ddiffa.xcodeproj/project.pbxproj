@@ -14,11 +14,14 @@
 		13474D2929F7E4120034F2C0 /* OnboardingScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13474D2829F7E4120034F2C0 /* OnboardingScreenViewModel.swift */; };
 		135460F129F7C85F00413F74 /* Color+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135460F029F7C85F00413F74 /* Color+CustomColors.swift */; };
 		135460F329F7C96C00413F74 /* ProgressDotIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135460F229F7C96C00413F74 /* ProgressDotIndicator.swift */; };
+		135D90A32A00EBF800CB8DB1 /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D90A12A00EBF800CB8DB1 /* Project+CoreDataClass.swift */; };
+		135D90A42A00EBF800CB8DB1 /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D90A22A00EBF800CB8DB1 /* Project+CoreDataProperties.swift */; };
 		135EF6A229F7C40A00C8D41D /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135EF6A129F7C40A00C8D41D /* OnboardingScreenView.swift */; };
 		13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */; };
 		13A1E4B329F8272A00BEB26A /* SpringToTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A1E4B229F8272900BEB26A /* SpringToTop.swift */; };
 		13EBBBF829F8B04400141F3B /* PomodoroNotStartedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBBBF729F8B04400141F3B /* PomodoroNotStartedScreenView.swift */; };
 		13EBBC1929FFE9C000141F3B /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBBC1829FFE9C000141F3B /* TagView.swift */; };
+		13FD29272A00D89000F46A68 /* PomodoroSessionPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FD29262A00D89000F46A68 /* PomodoroSessionPersistence.swift */; };
 		49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */; };
 		49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FE29F7ACBB00830C61 /* ContentView.swift */; };
 		49E4BA0129F7ACBB00830C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E4BA0029F7ACBB00830C61 /* Assets.xcassets */; };
@@ -35,11 +38,14 @@
 		13474D2829F7E4120034F2C0 /* OnboardingScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenViewModel.swift; sourceTree = "<group>"; };
 		135460F029F7C85F00413F74 /* Color+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Color+CustomColors.swift"; path = "ddiffa/Shared/Views/Screens/Color+CustomColors.swift"; sourceTree = SOURCE_ROOT; };
 		135460F229F7C96C00413F74 /* ProgressDotIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProgressDotIndicator.swift; path = ddiffa/Shared/Views/Screens/ProgressDotIndicator.swift; sourceTree = SOURCE_ROOT; };
+		135D90A12A00EBF800CB8DB1 /* Project+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataClass.swift"; sourceTree = "<group>"; };
+		135D90A22A00EBF800CB8DB1 /* Project+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		135EF6A129F7C40A00C8D41D /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
 		13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		13A1E4B229F8272900BEB26A /* SpringToTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpringToTop.swift; path = ddiffa/Shared/Views/Screens/SpringToTop.swift; sourceTree = SOURCE_ROOT; };
 		13EBBBF729F8B04400141F3B /* PomodoroNotStartedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroNotStartedScreenView.swift; sourceTree = "<group>"; };
 		13EBBC1829FFE9C000141F3B /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TagView.swift; path = ddiffa/Shared/Views/TagView.swift; sourceTree = SOURCE_ROOT; };
+		13FD29262A00D89000F46A68 /* PomodoroSessionPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroSessionPersistence.swift; sourceTree = "<group>"; };
 		49E4B9F929F7ACBB00830C61 /* ddiffa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddiffa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ddiffaApp.swift; sourceTree = "<group>"; };
 		49E4B9FE29F7ACBB00830C61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +103,8 @@
 		49E4B9F029F7ACBB00830C61 = {
 			isa = PBXGroup;
 			children = (
+				135D90A12A00EBF800CB8DB1 /* Project+CoreDataClass.swift */,
+				135D90A22A00EBF800CB8DB1 /* Project+CoreDataProperties.swift */,
 				49E4B9FB29F7ACBB00830C61 /* ddiffa */,
 				49E4B9FA29F7ACBB00830C61 /* Products */,
 			);
@@ -198,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				49F6CC0729FFF09700ABC9C9 /* PersistenceController.swift */,
+				13FD29262A00D89000F46A68 /* PomodoroSessionPersistence.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -353,6 +362,8 @@
 				49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */,
 				13EBBBF829F8B04400141F3B /* PomodoroNotStartedScreenView.swift in Sources */,
 				133AED9829F815F30092FC46 /* UserDefaults+customKeys.swift in Sources */,
+				135D90A42A00EBF800CB8DB1 /* Project+CoreDataProperties.swift in Sources */,
+				135D90A32A00EBF800CB8DB1 /* Project+CoreDataClass.swift in Sources */,
 				13A1E4B329F8272A00BEB26A /* SpringToTop.swift in Sources */,
 				49F6CC0B29FFF20D00ABC9C9 /* Model.xcdatamodeld in Sources */,
 				135EF6A229F7C40A00C8D41D /* OnboardingScreenView.swift in Sources */,
@@ -360,6 +371,7 @@
 				49F6CC0829FFF09700ABC9C9 /* PersistenceController.swift in Sources */,
 				13474D2529F7E1380034F2C0 /* OnboardingModel.swift in Sources */,
 				135460F329F7C96C00413F74 /* ProgressDotIndicator.swift in Sources */,
+				13FD29272A00D89000F46A68 /* PomodoroSessionPersistence.swift in Sources */,
 				135460F129F7C85F00413F74 /* Color+CustomColors.swift in Sources */,
 				13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */,
 				49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */,

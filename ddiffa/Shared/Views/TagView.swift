@@ -12,20 +12,20 @@ struct TagView: View {
     let tag: Tag
     
     var body: some View {
-        Text(tag.name)
+        Text(tag.name ?? "No name")
             .font(.system(.footnote, design: .rounded))
-            .foregroundColor(Color("\(tag.colorString)-foreground"))
+            .foregroundColor(Color("\(tag.colorString ?? "rose")-foreground"))
             .padding(
                 EdgeInsets(top: 6, leading: 16, bottom: 6, trailing: 16)
             )
-            .background { Color("\(tag.colorString)-background") }
+            .background { Color("\(tag.colorString ?? "rose")-background") }
             .cornerRadius(100)
             .fixedSize()
     }
 }
 
-struct TagView_Previews: PreviewProvider {
-    static var previews: some View {
-        TagView(tag: Tag(name: "Work", colorString: "orange"))
-    }
-}
+//struct TagView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TagView(tag: Tag(name: "Work", colorString: "orange"))
+//    }
+//}
