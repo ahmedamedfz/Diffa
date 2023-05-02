@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 enum FocusedField {
     case tag, projectField, information
@@ -13,11 +14,7 @@ enum FocusedField {
 
 struct PomodoroNotStartedScreenView: View {
     
-    // MOCK
-//    @State var tagsMock = [
-//        Tag(name: "Work", colorString: "orange"),
-//        Tag(name: "Programming", colorString: "rose")
-//    ]
+    @State var tags: [Tag] = []
     
     @FetchRequest(sortDescriptors: [
         SortDescriptor(\.startTime)
@@ -37,13 +34,15 @@ struct PomodoroNotStartedScreenView: View {
         .onTapGesture {
             focusedField = nil
             isExpandInformation = false
+            
+            print("isExpand: \(isExpandInformation)")
         }
         .safeAreaInset(edge: .bottom) {
             SessionInformationView(
                 focusedField: $focusedField,
                 isExpanded: $isExpandInformation,
                 projectQuery: $projectQuery,
-//                tags: $tagsMock,
+                tags: $tags,
                 tagQuery: $tagQuery
             )
             .focused($focusedField, equals: .information)
@@ -51,6 +50,7 @@ struct PomodoroNotStartedScreenView: View {
                 withAnimation {
                     isExpandInformation = true
                 }
+                print("isExpand: \(isExpandInformation)")
             }
         }
     }
@@ -62,43 +62,76 @@ struct SessionInformationView: View {
     
     var focusedField: FocusState<FocusedField?>.Binding
     
-    @ObservedObject private var vm: ViewModel
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
+    @FetchRequest var projectResults: FetchedResults<Project>
+
+    @Binding var isExpanded: Bool
+    @Binding var tags: [Tag]
+    
+    @StateObject private var vm: ViewModel
     
     init(
         focusedField: FocusState<FocusedField?>.Binding,
         isExpanded: Binding<Bool>,
         projectQuery: Binding<String>,
-//        tags: Binding<[Tag]>,
+        tags: Binding<[Tag]>,
         tagQuery: Binding<String>
     ) {
+        let request: NSFetchRequest<Project> = Project.fetchRequest()
+        request.fetchLimit = 2
+        request.sortDescriptors = []
+
+        _projectResults = FetchRequest(fetchRequest: request)
+        
         self.focusedField = focusedField
-        self._vm = ObservedObject(
+        self._tags = tags
+        self._isExpanded = isExpanded
+        self._vm = StateObject(
             wrappedValue: ViewModel(isExpanded: isExpanded,
-                                    projectQuery: projectQuery,
-//                                    tags: tags,
+//                                    projectQuery: projectQuery,
+                                    tags: tags,
                                     tagQuery: tagQuery)
         )
     }
     
     var tagViews: some View {
-//        HStack(spacing: 8) {
-//            ForEach(vm.tags, id: \.self) { tag in
-//                TagView(tag: tag)
-//            }
-//        }
-        Text("TODO")
+        VStack {
+            
+            if !isExpanded {
+                if tags.isEmpty {
+                    Text("Add Tag")
+                        .foregroundColor(.text.tertiary)
+                        .padding(EdgeInsets(top: 6, leading: 16, bottom: 6, trailing: 16))
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 16)
+                                .inset(by: 1.5) // inset value should be same as lineWidth in .stroke
+                                .stroke(Color.primaryColor, lineWidth: 1.5)
+                        }
+                } else {
+                    EmptyView()
+                }
+            } else {
+                HStack(spacing: 8) {
+                    ForEach(vm.tags, id: \.self) { tag in
+                        TagView(tag: tag)
+                    }
+                }
+            }
+        }
     }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
+            
             // MARK: Tag when not active
             
             ScrollView(.horizontal) {
                 tagViews
             }
             .scrollIndicators(.never)
-            .frame(height: !vm.isExpanded ? nil : 0)
-            .opacity(vm.isExpanded ? 0 : 1)
+            .frame(height: !isExpanded ? nil : 0)
+            .opacity(isExpanded ? 0 : 1)
             .clipped()
             
             // MARK: Project
@@ -106,8 +139,8 @@ struct SessionInformationView: View {
             Text("Project")
                 .font(.system(.title3, design: .rounded))
                 .foregroundColor(.text.primary)
-                .frame(height: vm.isExpanded ? nil : 0)
-                .opacity(vm.isExpanded ? 1 : 0)
+                .frame(height: isExpanded ? nil : 0)
+                .opacity(isExpanded ? 1 : 0)
             
             HStack(spacing: 16) {
                 TextField(text: $vm.projectQuery) {
@@ -126,6 +159,16 @@ struct SessionInformationView: View {
                     withAnimation(.easeIn(duration: 3)) {
                         focusedField.wrappedValue = .projectField
                     }
+                    print("isExpand: \(isExpanded)")
+                }
+                .onChange(of: vm.projectQuery) { newValue in
+                    projectResults.nsPredicate = newValue.isEmpty ? nil :
+                    NSPredicate(format: "name CONTAINS[c] %@", newValue)
+                    print("-----")
+                    projectResults.forEach { project in
+                        print(project.name)
+                    }
+                    vm.updateView()
                 }
                 
                 Button {
@@ -143,6 +186,25 @@ struct SessionInformationView: View {
                 }
             }
             .padding(.top, 16)
+            .overlay {
+                if !projectResults.isEmpty && !vm.projectQuery.isEmpty && focusedField.wrappedValue == .projectField {
+                    VStack(alignment: .leading, spacing: 0) {
+                        ForEach(projectResults, id: \.objectID) { project in
+                            Text(project.name ?? "No name")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding()
+                                .background(Color.background.base)
+                                .onTapGesture {
+                                    vm.projectQuery = project.name ?? "dim"
+                                    print("pro: \(vm.projectQuery)")
+                                    focusedField.wrappedValue = .none
+                                }
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .offset(y: -50)
+                }
+            }
             
             // MARK: Tag when active
             
@@ -175,7 +237,7 @@ struct SessionInformationView: View {
                             .font(.system(.footnote, design: .rounded))
                         }
                         .padding(.horizontal, 16)
-                        .frame(width: vm.isExpanded ? nil : 0, height: 30)
+                        .frame(width: isExpanded ? nil : 0, height: 30)
                         .background {
                             if focusedField.wrappedValue == .tag {
                                 Color.background.secondary
@@ -195,14 +257,14 @@ struct SessionInformationView: View {
                 }
                 .scrollIndicators(.never)
             }
-            .frame(height: vm.isExpanded ? nil : 0)
-            .opacity(vm.isExpanded ? 1 : 0)
+            .frame(height: isExpanded ? nil : 0)
+            .opacity(isExpanded ? 1 : 0)
             
         }
         .onSubmit {
             vm.needToHandleKeyboardDissmiss = true
         }
-        .onChange(of: vm.isExpanded, perform: { newValue in
+        .onChange(of: isExpanded, perform: { newValue in
             if newValue == false {
                 focusedField.wrappedValue = nil
             }
@@ -217,7 +279,7 @@ struct SessionInformationView: View {
                 print(vm.isProjectFocused)
                 
                 if newValue != nil {
-                    vm.isExpanded = true
+                    isExpanded = true
                 }
             }
         })
@@ -229,20 +291,29 @@ struct SessionInformationView: View {
 
 extension SessionInformationView {
     class ViewModel: ObservableObject {
-        @Binding var isExpanded: Bool
+        @Published var isExpanded: Bool = false
         
         @Published var isProjectFocused = false
         @Published var needToHandleKeyboardDissmiss = false
         
-        @Binding var projectQuery: String
-//        @Binding var tags: [Tag]
+        @Published var projectQuery = ""
+        @Binding var tags: [Tag]
         @Binding var tagQuery: String
         
-        init(isExpanded: Binding<Bool>, projectQuery: Binding<String>, tagQuery: Binding<String>) {
-            self._isExpanded = isExpanded
-            self._projectQuery = projectQuery
-//            self._tags = tags
+        init(
+            isExpanded: Binding<Bool>,
+//            projectQuery: Binding<String>,
+            tags: Binding<[Tag]>,
+            tagQuery: Binding<String>
+        ) {
+//            self._isExpanded = isExpanded
+//            self._projectQuery = projectQuery
+            self._tags = tags
             self._tagQuery = tagQuery
+        }
+        
+        func updateView() {
+            objectWillChange.send()
         }
     }
 }
@@ -253,10 +324,3 @@ struct PomodoroNotStartedScreenView_Previews: PreviewProvider {
             .preferredColorScheme(.dark)
     }
 }
-
-// MARK: Mocks
-
-//struct Tag: Hashable {
-//    let name: String
-//    let colorString: String
-//}
