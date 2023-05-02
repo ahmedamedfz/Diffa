@@ -79,15 +79,7 @@ struct SessionInformationView: View {
     var tagViews: some View {
         HStack(spacing: 8) {
             ForEach(vm.tags, id: \.self) { tag in
-                Text(tag.name)
-                    .font(.system(.footnote, design: .rounded))
-                    .foregroundColor(Color("\(tag.colorString)-foreground"))
-                    .padding(
-                        EdgeInsets(top: 6, leading: 16, bottom: 6, trailing: 16)
-                    )
-                    .background { Color("\(tag.colorString)-background") }
-                    .cornerRadius(100)
-                    .fixedSize()
+                TagView(tag: tag)
             }
         }
     }
