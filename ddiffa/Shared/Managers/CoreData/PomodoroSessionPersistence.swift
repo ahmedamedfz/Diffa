@@ -36,4 +36,8 @@ class PomodoroSessionPersistence {
         }
     }
     
+    func resetChanged(in context: NSManagedObjectContext) {
+        context.rollback()
+    }
+    
 }

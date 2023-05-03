@@ -28,26 +28,10 @@ struct PomodoroNotStartedScreenView: View {
     
     @FocusState var focusedField: FocusedField?
     
-    var currentSession: Pomodoro?
-    
-    init() {
-        currentSession = Pomodoro(context: managedObjectContext)
-    }
-    
     var body: some View {
         ZStack {
             Color.background.base
                 .ignoresSafeArea()
-            
-            VStack {
-                Text(currentSession?.project?.name ?? "Default name")
-                
-                HStack {
-                    ForEach(currentSession!.project?.arrayOfTags() ?? []) { tag in
-                        TagView(tag: tag)
-                    }
-                }
-            }
         }
         .onTapGesture {
             focusedField = nil
@@ -61,8 +45,7 @@ struct PomodoroNotStartedScreenView: View {
                 isExpanded: $isExpandInformation,
                 projectQuery: $projectQuery,
                 tags: $tags,
-                tagQuery: $tagQuery,
-                currentSession: currentSession
+                tagQuery: $tagQuery
             )
             .focused($focusedField, equals: .information)
             .onTapGesture {

@@ -21,10 +21,6 @@ struct SessionInformationView: View {
     @Binding var isExpanded: Bool
     @Binding var tags: [Tag]
     
-    var pomodoroSession: Pomodoro?
-    
-    var currentSession: Pomodoro?
-    
     @StateObject private var vm: ViewModel
     
     init(
@@ -32,18 +28,15 @@ struct SessionInformationView: View {
         isExpanded: Binding<Bool>,
         projectQuery: Binding<String>,
         tags: Binding<[Tag]>,
-        tagQuery: Binding<String>,
-        currentSession: Pomodoro?
+        tagQuery: Binding<String>
     ) {
         self.focusedField = focusedField
         self._tags = tags
         self._isExpanded = isExpanded
-        self.currentSession = currentSession
         self._vm = StateObject(
             wrappedValue: ViewModel(isExpanded: isExpanded,
                                     tags: tags,
-                                    tagQuery: tagQuery,
-                                    currentSession: currentSession)
+                                    tagQuery: tagQuery)
         )
     }
     
@@ -117,10 +110,6 @@ struct SessionInformationView: View {
                 .onChange(of: vm.projectQuery) { newValue in
                     projectResults.nsPredicate = newValue.isEmpty ? nil :
                     NSPredicate(format: "name CONTAINS[c] %@", newValue)
-                    print("-----")
-                    projectResults.forEach { project in
-                        print(project.name)
-                    }
                     vm.updateView()
                 }
                 

@@ -16,18 +16,17 @@ extension SessionInformationView {
         
         @Published var projectQuery = ""
         @Published var tags: [Tag] = []
-        @Binding var tagQuery: String
+        @Published var tagQuery: String = ""
         
         var currentSession: Pomodoro?
         
         init(
             isExpanded: Binding<Bool>,
             tags: Binding<[Tag]>,
-            tagQuery: Binding<String>,
-            currentSession: Pomodoro?
+            tagQuery: Binding<String>
         ) {
 //            self._tags = tags
-            self._tagQuery = tagQuery
+//            self._tagQuery = tagQuery
 //            self.currentSession = currentSession
         }
         
@@ -50,11 +49,7 @@ extension SessionInformationView {
             currentSession?.project = projectCopy
             
             tags = projectCopy?.arrayOfTags() ?? []
-            
-            print(currentSession)
-            print(currentSession?.project)
-            print(currentSession?.project?.arrayOfTags())
-            
+
             tags.forEach { tag in
                 print(tag.name)
             }
