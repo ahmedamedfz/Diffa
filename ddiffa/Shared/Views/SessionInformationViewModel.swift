@@ -20,6 +20,7 @@ extension SessionInformationView {
         
         var currentSession: Pomodoro?
         
+        // TODO: Delete
         init(
             isExpanded: Binding<Bool>,
             tags: Binding<[Tag]>,
@@ -36,16 +37,16 @@ extension SessionInformationView {
         
         func startSession() {
             print("tags:")
-            tags.forEach { tag in
-                print(tag.name)
-            }
         }
         
         func updateSession(in context: NSManagedObjectContext, projectObjectID: NSManagedObjectID) {
             let projectManagedObjectCopy = try! context.existingObject(with: projectObjectID)
             let projectCopy = projectManagedObjectCopy as? Project
             
-            currentSession = Pomodoro(context: context)
+            if currentSession == nil {
+                currentSession = Pomodoro(context: context)
+            }
+            
             currentSession?.project = projectCopy
             
             tags = projectCopy?.arrayOfTags() ?? []
