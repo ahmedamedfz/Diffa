@@ -258,6 +258,9 @@ struct SessionInformationView: View {
         //                                    focusedField.wrappedValue = .none
         //                                    vm.updateSession(in: managedObjectContext, projectObjectID: project.objectID)
         //
+                                            vm.addTag(tag, to: managedObjectContext)
+                                            vm.tagQuery = ""
+                                            focusedField.wrappedValue = .none
                                             vm.updateView()
                                         }
                                 }
