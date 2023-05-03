@@ -8,7 +8,16 @@
 import CoreData
 
 class PomodoroSessionPersistence {
+    
     static let shared = PomodoroSessionPersistence()
+    
+    static var projectQueryFetchRequest: NSFetchRequest<Project> = {
+        let request: NSFetchRequest<Project> = Project.fetchRequest()
+        request.fetchLimit = 2
+        request.sortDescriptors = []
+        
+        return request
+    }()
     
     private init() {}
     
