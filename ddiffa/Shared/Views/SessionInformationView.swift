@@ -21,6 +21,10 @@ struct SessionInformationView: View {
     @Binding var isExpanded: Bool
     @Binding var tags: [Tag]
     
+    var pomodoroSession: Pomodoro?
+    
+    var currentSession: Pomodoro?
+    
     @StateObject private var vm: ViewModel
     
     init(
@@ -28,22 +32,18 @@ struct SessionInformationView: View {
         isExpanded: Binding<Bool>,
         projectQuery: Binding<String>,
         tags: Binding<[Tag]>,
-        tagQuery: Binding<String>
+        tagQuery: Binding<String>,
+        currentSession: Pomodoro?
     ) {
-//        let request: NSFetchRequest<Project> = Project.fetchRequest()
-//        request.fetchLimit = 2
-//        request.sortDescriptors = []
-//
-//        _projectResults = FetchRequest(fetchRequest: request)
-        
         self.focusedField = focusedField
         self._tags = tags
         self._isExpanded = isExpanded
+        self.currentSession = currentSession
         self._vm = StateObject(
             wrappedValue: ViewModel(isExpanded: isExpanded,
-//                                    projectQuery: projectQuery,
                                     tags: tags,
-                                    tagQuery: tagQuery)
+                                    tagQuery: tagQuery,
+                                    currentSession: currentSession)
         )
     }
     
@@ -125,7 +125,7 @@ struct SessionInformationView: View {
                 }
                 
                 Button {
-                    print("implement: start pomodoro")
+                    vm.startSession()
                 } label: {
                     Image(systemName: "play.fill")
                         .resizable()
@@ -151,6 +151,9 @@ struct SessionInformationView: View {
                                     vm.projectQuery = project.name ?? "dim"
                                     print("pro: \(vm.projectQuery)")
                                     focusedField.wrappedValue = .none
+                                    vm.updateSession(in: managedObjectContext, projectObjectID: project.objectID)
+                                    
+                                    vm.updateView()
                                 }
                         }
                     }
@@ -247,3 +250,4 @@ struct SessionInformationView: View {
 //        SessionInformationView()
 //    }
 //}
+

@@ -6,39 +6,61 @@
 //
 
 import SwiftUI
+import CoreData
 
 extension SessionInformationView {
     class ViewModel: ObservableObject {
-        @Published var isExpanded: Bool = false
         
         @Published var isProjectFocused = false
         @Published var needToHandleKeyboardDissmiss = false
         
         @Published var projectQuery = ""
-        @Binding var tags: [Tag]
+        @Published var tags: [Tag] = []
         @Binding var tagQuery: String
+        
+        var currentSession: Pomodoro?
         
         init(
             isExpanded: Binding<Bool>,
-//            projectQuery: Binding<String>,
             tags: Binding<[Tag]>,
-            tagQuery: Binding<String>
+            tagQuery: Binding<String>,
+            currentSession: Pomodoro?
         ) {
-//            self._isExpanded = isExpanded
-//            self._projectQuery = projectQuery
-            self._tags = tags
+//            self._tags = tags
             self._tagQuery = tagQuery
+//            self.currentSession = currentSession
         }
         
         func updateView() {
             objectWillChange.send()
         }
-    }
-}
-
-struct PomodoroNotStartedScreenView_Previews: PreviewProvider {
-    static var previews: some View {
-        PomodoroNotStartedScreenView()
-            .preferredColorScheme(.dark)
+        
+        func startSession() {
+            print("tags:")
+            tags.forEach { tag in
+                print(tag.name)
+            }
+        }
+        
+        func updateSession(in context: NSManagedObjectContext, projectObjectID: NSManagedObjectID) {
+            let projectManagedObjectCopy = try! context.existingObject(with: projectObjectID)
+            let projectCopy = projectManagedObjectCopy as? Project
+            
+            currentSession = Pomodoro(context: context)
+            currentSession?.project = projectCopy
+            
+            tags = projectCopy?.arrayOfTags() ?? []
+            
+            print(currentSession)
+            print(currentSession?.project)
+            print(currentSession?.project?.arrayOfTags())
+            
+            tags.forEach { tag in
+                print(tag.name)
+            }
+            
+            objectWillChange.send()
+        }
+        
     }
 }

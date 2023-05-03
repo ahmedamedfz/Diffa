@@ -14,6 +14,8 @@ enum FocusedField {
 
 struct PomodoroNotStartedScreenView: View {
     
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
     @State var tags: [Tag] = []
     
     @FetchRequest(sortDescriptors: [
@@ -26,10 +28,26 @@ struct PomodoroNotStartedScreenView: View {
     
     @FocusState var focusedField: FocusedField?
     
+    var currentSession: Pomodoro?
+    
+    init() {
+        currentSession = Pomodoro(context: managedObjectContext)
+    }
+    
     var body: some View {
         ZStack {
             Color.background.base
                 .ignoresSafeArea()
+            
+            VStack {
+                Text(currentSession?.project?.name ?? "Default name")
+                
+                HStack {
+                    ForEach(currentSession!.project?.arrayOfTags() ?? []) { tag in
+                        TagView(tag: tag)
+                    }
+                }
+            }
         }
         .onTapGesture {
             focusedField = nil
@@ -43,7 +61,8 @@ struct PomodoroNotStartedScreenView: View {
                 isExpanded: $isExpandInformation,
                 projectQuery: $projectQuery,
                 tags: $tags,
-                tagQuery: $tagQuery
+                tagQuery: $tagQuery,
+                currentSession: currentSession
             )
             .focused($focusedField, equals: .information)
             .onTapGesture {
@@ -53,5 +72,12 @@ struct PomodoroNotStartedScreenView: View {
                 print("isExpand: \(isExpandInformation)")
             }
         }
+    }
+}
+
+struct PomodoroNotStartedScreenView_Previews: PreviewProvider {
+    static var previews: some View {
+        PomodoroNotStartedScreenView()
+            .preferredColorScheme(.dark)
     }
 }
