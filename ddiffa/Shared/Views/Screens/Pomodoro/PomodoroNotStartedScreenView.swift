@@ -43,9 +43,7 @@ struct PomodoroNotStartedScreenView: View {
             SessionInformationView(
                 focusedField: $focusedField,
                 isExpanded: $isExpandInformation,
-                projectQuery: $projectQuery,
-                tags: $tags,
-                tagQuery: $tagQuery
+                tags: $tags
             )
             .focused($focusedField, equals: .information)
             .onTapGesture {

@@ -20,17 +20,6 @@ extension SessionInformationView {
         
         var currentSession: Pomodoro?
         
-        // TODO: Delete
-        init(
-            isExpanded: Binding<Bool>,
-            tags: Binding<[Tag]>,
-            tagQuery: Binding<String>
-        ) {
-//            self._tags = tags
-//            self._tagQuery = tagQuery
-//            self.currentSession = currentSession
-        }
-        
         func updateView() {
             objectWillChange.send()
         }
@@ -56,6 +45,21 @@ extension SessionInformationView {
             }
             
             objectWillChange.send()
+        }
+        
+        func handleProjectChange(to projectName: String, in context: NSManagedObjectContext) {
+            if currentSession == nil {
+                currentSession = Pomodoro(context: context)
+            }
+            
+            let newProject = Project(context: context)
+            newProject.name = projectName
+            newProject.color = "rose" // TODO: change dynamically
+            
+            if let currentSession {
+                newProject.addToPomodoroSessions(currentSession)
+                tags = []
+            }
         }
         
         func remove(tag: NSManagedObject, from session: NSManagedObject) {

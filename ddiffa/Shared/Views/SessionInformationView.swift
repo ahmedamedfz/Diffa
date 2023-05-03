@@ -10,8 +10,6 @@ import CoreData
 
 struct SessionInformationView: View {
     
-    //    @FocusState private var focusedField: FocusedField?
-    
     var focusedField: FocusState<FocusedField?>.Binding
     
     @Environment(\.managedObjectContext) var managedObjectContext
@@ -22,23 +20,16 @@ struct SessionInformationView: View {
     @Binding var isExpanded: Bool
     @Binding var tags: [Tag]
     
-    @StateObject private var vm: ViewModel
+    @StateObject private var vm = ViewModel()
     
     init(
         focusedField: FocusState<FocusedField?>.Binding,
         isExpanded: Binding<Bool>,
-        projectQuery: Binding<String>,
-        tags: Binding<[Tag]>,
-        tagQuery: Binding<String>
+        tags: Binding<[Tag]>
     ) {
         self.focusedField = focusedField
         self._tags = tags
         self._isExpanded = isExpanded
-        self._vm = StateObject(
-            wrappedValue: ViewModel(isExpanded: isExpanded,
-                                    tags: tags,
-                                    tagQuery: tagQuery)
-        )
     }
     
     var tagViews: some View {
@@ -117,7 +108,11 @@ struct SessionInformationView: View {
                 .onChange(of: vm.projectQuery) { newValue in
                     projectResults.nsPredicate = newValue.isEmpty ? nil :
                     NSPredicate(format: "name CONTAINS[c] %@", newValue)
+                    
                     vm.updateView()
+                }
+                .onSubmit {
+                    vm.handleProjectChange(to: vm.projectQuery, in: managedObjectContext)
                 }
                 
                 Button {
@@ -144,7 +139,7 @@ struct SessionInformationView: View {
                                 .padding()
                                 .background(Color.background.base)
                                 .onTapGesture {
-                                    vm.projectQuery = project.name ?? "dim"
+                                    vm.projectQuery = project.name ?? ""
                                     print("pro: \(vm.projectQuery)")
                                     focusedField.wrappedValue = .none
                                     vm.updateSession(in: managedObjectContext, projectObjectID: project.objectID)
@@ -253,11 +248,6 @@ struct SessionInformationView: View {
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .background(Color.background.base)
                                         .onTapGesture {
-        //                                    vm.projectQuery = project.name ?? "dim"
-        //                                    print("pro: \(vm.projectQuery)")
-        //                                    focusedField.wrappedValue = .none
-        //                                    vm.updateSession(in: managedObjectContext, projectObjectID: project.objectID)
-        //
                                             vm.addTag(tag, to: managedObjectContext)
                                             vm.tagQuery = ""
                                             focusedField.wrappedValue = .none
@@ -286,6 +276,7 @@ struct SessionInformationView: View {
         .onChange(of: isExpanded, perform: { newValue in
             if newValue == false {
                 focusedField.wrappedValue = nil
+                vm.handleProjectChange(to: vm.projectQuery, in: managedObjectContext)
             }
         })
         .onChange(of: focusedField.wrappedValue, perform: { newValue in
@@ -313,4 +304,3 @@ struct SessionInformationView: View {
 //        SessionInformationView()
 //    }
 //}
-
