@@ -90,9 +90,13 @@ extension SessionInformationView {
             if let project = currentSession?.project {
                 newTag.addToProject(project)
                 
-                tags.append(newTag)
                 print("added new tag. Now tags: \(tags)")
+            } else {
+                currentSession?.project = Project(context: context)
+                newTag.addToProject(currentSession!.project!)
             }
+            
+            tags.append(newTag)
         }
         
     }
