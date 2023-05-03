@@ -74,5 +74,26 @@ extension SessionInformationView {
             }
         }
         
+        func addNewTag(name: String, colorString: String, toContext context: NSManagedObjectContext) {
+            let newTag = Tag(context: context)
+            
+            newTag.name = name
+            newTag.colorString = colorString
+            
+            if currentSession == nil {
+                currentSession = Pomodoro(context: context)
+            }
+            
+            print("tapped add new tag")
+            print("project: \(currentSession?.project)")
+            
+            if let project = currentSession?.project {
+                newTag.addToProject(project)
+                
+                tags.append(newTag)
+                print("added new tag. Now tags: \(tags)")
+            }
+        }
+        
     }
 }

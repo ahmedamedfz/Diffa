@@ -221,40 +221,49 @@ struct SessionInformationView: View {
             .frame(height: isExpanded ? nil : 0)
             .opacity(isExpanded ? 1 : 0)
             .overlay {
-                if !tagResults.isEmpty && !vm.tagQuery.isEmpty && focusedField.wrappedValue == .tag {
+                if !vm.tagQuery.isEmpty && focusedField.wrappedValue == .tag && tagResults.first?.name != vm.tagQuery {
                     VStack(alignment: .leading, spacing: 0) {
                         
-                        Button {
-                            
-                        } label: {
-                            HStack(spacing: 8) {
-                                Text("Create new tag")
-                                    .foregroundColor(.text.primary)
-                                
-                                TempTagView(name: vm.tagQuery, colorString: "rose")
-                            }
-                            .padding(.horizontal, 16)
-                        }
-                        
-                        Spacer()
-                            .frame(height: 16)
-                        
-                        ForEach(tagResults, id: \.objectID) { tag in
-                            TagView(tag: tag, isRemovable: false)
-                                .padding(
-                                    EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16)
-                                )
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .background(Color.background.base)
-                                .onTapGesture {
-//                                    vm.projectQuery = project.name ?? "dim"
-//                                    print("pro: \(vm.projectQuery)")
-//                                    focusedField.wrappedValue = .none
-//                                    vm.updateSession(in: managedObjectContext, projectObjectID: project.objectID)
-//
-                                    vm.updateView()
+                   
+                                Button {
+                                    // TODO: change color string dynamically
+                                    vm.addNewTag(name: vm.tagQuery,
+                                                 colorString: "rose",
+                                                 toContext: managedObjectContext)
+                                    focusedField.wrappedValue = .none
+                                    vm.tagQuery = ""
+                                } label: {
+                                    HStack(spacing: 8) {
+                                        Text("Create new tag")
+                                            .foregroundColor(.text.primary)
+                                        
+                                        TempTagView(name: vm.tagQuery, colorString: "rose")
+                                    }
+                                    .padding(.horizontal, 16)
                                 }
-                        }
+                                
+                                Spacer()
+                                    .frame(height: 16)
+                                
+                                ForEach(tagResults, id: \.objectID) { tag in
+                                    TagView(tag: tag, isRemovable: false)
+                                        .padding(
+                                            EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16)
+                                        )
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .background(Color.background.base)
+                                        .onTapGesture {
+        //                                    vm.projectQuery = project.name ?? "dim"
+        //                                    print("pro: \(vm.projectQuery)")
+        //                                    focusedField.wrappedValue = .none
+        //                                    vm.updateSession(in: managedObjectContext, projectObjectID: project.objectID)
+        //
+                                            vm.updateView()
+                                        }
+                                }
+                           
+                        
+                        
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.vertical, 16)
