@@ -84,13 +84,13 @@ struct OnboardingScreenView: View {
                 Text(vm.callout)
                     .id(vm.currentIndex)
                     .transition(.springToTop)
-                    .font(.system(.callout, design: .rounded))
+                    .font(.system(.callout, design: .rounded, weight: .bold))
                     .foregroundColor(.primaryColor)
                 
                 Text(vm.title)
                     .id(vm.currentIndex)
                     .transition(.springToTop)
-                    .font(.system(.title, design: .rounded))
+                    .font(.system(.title, design: .rounded, weight: .semibold))
                     .foregroundColor(.text.primary)
                     .padding(.top, 8)
                 
@@ -143,7 +143,6 @@ struct OnboardingScreenView: View {
                 
             }
         }
-        .preferredColorScheme(.dark)
     }
 }
 

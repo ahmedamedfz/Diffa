@@ -45,15 +45,6 @@ struct TabbedScreenView: View {
                 .toolbarBackground(Color.background.base, for: .tabBar)
                 .tag(AppTab.stretching)
             
-//            VStack {
-//                Text("Debug helper:")
-//                Button {
-//                    UserDefaults.standard.set(false, forKey: UserDefaults.keyHasFinishedOnboarding)
-//                } label: {
-//                    Text("Reset onboarding")
-//                }
-//                Text("You need to change the app for the changes to take effect")
-//            }
             DebugCoreData()
                 .tabItem {
                     Image(systemName: activeTab == .profile ? "person.fill" : "person")
@@ -70,7 +61,6 @@ struct TabbedScreenView: View {
 struct TabbedScreenView_Previews: PreviewProvider {
     static var previews: some View {
         TabbedScreenView()
-            .preferredColorScheme(.dark)
     }
 }
 
@@ -120,17 +110,30 @@ struct DebugCoreData: View {
     
     var body: some View {
         NavigationStack {
-            List {
-                ForEach(lastPomodoroSessions) { pomodoroSession in
-                    VStack(alignment: .leading) {
-                        Text(pomodoroSession.project?.name ?? "No project name")
-                        
-                        HStack {
-                            ForEach(pomodoroSession.project?.arrayOfTags() ?? []) { tag in
-                                TagView(tag: tag, isRemovable: false)
+            VStack {
+                
+                VStack {
+                    Text("Debug helper:")
+                    Button {
+                        UserDefaults.standard.set(false, forKey: UserDefaults.keyHasFinishedOnboarding)
+                    } label: {
+                        Text("Reset onboarding")
+                    }
+                    Text("Note: You need to change the app for the changes to take effect")
+                }
+                
+                List {
+                    ForEach(lastPomodoroSessions) { pomodoroSession in
+                        VStack(alignment: .leading) {
+                            Text(pomodoroSession.project?.name ?? "No project name")
+                            
+                            HStack {
+                                ForEach(pomodoroSession.project?.arrayOfTags() ?? []) { tag in
+                                    TagView(tag: tag, isRemovable: false)
+                                }
                             }
+                            
                         }
-                        
                     }
                 }
             }
