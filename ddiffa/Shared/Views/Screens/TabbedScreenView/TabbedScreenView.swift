@@ -127,7 +127,7 @@ struct DebugCoreData: View {
                         
                         HStack {
                             ForEach(pomodoroSession.project?.arrayOfTags() ?? []) { tag in
-                                TagView(tag: tag)
+                                TagView(tag: tag, isRemovable: false)
                             }
                         }
                         

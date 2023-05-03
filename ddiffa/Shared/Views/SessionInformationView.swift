@@ -42,7 +42,6 @@ struct SessionInformationView: View {
     
     var tagViews: some View {
         VStack {
-            
             if !isExpanded {
                 if tags.isEmpty {
                     Text("Add Tag")
@@ -60,7 +59,14 @@ struct SessionInformationView: View {
             } else {
                 HStack(spacing: 8) {
                     ForEach(vm.tags, id: \.self) { tag in
-                        TagView(tag: tag)
+                        TagView(tag: tag, isRemovable: isExpanded)
+                            .onTapGesture {
+                                if isExpanded {
+                                    if let currentSession = vm.currentSession {
+                                        vm.remove(tag: tag, from: currentSession)
+                                    }
+                                }
+                            }
                     }
                 }
             }
