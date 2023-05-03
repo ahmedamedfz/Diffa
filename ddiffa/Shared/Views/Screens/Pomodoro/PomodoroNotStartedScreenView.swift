@@ -59,6 +59,5 @@ struct PomodoroNotStartedScreenView: View {
 struct PomodoroNotStartedScreenView_Previews: PreviewProvider {
     static var previews: some View {
         PomodoroNotStartedScreenView()
-            .preferredColorScheme(.dark)
     }
 }

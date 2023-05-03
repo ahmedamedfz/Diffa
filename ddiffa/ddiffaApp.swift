@@ -15,7 +15,6 @@ struct ddiffaApp: App {
         WindowGroup {
             GeometryReader { proxy in
                 ContentView()
-                    .preferredColorScheme(.dark)
                     .environment(\.mainWindowSize, proxy.size)
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }

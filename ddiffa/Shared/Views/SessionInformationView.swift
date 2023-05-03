@@ -89,6 +89,7 @@ struct SessionInformationView: View {
             HStack(spacing: 16) {
                 TextField(text: $vm.projectQuery) {
                     Text("Tap to add your project")
+                        .foregroundColor(.text.tertiary)
                 }
                 .padding(.horizontal, 16)
                 .frame(height: 56)
@@ -173,6 +174,7 @@ struct SessionInformationView: View {
                             Image(systemName: "magnifyingglass")
                                 .resizable()
                                 .frame(width: 12, height: 12)
+                                .foregroundColor(focusedField.wrappedValue == .tag ? Color.primaryColor : .white)
                             
                             TextField(
                                 "",
