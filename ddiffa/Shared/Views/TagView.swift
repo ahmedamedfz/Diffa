@@ -35,6 +35,26 @@ struct TagView: View {
     }
 }
 
+struct TempTagView: View {
+    
+    let name: String
+    let colorString: String
+    
+    var body: some View {
+        Text(name)
+            .font(.system(.footnote, design: .rounded))
+            .foregroundColor(Color("\(colorString)-foreground"))
+            .padding(
+                EdgeInsets(top: 6, leading: 16, bottom: 6, trailing: 16)
+            )
+            .background { Color("\(colorString)-background") }
+            .cornerRadius(100)
+            .fixedSize()
+    }
+}
+
+
+
 //struct TagView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        TagView(tag: Tag(name: "Work", colorString: "orange"))

@@ -19,6 +19,14 @@ class PomodoroSessionPersistence {
         return request
     }()
     
+    static var tagQueryFetchRequest: NSFetchRequest<Tag> = {
+        let request: NSFetchRequest<Tag> = Tag.fetchRequest()
+        request.fetchLimit = 2
+        request.sortDescriptors = []
+        
+        return request
+    }()
+    
     private init() {}
     
     func createNewSession(in context: NSManagedObjectContext) -> Pomodoro {

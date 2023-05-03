@@ -64,11 +64,7 @@ extension SessionInformationView {
             if let project = session.project {
                 tag.removeFromProject(project)
                 project.removeFromTags(tag)
-                
-//                project.arrayOfTags().forEach { tag in
-//                    print(tag.name)
-//                }
-                
+
                 withAnimation {
                     let indexToDelete = tags.firstIndex { $0.name == tag.name && $0.colorString == tag.colorString }
                     if let indexToDelete {

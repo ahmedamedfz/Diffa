@@ -17,6 +17,7 @@ struct SessionInformationView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     
     @FetchRequest(fetchRequest: PomodoroSessionPersistence.projectQueryFetchRequest) var projectResults: FetchedResults<Project>
+    @FetchRequest(fetchRequest: PomodoroSessionPersistence.tagQueryFetchRequest) var tagResults: FetchedResults<Tag>
 
     @Binding var isExpanded: Bool
     @Binding var tags: [Tag]
@@ -153,6 +154,10 @@ struct SessionInformationView: View {
                         }
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.gray, lineWidth: 1.5)
+                    }
                     .offset(y: -57.5)
                 }
             }
@@ -186,6 +191,11 @@ struct SessionInformationView: View {
                             .tint(.white)
                             .focused(focusedField, equals: .tag)
                             .font(.system(.footnote, design: .rounded))
+                            .onChange(of: vm.tagQuery) { newValue in
+                                tagResults.nsPredicate = newValue.isEmpty ? nil :
+                                NSPredicate(format: "name CONTAINS[c] %@", newValue)
+                                vm.updateView()
+                            }
                         }
                         .padding(.horizontal, 16)
                         .frame(width: isExpanded ? nil : 0, height: 30)
@@ -210,6 +220,52 @@ struct SessionInformationView: View {
             }
             .frame(height: isExpanded ? nil : 0)
             .opacity(isExpanded ? 1 : 0)
+            .overlay {
+                if !tagResults.isEmpty && !vm.tagQuery.isEmpty && focusedField.wrappedValue == .tag {
+                    VStack(alignment: .leading, spacing: 0) {
+                        
+                        Button {
+                            
+                        } label: {
+                            HStack(spacing: 8) {
+                                Text("Create new tag")
+                                    .foregroundColor(.text.primary)
+                                
+                                TempTagView(name: vm.tagQuery, colorString: "rose")
+                            }
+                            .padding(.horizontal, 16)
+                        }
+                        
+                        Spacer()
+                            .frame(height: 16)
+                        
+                        ForEach(tagResults, id: \.objectID) { tag in
+                            TagView(tag: tag, isRemovable: false)
+                                .padding(
+                                    EdgeInsets(top: 12, leading: 16, bottom: 12, trailing: 16)
+                                )
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .background(Color.background.base)
+                                .onTapGesture {
+//                                    vm.projectQuery = project.name ?? "dim"
+//                                    print("pro: \(vm.projectQuery)")
+//                                    focusedField.wrappedValue = .none
+//                                    vm.updateSession(in: managedObjectContext, projectObjectID: project.objectID)
+//
+                                    vm.updateView()
+                                }
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.vertical, 16)
+                    .background(Color.background.base)
+                    .overlay {
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.gray, lineWidth: 1.5)
+                    }
+                    .offset(y: -87.5)
+                }
+            }
             
         }
         .onSubmit {
