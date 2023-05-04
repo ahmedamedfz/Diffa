@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+extension TimeInterval {
+    static func secondsToHourMinFormat(time: TimeInterval) -> String? {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.minute, .second]
+        formatter.zeroFormattingBehavior = .pad
+        return formatter.string(from: time)
+    }
+}
+
 struct PomodoroScreenView: View {
     
     @EnvironmentObject var sessionManager: PomodoroSessionManager
@@ -19,44 +28,47 @@ struct PomodoroScreenView: View {
 
     var body: some View {
         VStack {
-            Text("Session")
-                .onReceive(sessionManager.timer) { _ in
-//                    passedSeconds += 1
-    //                progress = Double(passedSeconds) / Double(duration)
-    //                print("progress: \(progress)")
-                    
-                    passedSeconds += 1
-                    sessionManager.updateProgress(with: passedSeconds)
-                    
-                    print("passed seconds: \(passedSeconds)")
-                    print("progress: \(sessionManager.progress)")
-                }
+//            CircularProgressWatchView(progress: sessionManager.progress - 0.04, lineWidth: 16)
+//                .frame(width: 64)
             
-            Text("Progress: \(sessionManager.progress)")
+            VStack(alignment: .leading) {
+                Text("Elapsed Time")
+                    .font(.system(.body, design: .rounded))
+                    .foregroundColor(.text.secondary)
+                
+                Text(TimeInterval.secondsToHourMinFormat(time: TimeInterval(passedSeconds))!)
+                    .font(.system(.title2))
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.top, 16)
+            .scenePadding(.horizontal)
+            
+            
+            ProgressBarView(value: $sessionManager.progress)
+                .padding(.top, 32)
+                .scenePadding(.horizontal)
+            
+            Spacer()
         }
         .onAppear {
-//            let session = sessionManager.session
-//            self.duration = Int(session!.duration)
-            
-            print("session: \(sessionManager.session)")
-            print("session start time: \(sessionManager.session.startTime)")
-            
             self.passedSeconds = Int(Date.now.timeIntervalSince(sessionManager.session.startTime!))
         }
+        .onReceive(sessionManager.timer) { _ in
+            passedSeconds += 1
+            sessionManager.updateProgress(with: passedSeconds)
+        }
+        .navigationTitle("On Going")
+//        .navigationBarTitleDisplayMode(.large)
     }
 }
 
 struct SessionScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        let context = PersistenceController.preview.container.viewContext
-        let sessionManager = PomodoroSessionManager.shared
-        
-        // TODO: Fetch these properties from Pomodoro ManagedObject
-        let startTime = Date(timeIntervalSinceNow: -5 * 60)
-        let duration = 25 * 60
+        let project = PersistenceController.projectsPreview.first!
+        let sessionManager = PomodoroSessionManager.preview
+        sessionManager.startNewSession(for: project, withDurationTarget: 1 * 60)
         
         return PomodoroScreenView()
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
             .environmentObject(sessionManager)
     }
 }

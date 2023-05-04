@@ -9,39 +9,26 @@ import CoreData
 
 class PomodoroSessionManager: ObservableObject {
     
-    private let context: NSManagedObjectContext = PersistenceController.shared.container.viewContext
+    private let context: NSManagedObjectContext
     private(set) var session: Pomodoro!
     private(set) var durationTarget = 0
     
     @Published var progress: Double = 0
     @Published var timer = Timer
                             .publish(every: 1, on: .main, in: .common)
-//                            .sink { <#Date#> in
-//                                <#code#>
-//                            }
     
-//    init(withProject project: Project, targetDuration: Int) { // TODO: change preview to shared
-//        let context = PersistenceController.preview.container.viewContext
-//        let projectObjectID = project.objectID
-//        let managedObject = context.object(with: projectObjectID)
-//        guard let project = managedObject as? Project else {
-//            fatalError("Can't convert Pomodoro from NSManagedObjectID")
-//        }
-//
-//        let session = Pomodoro(context: context)
-//        session.project = project
-//        session.duration = Int64(targetDuration)
-//        self.session = session
-//    }
-    
-    /// Warning: To use PomodoroSessionManager, you have to call startNewSession() first.
+    /// Warning: To use PomodoroSessionManager, you have to call startNewSession() or continueActiveSession() first.
     static let shared = PomodoroSessionManager()
     
-    private init() {}
+    static let preview = PomodoroSessionManager(isPreview: true)
     
-//    init(in context: NSManagedObjectContext) {
-//        self.context = context
-//    }
+    private init(isPreview: Bool = false) {
+        if isPreview {
+            self.context = PersistenceController.preview.container.viewContext
+        } else {
+            self.context = PersistenceController.shared.container.viewContext
+        }
+    }
     
     func startNewSession(for project: Project, withDurationTarget durationTarget: Int) {
         let newSession = createNewSession(from: project)
@@ -52,8 +39,16 @@ class PomodoroSessionManager: ObservableObject {
         
         self.session = newSession
         
-        timer = Timer.publish(every: 1, on: .main, in: .common)
-        _ = timer.connect()
+        try? context.save()
+        
+        startTimer()
+    }
+    
+    func continueActiveSession(_ session: Pomodoro) {
+        self.session = session
+        self.durationTarget = Int(session.duration)
+        
+        startTimer()
     }
     
     func updateProgress(with secondsPassed: Int) {
@@ -69,6 +64,11 @@ class PomodoroSessionManager: ObservableObject {
 
 // MARK: - Helpers
 extension PomodoroSessionManager {
+    private func startTimer() {
+        timer = Timer.publish(every: 1, on: .main, in: .common)
+        _ = timer.connect()
+    }
+    
     private func createNewSession(from project: Project) -> Pomodoro {
         let projectObjectID = project.objectID
         let managedObject = context.object(with: projectObjectID)

@@ -29,7 +29,7 @@ struct ContentView: View {
         .onAppear {
             if !onGoingPomodoroSession.isEmpty {
                 let session = onGoingPomodoroSession.first!
-                pomodoroSessionManager.startNewSession(for: session.project!, withDurationTarget: Int(session.duration))
+                pomodoroSessionManager.continueActiveSession(session)
             }
         }
     }
