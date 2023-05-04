@@ -17,11 +17,28 @@
 		135D90A82A020DFF00CB8DB1 /* SessionInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D90A72A020DFF00CB8DB1 /* SessionInformationView.swift */; };
 		135D90AA2A020E4100CB8DB1 /* SessionInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135D90A92A020E4100CB8DB1 /* SessionInformationViewModel.swift */; };
 		135EF6A229F7C40A00C8D41D /* OnboardingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135EF6A129F7C40A00C8D41D /* OnboardingScreenView.swift */; };
+		135F2B532A0376ED006DBC9F /* PomodoroNotStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B522A0376ED006DBC9F /* PomodoroNotStartedView.swift */; };
+		135F2B552A03A68E006DBC9F /* SessionEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B542A03A68E006DBC9F /* SessionEmptyView.swift */; };
+		135F2B572A03BA91006DBC9F /* PomodoroOnGoingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B562A03BA91006DBC9F /* PomodoroOnGoingView.swift */; };
+		135F2B592A03C52A006DBC9F /* PomodoroScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B582A03C52A006DBC9F /* PomodoroScreenView.swift */; };
+		135F2B5B2A03F0DF006DBC9F /* PomodoroSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B5A2A03F0DF006DBC9F /* PomodoroSessionManager.swift */; };
 		137FA0882A029AB500473C6B /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FA0862A029AB500473C6B /* Project+CoreDataProperties.swift */; };
 		137FA0892A029AB500473C6B /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FA0872A029AB500473C6B /* Project+CoreDataClass.swift */; };
 		137FA08B2A029B6A00473C6B /* PomodoroSessionPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FA08A2A029B6A00473C6B /* PomodoroSessionPersistence.swift */; };
 		13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */; };
 		13A1E4B329F8272A00BEB26A /* SpringToTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A1E4B229F8272900BEB26A /* SpringToTop.swift */; };
+		13A3770C2A0358C400624352 /* FocusFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3770B2A0358C400624352 /* FocusFlowApp.swift */; };
+		13A3770E2A0358C400624352 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3770D2A0358C400624352 /* ContentView.swift */; };
+		13A377132A0358C500624352 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13A377122A0358C500624352 /* Preview Assets.xcassets */; };
+		13A377162A0358C500624352 /* FocusFlow Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 13A377092A0358C400624352 /* FocusFlow Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		13A3771D2A0363A600624352 /* PomodoroSessionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A3771C2A0363A600624352 /* PomodoroSessionCardView.swift */; };
+		13A3771E2A03643400624352 /* Color+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135460F029F7C85F00413F74 /* Color+CustomColors.swift */; };
+		13A377232A03665000624352 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CC0929FFF20D00ABC9C9 /* Model.xcdatamodeld */; };
+		13A377242A03667E00624352 /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FA0872A029AB500473C6B /* Project+CoreDataClass.swift */; };
+		13A377252A03668000624352 /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FA0862A029AB500473C6B /* Project+CoreDataProperties.swift */; };
+		13A377262A0366A300624352 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CC0729FFF09700ABC9C9 /* PersistenceController.swift */; };
+		13A377272A03680900624352 /* PomodoroSessionPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FA08A2A029B6A00473C6B /* PomodoroSessionPersistence.swift */; };
+		13A377292A036C9800624352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13A377282A036C9800624352 /* Assets.xcassets */; };
 		13EBBBF829F8B04400141F3B /* PomodoroNotStartedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBBBF729F8B04400141F3B /* PomodoroNotStartedScreenView.swift */; };
 		13EBBC1929FFE9C000141F3B /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBBC1829FFE9C000141F3B /* TagView.swift */; };
 		49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */; };
@@ -31,6 +48,30 @@
 		49F6CC0829FFF09700ABC9C9 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CC0729FFF09700ABC9C9 /* PersistenceController.swift */; };
 		49F6CC0B29FFF20D00ABC9C9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CC0929FFF20D00ABC9C9 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		13A377142A0358C500624352 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49E4B9F129F7ACBB00830C61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13A377082A0358C400624352;
+			remoteInfo = "FocusFlow Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		13A377172A0358C500624352 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				13A377162A0358C500624352 /* FocusFlow Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		133AED9329F814E00092FC46 /* TabbedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedScreenView.swift; sourceTree = "<group>"; };
@@ -43,11 +84,22 @@
 		135D90A72A020DFF00CB8DB1 /* SessionInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SessionInformationView.swift; path = ddiffa/Shared/Views/SessionInformationView.swift; sourceTree = SOURCE_ROOT; };
 		135D90A92A020E4100CB8DB1 /* SessionInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SessionInformationViewModel.swift; path = ddiffa/Shared/Views/SessionInformationViewModel.swift; sourceTree = SOURCE_ROOT; };
 		135EF6A129F7C40A00C8D41D /* OnboardingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenView.swift; sourceTree = "<group>"; };
+		135F2B522A0376ED006DBC9F /* PomodoroNotStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroNotStartedView.swift; sourceTree = "<group>"; };
+		135F2B542A03A68E006DBC9F /* SessionEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEmptyView.swift; sourceTree = "<group>"; };
+		135F2B562A03BA91006DBC9F /* PomodoroOnGoingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroOnGoingView.swift; sourceTree = "<group>"; };
+		135F2B582A03C52A006DBC9F /* PomodoroScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroScreenView.swift; sourceTree = "<group>"; };
+		135F2B5A2A03F0DF006DBC9F /* PomodoroSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroSessionManager.swift; sourceTree = "<group>"; };
 		137FA0862A029AB500473C6B /* Project+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		137FA0872A029AB500473C6B /* Project+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataClass.swift"; sourceTree = "<group>"; };
 		137FA08A2A029B6A00473C6B /* PomodoroSessionPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroSessionPersistence.swift; sourceTree = "<group>"; };
 		13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		13A1E4B229F8272900BEB26A /* SpringToTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpringToTop.swift; path = ddiffa/Shared/Views/Screens/SpringToTop.swift; sourceTree = SOURCE_ROOT; };
+		13A377092A0358C400624352 /* FocusFlow Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FocusFlow Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13A3770B2A0358C400624352 /* FocusFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusFlowApp.swift; sourceTree = "<group>"; };
+		13A3770D2A0358C400624352 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		13A377122A0358C500624352 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		13A3771C2A0363A600624352 /* PomodoroSessionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroSessionCardView.swift; sourceTree = "<group>"; };
+		13A377282A036C9800624352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13EBBBF729F8B04400141F3B /* PomodoroNotStartedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroNotStartedScreenView.swift; sourceTree = "<group>"; };
 		13EBBC1829FFE9C000141F3B /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TagView.swift; path = ddiffa/Shared/Views/TagView.swift; sourceTree = SOURCE_ROOT; };
 		49E4B9F929F7ACBB00830C61 /* ddiffa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddiffa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +113,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		13A377062A0358C400624352 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49E4B9F629F7ACBB00830C61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,6 +156,33 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		135F2B502A0376A6006DBC9F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				13A3771C2A0363A600624352 /* PomodoroSessionCardView.swift */,
+				135F2B542A03A68E006DBC9F /* SessionEmptyView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		135F2B512A0376CC006DBC9F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				135F2B522A0376ED006DBC9F /* PomodoroNotStartedView.swift */,
+				135F2B562A03BA91006DBC9F /* PomodoroOnGoingView.swift */,
+				135F2B582A03C52A006DBC9F /* PomodoroScreenView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		135F2B5C2A03F0E9006DBC9F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				135F2B5A2A03F0DF006DBC9F /* PomodoroSessionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		137FA08C2A029BAA00473C6B /* ManagedObject */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +190,28 @@
 				137FA0862A029AB500473C6B /* Project+CoreDataProperties.swift */,
 			);
 			path = ManagedObject;
+			sourceTree = "<group>";
+		};
+		13A3770A2A0358C400624352 /* FocusFlow Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				13A3770B2A0358C400624352 /* FocusFlowApp.swift */,
+				13A3770D2A0358C400624352 /* ContentView.swift */,
+				13A377282A036C9800624352 /* Assets.xcassets */,
+				135F2B502A0376A6006DBC9F /* Components */,
+				135F2B512A0376CC006DBC9F /* Screens */,
+				135F2B5C2A03F0E9006DBC9F /* Managers */,
+				13A377112A0358C500624352 /* Preview Content */,
+			);
+			path = "FocusFlow Watch App";
+			sourceTree = "<group>";
+		};
+		13A377112A0358C500624352 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				13A377122A0358C500624352 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		13EBBBF429F8B00400141F3B /* Pomodoro */ = {
@@ -118,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				49E4B9FB29F7ACBB00830C61 /* ddiffa */,
+				13A3770A2A0358C400624352 /* FocusFlow Watch App */,
 				49E4B9FA29F7ACBB00830C61 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -126,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				49E4B9F929F7ACBB00830C61 /* ddiffa.app */,
+				13A377092A0358C400624352 /* FocusFlow Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -306,6 +416,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		13A377082A0358C400624352 /* FocusFlow Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13A3771A2A0358C500624352 /* Build configuration list for PBXNativeTarget "FocusFlow Watch App" */;
+			buildPhases = (
+				13A377052A0358C400624352 /* Sources */,
+				13A377062A0358C400624352 /* Frameworks */,
+				13A377072A0358C400624352 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FocusFlow Watch App";
+			productName = "FocusFlow Watch App";
+			productReference = 13A377092A0358C400624352 /* FocusFlow Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		49E4B9F829F7ACBB00830C61 /* ddiffa */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49E4BA0829F7ACBB00830C61 /* Build configuration list for PBXNativeTarget "ddiffa" */;
@@ -313,10 +440,12 @@
 				49E4B9F529F7ACBB00830C61 /* Sources */,
 				49E4B9F629F7ACBB00830C61 /* Frameworks */,
 				49E4B9F729F7ACBB00830C61 /* Resources */,
+				13A377172A0358C500624352 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				13A377152A0358C500624352 /* PBXTargetDependency */,
 			);
 			name = ddiffa;
 			productName = ddiffa;
@@ -333,6 +462,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					13A377082A0358C400624352 = {
+						CreatedOnToolsVersion = 14.3;
+					};
 					49E4B9F829F7ACBB00830C61 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -352,11 +484,21 @@
 			projectRoot = "";
 			targets = (
 				49E4B9F829F7ACBB00830C61 /* ddiffa */,
+				13A377082A0358C400624352 /* FocusFlow Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		13A377072A0358C400624352 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13A377292A036C9800624352 /* Assets.xcassets in Resources */,
+				13A377132A0358C500624352 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49E4B9F729F7ACBB00830C61 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,6 +511,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		13A377052A0358C400624352 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13A3771D2A0363A600624352 /* PomodoroSessionCardView.swift in Sources */,
+				135F2B5B2A03F0DF006DBC9F /* PomodoroSessionManager.swift in Sources */,
+				13A377272A03680900624352 /* PomodoroSessionPersistence.swift in Sources */,
+				135F2B532A0376ED006DBC9F /* PomodoroNotStartedView.swift in Sources */,
+				13A3770E2A0358C400624352 /* ContentView.swift in Sources */,
+				13A377232A03665000624352 /* Model.xcdatamodeld in Sources */,
+				13A377252A03668000624352 /* Project+CoreDataProperties.swift in Sources */,
+				13A377242A03667E00624352 /* Project+CoreDataClass.swift in Sources */,
+				13A3771E2A03643400624352 /* Color+CustomColors.swift in Sources */,
+				13A3770C2A0358C400624352 /* FocusFlowApp.swift in Sources */,
+				135F2B592A03C52A006DBC9F /* PomodoroScreenView.swift in Sources */,
+				13A377262A0366A300624352 /* PersistenceController.swift in Sources */,
+				135F2B552A03A68E006DBC9F /* SessionEmptyView.swift in Sources */,
+				135F2B572A03BA91006DBC9F /* PomodoroOnGoingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49E4B9F529F7ACBB00830C61 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -399,7 +562,76 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		13A377152A0358C500624352 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 13A377082A0358C400624352 /* FocusFlow Watch App */;
+			targetProxy = 13A377142A0358C500624352 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		13A377182A0358C500624352 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FocusFlow Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = H9PJ7U2A6K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FocusFlow;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.dev.ddiffa.ddiffa;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.ddiffa.ddiffa.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Debug;
+		};
+		13A377192A0358C500624352 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FocusFlow Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = H9PJ7U2A6K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FocusFlow;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.dev.ddiffa.ddiffa;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.ddiffa.ddiffa.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.4;
+			};
+			name = Release;
+		};
 		49E4BA0629F7ACBB00830C61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -512,6 +744,7 @@
 		49E4BA0929F7ACBB00830C61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ddiffa/ddiffa.entitlements;
@@ -551,6 +784,7 @@
 		49E4BA0A29F7ACBB00830C61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ddiffa/ddiffa.entitlements;
@@ -590,6 +824,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		13A3771A2A0358C500624352 /* Build configuration list for PBXNativeTarget "FocusFlow Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13A377182A0358C500624352 /* Debug */,
+				13A377192A0358C500624352 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		49E4B9F429F7ACBB00830C61 /* Build configuration list for PBXProject "ddiffa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
