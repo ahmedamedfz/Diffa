@@ -23,6 +23,7 @@
 		49E4BA0529F7ACBB00830C61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E4BA0429F7ACBB00830C61 /* Preview Assets.xcassets */; };
 		49F6CC0829FFF09700ABC9C9 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CC0729FFF09700ABC9C9 /* PersistenceController.swift */; };
 		49F6CC0B29FFF20D00ABC9C9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CC0929FFF20D00ABC9C9 /* Model.xcdatamodeld */; };
+		49F6CC572A02538F00ABC9C9 /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CC562A02538F00ABC9C9 /* SignInWithApple.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		49E4BA0429F7ACBB00830C61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		49F6CC0729FFF09700ABC9C9 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		49F6CC0A29FFF20D00ABC9C9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		49F6CC552A02463700ABC9C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		49F6CC562A02538F00ABC9C9 /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInWithApple.swift; path = ddiffa/SignInWithApple.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		49E4B9FB29F7ACBB00830C61 /* ddiffa */ = {
 			isa = PBXGroup;
 			children = (
+				49F6CC552A02463700ABC9C9 /* Info.plist */,
 				49E4BA0029F7ACBB00830C61 /* Assets.xcassets */,
 				49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */,
 				49E4BA0229F7ACBB00830C61 /* ddiffa.entitlements */,
@@ -254,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				135460F229F7C96C00413F74 /* ProgressDotIndicator.swift */,
+				49F6CC562A02538F00ABC9C9 /* SignInWithApple.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 				13474D2529F7E1380034F2C0 /* OnboardingModel.swift in Sources */,
 				135460F329F7C96C00413F74 /* ProgressDotIndicator.swift in Sources */,
 				135460F129F7C85F00413F74 /* Color+CustomColors.swift in Sources */,
+				49F6CC572A02538F00ABC9C9 /* SignInWithApple.swift in Sources */,
 				13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */,
 				49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */,
 				13474D2929F7E4120034F2C0 /* OnboardingScreenViewModel.swift in Sources */,
@@ -474,10 +480,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ddiffa/Preview Content\"";
-				DEVELOPMENT_TEAM = H9PJ7U2A6K;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ddiffa/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -513,10 +520,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ddiffa/Preview Content\"";
-				DEVELOPMENT_TEAM = H9PJ7U2A6K;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ddiffa/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
