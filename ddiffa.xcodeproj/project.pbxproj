@@ -46,6 +46,17 @@
 		13A377292A036C9800624352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13A377282A036C9800624352 /* Assets.xcassets */; };
 		13EBBBF829F8B04400141F3B /* PomodoroNotStartedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBBBF729F8B04400141F3B /* PomodoroNotStartedScreenView.swift */; };
 		13EBBC1929FFE9C000141F3B /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBBC1829FFE9C000141F3B /* TagView.swift */; };
+		49341D7F2A04F195004EA509 /* StretchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D7E2A04F195004EA509 /* StretchModel.swift */; };
+		49341D832A04F1E5004EA509 /* StretchingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D822A04F1E5004EA509 /* StretchingCard.swift */; };
+		49341D852A04F257004EA509 /* StretchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D842A04F257004EA509 /* StretchingView.swift */; };
+		49341D872A04F26D004EA509 /* WaitingSessionStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D862A04F26D004EA509 /* WaitingSessionStartView.swift */; };
+		49341D892A04F297004EA509 /* WaitingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D882A04F297004EA509 /* WaitingTimer.swift */; };
+		49341D8B2A04F411004EA509 /* OnGoingMovementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D8A2A04F411004EA509 /* OnGoingMovementView.swift */; };
+		49341D8E2A04F42A004EA509 /* OnGoingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D8D2A04F42A004EA509 /* OnGoingTimer.swift */; };
+		49341D902A04F438004EA509 /* RestTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D8F2A04F438004EA509 /* RestTimer.swift */; };
+		49341D922A04F44E004EA509 /* RestBetweenSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D912A04F44E004EA509 /* RestBetweenSessionView.swift */; };
+		49341D952A04F4A8004EA509 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 49341D942A04F4A8004EA509 /* ConfettiSwiftUI */; };
+		49341D972A04F6E6004EA509 /* FinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D962A04F6E6004EA509 /* FinishedView.swift */; };
 		49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */; };
 		49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FE29F7ACBB00830C61 /* ContentView.swift */; };
 		49E4BA0129F7ACBB00830C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E4BA0029F7ACBB00830C61 /* Assets.xcassets */; };
@@ -111,6 +122,16 @@
 		13A377282A036C9800624352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13EBBBF729F8B04400141F3B /* PomodoroNotStartedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroNotStartedScreenView.swift; sourceTree = "<group>"; };
 		13EBBC1829FFE9C000141F3B /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TagView.swift; path = ddiffa/Shared/Views/TagView.swift; sourceTree = SOURCE_ROOT; };
+		49341D7E2A04F195004EA509 /* StretchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchModel.swift; sourceTree = "<group>"; };
+		49341D822A04F1E5004EA509 /* StretchingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingCard.swift; sourceTree = "<group>"; };
+		49341D842A04F257004EA509 /* StretchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingView.swift; sourceTree = "<group>"; };
+		49341D862A04F26D004EA509 /* WaitingSessionStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingSessionStartView.swift; sourceTree = "<group>"; };
+		49341D882A04F297004EA509 /* WaitingTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingTimer.swift; sourceTree = "<group>"; };
+		49341D8A2A04F411004EA509 /* OnGoingMovementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnGoingMovementView.swift; sourceTree = "<group>"; };
+		49341D8D2A04F42A004EA509 /* OnGoingTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnGoingTimer.swift; sourceTree = "<group>"; };
+		49341D8F2A04F438004EA509 /* RestTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTimer.swift; sourceTree = "<group>"; };
+		49341D912A04F44E004EA509 /* RestBetweenSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestBetweenSessionView.swift; sourceTree = "<group>"; };
+		49341D962A04F6E6004EA509 /* FinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedView.swift; sourceTree = "<group>"; };
 		49E4B9F929F7ACBB00830C61 /* ddiffa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddiffa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ddiffaApp.swift; sourceTree = "<group>"; };
 		49E4B9FE29F7ACBB00830C61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49341D952A04F4A8004EA509 /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +262,23 @@
 				13EBBBF729F8B04400141F3B /* PomodoroNotStartedScreenView.swift */,
 			);
 			path = Pomodoro;
+			sourceTree = "<group>";
+		};
+		49341D7D2A04F184004EA509 /* Stretching */ = {
+			isa = PBXGroup;
+			children = (
+				49341D7E2A04F195004EA509 /* StretchModel.swift */,
+				49341D822A04F1E5004EA509 /* StretchingCard.swift */,
+				49341D842A04F257004EA509 /* StretchingView.swift */,
+				49341D862A04F26D004EA509 /* WaitingSessionStartView.swift */,
+				49341D882A04F297004EA509 /* WaitingTimer.swift */,
+				49341D8A2A04F411004EA509 /* OnGoingMovementView.swift */,
+				49341D8D2A04F42A004EA509 /* OnGoingTimer.swift */,
+				49341D8F2A04F438004EA509 /* RestTimer.swift */,
+				49341D912A04F44E004EA509 /* RestBetweenSessionView.swift */,
+				49341D962A04F6E6004EA509 /* FinishedView.swift */,
+			);
+			path = Stretching;
 			sourceTree = "<group>";
 		};
 		49E4B9F029F7ACBB00830C61 = {
@@ -406,6 +445,7 @@
 		49E4BA1929F7B5B400830C61 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				49341D7D2A04F184004EA509 /* Stretching */,
 				49E4B9FE29F7ACBB00830C61 /* ContentView.swift */,
 				13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */,
 				13474D2729F7E3F50034F2C0 /* Onboarding */,
@@ -469,6 +509,9 @@
 				13A377152A0358C500624352 /* PBXTargetDependency */,
 			);
 			name = ddiffa;
+			packageProductDependencies = (
+				49341D942A04F4A8004EA509 /* ConfettiSwiftUI */,
+			);
 			productName = ddiffa;
 			productReference = 49E4B9F929F7ACBB00830C61 /* ddiffa.app */;
 			productType = "com.apple.product-type.application";
@@ -500,6 +543,9 @@
 				Base,
 			);
 			mainGroup = 49E4B9F029F7ACBB00830C61;
+			packageReferences = (
+				49341D932A04F4A8004EA509 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = 49E4B9FA29F7ACBB00830C61 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -565,24 +611,34 @@
 				137FA08B2A029B6A00473C6B /* PomodoroSessionPersistence.swift in Sources */,
 				49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */,
 				13EBBBF829F8B04400141F3B /* PomodoroNotStartedScreenView.swift in Sources */,
+				49341D832A04F1E5004EA509 /* StretchingCard.swift in Sources */,
 				137FA0882A029AB500473C6B /* Project+CoreDataProperties.swift in Sources */,
 				133AED9829F815F30092FC46 /* UserDefaults+customKeys.swift in Sources */,
+				49341D8B2A04F411004EA509 /* OnGoingMovementView.swift in Sources */,
 				13A1E4B329F8272A00BEB26A /* SpringToTop.swift in Sources */,
 				49F6CC0B29FFF20D00ABC9C9 /* Model.xcdatamodeld in Sources */,
 				135EF6A229F7C40A00C8D41D /* OnboardingScreenView.swift in Sources */,
+				49341D922A04F44E004EA509 /* RestBetweenSessionView.swift in Sources */,
 				133AED9429F814E00092FC46 /* TabbedScreenView.swift in Sources */,
 				137FA0892A029AB500473C6B /* Project+CoreDataClass.swift in Sources */,
 				49F6CC0829FFF09700ABC9C9 /* PersistenceController.swift in Sources */,
 				13474D2529F7E1380034F2C0 /* OnboardingModel.swift in Sources */,
 				135460F329F7C96C00413F74 /* ProgressDotIndicator.swift in Sources */,
+				49341D892A04F297004EA509 /* WaitingTimer.swift in Sources */,
+				49341D972A04F6E6004EA509 /* FinishedView.swift in Sources */,
 				135D90AA2A020E4100CB8DB1 /* SessionInformationViewModel.swift in Sources */,
 				135460F129F7C85F00413F74 /* Color+CustomColors.swift in Sources */,
 				13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */,
+				49341D852A04F257004EA509 /* StretchingView.swift in Sources */,
 				49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */,
+				49341D902A04F438004EA509 /* RestTimer.swift in Sources */,
 				13EBBC1929FFE9C000141F3B /* TagView.swift in Sources */,
 				13474D2929F7E4120034F2C0 /* OnboardingScreenViewModel.swift in Sources */,
+				49341D872A04F26D004EA509 /* WaitingSessionStartView.swift in Sources */,
 				133AED9629F8157E0092FC46 /* SettingsManager.swift in Sources */,
 				135F2B602A041616006DBC9F /* Date+component.swift in Sources */,
+				49341D7F2A04F195004EA509 /* StretchModel.swift in Sources */,
+				49341D8E2A04F42A004EA509 /* OnGoingTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -878,6 +934,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		49341D932A04F4A8004EA509 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		49341D942A04F4A8004EA509 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49341D932A04F4A8004EA509 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		49F6CC0929FFF20D00ABC9C9 /* Model.xcdatamodeld */ = {
