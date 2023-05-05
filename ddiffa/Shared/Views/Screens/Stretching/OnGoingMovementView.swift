@@ -11,6 +11,7 @@ import Combine
 struct OnGoingMovementView: View {
     @State private var timerFinished = false
     @State private var isTimerRunning = true
+    @State private var isInfoOpen = false
     
     var index: Int
     var mainStretch : MainStretch
@@ -30,10 +31,15 @@ struct OnGoingMovementView: View {
                             .cornerRadius(10)
                         HStack {
                             Spacer()
-                            Image(systemName: "questionmark.circle")
-                                .foregroundColor(.white)
-                                .padding()
-                                .padding(.trailing,25)
+                            
+                            Button {
+                                self.isInfoOpen = true
+                            } label: {
+                                    Image(systemName: "questionmark.circle")
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .padding(.trailing,10)
+                            }
                         }
                     }
                     VStack (spacing: 0) {
@@ -56,6 +62,12 @@ struct OnGoingMovementView: View {
                     }
                 }
                 .padding()
+                
+                if isInfoOpen {
+                    withAnimation{
+                        StretchInfoView(isInfoOpen: $isInfoOpen)
+                    }
+                }
             }
         }
         .onReceive([isTimerRunning].publisher.first()) { (value) in

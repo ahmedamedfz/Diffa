@@ -36,7 +36,7 @@ struct FinishedView: View {
                     Rectangle()
                         .foregroundColor(Color.background.secondary)
                         .cornerRadius(35)
-                        .padding(.bottom,-50)
+                        .padding(.bottom,-150)
                     
                     VStack (spacing: 40) {
                         VStack {
@@ -154,7 +154,7 @@ struct FinishedView: View {
                 }
             }
         }
-        
+        .navigationBarBackButtonHidden(true)
         .onAppear {
                     self.counter += 1
                 }

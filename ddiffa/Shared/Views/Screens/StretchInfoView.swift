@@ -8,76 +8,63 @@
 import SwiftUI
 
 struct StretchInfoView: View {
+    @Binding var isInfoOpen: Bool
     var body: some View {
         
             ZStack {
-                Color(red: 15/255, green: 23/255, blue: 42/255).ignoresSafeArea()
+                Color.black
+                    .opacity(0.7)
+                    .edgesIgnoringSafeArea(.all)
                 
-                
-                VStack {
-                    Rectangle ()
-                        .fill(Color(red: 33/255, green: 47/255, blue: 81/255))
-                        .frame(width: 323, height: 284, alignment: .center)
-                        .cornerRadius(10)
-                        .padding(.top, 60)
-                    Spacer()
-                        .frame(height: 30)
-                    
-                    
+                ZStack {
                     VStack {
-                        Text ("Shoulder Stretch")
-                            .font(.system(.title, design: .rounded))
-                            .foregroundColor(.white)
-                            .bold()
-                            .padding(.leading, 16)
+                        Rectangle ()
+                            .fill(Color(red: 33/255, green: 47/255, blue: 81/255))
+                            .frame(width: 300, height: 220, alignment: .center)
+                            .cornerRadius(10)
+                            .padding(30)
+                            
                         
+                            VStack (alignment: .leading) {
+                                Text ("Shoulder Stretch")
+                                    .font(.system(.title, design: .rounded))
+                                    .foregroundColor(.text.primary)
+                                    .bold()
+                                
+                                Text ("Upper Body | **30 secs**")
+                                    .font(.system(.title2, design: .rounded))
+                                    .foregroundColor(.text.secondary)
+                                    .padding(.bottom,10)
+
+                            
+                        }
                         
-                        Text ("Upper Body | **30 secs**")
-                            .font(.system(.title2, design: .rounded))
-                            .foregroundColor(Color(red: 241/255, green: 245/255, blue: 249/255, opacity: 0.65))
-                            .padding(.leading, 16)
-                        
-                        Spacer()
-                            .frame(height: 31)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.horizontal)
-                    
-                    ScrollView {
-                        Text ("""
-Begin by standing next to a wall with your left shoulder touching it. Straighten your left arm upwards, with your palm facing the wall.
-
-Next, move your arms slowly in big clockwise circles.
-
-Repeat the same process with your right arm.
-
-""")
+                        Text ("Begin by standing next to a wall with your left shoulder touching it. Straighten your left arm upwards, with your palm facing the wall. \n \nNext, move your arms slowly in big clockwise circles.")
                         .font(.system(.body, design: .rounded))
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 16)
+                        .foregroundColor(.text.primary)
+                        .padding([.leading,.trailing],30)
+                        
+                        Button {
+                            isInfoOpen = false
+                        }
+                    label: {
+                        
+                        Text("Close")
+                            .frame(width: 323, height: 38)
+                            .background(Color.primaryColor)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                            .padding(9)
+                        }
+                    .padding()
+                        
                         
                     }
                     
-                    //                ZStack {
-                    
-                    
-                    Button {
-                        
-                    }
-                label: {
-                    
-                    Text("Close")
-                        .frame(width: 323, height: 38)
-                        .background(Color(red: 68/255, green: 60/255, blue: 255/255))
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                        .padding(9)
                 }
-                    
-                    //                }
-                    
-                    
-                }
+                .background(Color.background.secondary)
+                .cornerRadius(20)
+                .padding(30)
                 
             }
         }
@@ -85,7 +72,7 @@ Repeat the same process with your right arm.
     
     struct StretchInfoView_Previews: PreviewProvider {
         static var previews: some View {
-            StretchInfoView()
+            StretchInfoView(isInfoOpen: .constant(true))
         }
     }
     

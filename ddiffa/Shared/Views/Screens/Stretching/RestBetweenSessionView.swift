@@ -12,7 +12,7 @@ struct RestBetweenSessionView: View {
     var mainStretch: MainStretch
     var index: Int
     var subStretch: SubStretch {mainStretch.substretch[index]}
-    
+    @State private var isInfoOpen = false
     @State private var timerFinished = false
     
     var restTimer : RestTimer {RestTimer(timerFinished: $timerFinished)}
@@ -38,7 +38,11 @@ struct RestBetweenSessionView: View {
                     }
                     HStack {
                         Text(subStretch.title)
-                        Image(systemName: "questionmark.circle")
+                        Button {
+                            self.isInfoOpen = true
+                        } label: {
+                                Image(systemName: "questionmark.circle")
+                        }
                         Spacer()
                         Text("\(subStretch.duration)s")
                     }
@@ -50,6 +54,11 @@ struct RestBetweenSessionView: View {
                         .cornerRadius(10)
                 }
                 .padding()
+            }
+            if isInfoOpen {
+                withAnimation{
+                    StretchInfoView(isInfoOpen: $isInfoOpen)
+                }
             }
         }
     }
