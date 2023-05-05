@@ -20,8 +20,6 @@ struct PomodoroScreenView: View {
     
     @EnvironmentObject var sessionManager: PomodoroSessionManager
     
-    @State var passedSeconds: Int = 0
-    
     @State private var pausedOpacity = 1.0
     
     /// The target duration
@@ -40,7 +38,7 @@ struct PomodoroScreenView: View {
                     .font(.system(.body, design: .rounded))
                     .foregroundColor(.text.secondary)
                 
-                Text(TimeInterval.secondsToHourMinFormat(time: TimeInterval(passedSeconds))!)
+                Text(TimeInterval.secondsToHourMinFormat(time: TimeInterval(sessionManager.passedSeconds))!)
                     .font(.system(.title2))
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -65,12 +63,10 @@ struct PomodoroScreenView: View {
                 .onAppear { self.pausedOpacity = 0.3 }
             }
         }
-        .onAppear {
-            self.passedSeconds = Int(Date.now.timeIntervalSince(sessionManager.session.startTime ?? .now))
-        }
         .onReceive(sessionManager.timer) { _ in
-            passedSeconds += 1
-            sessionManager.updateProgress(with: passedSeconds)
+            sessionManager.updateProgress()
+            
+            print(sessionManager.passedSeconds)
         }
         .navigationTitle("On Going")
     }

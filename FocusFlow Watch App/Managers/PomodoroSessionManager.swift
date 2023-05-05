@@ -14,6 +14,7 @@ class PomodoroSessionManager: ObservableObject {
     private(set) var durationTarget = 0
     
     @Published var progress: Double = 0
+    @Published private(set) var passedSeconds = 0
     @Published var timer = Timer
                             .publish(every: 1, on: .main, in: .common)
     @Published var isPaused = false
@@ -37,7 +38,6 @@ class PomodoroSessionManager: ObservableObject {
         newSession.startTime = .now
         newSession.duration = Int64(durationTarget)
         self.durationTarget = durationTarget
-        
         self.session = newSession
         
         try? context.save()
@@ -48,12 +48,14 @@ class PomodoroSessionManager: ObservableObject {
     func continueActiveSession(_ session: Pomodoro) {
         self.session = session
         self.durationTarget = Int(session.duration)
+        self.passedSeconds = Int(Date.now.timeIntervalSince(session.startTime ?? .now))
         
         startTimer()
     }
     
-    func updateProgress(with secondsPassed: Int) {
-        progress = Double(secondsPassed) / Double(durationTarget)
+    func updateProgress() {
+        passedSeconds += 1
+        progress = Double(passedSeconds) / Double(durationTarget)
     }
     
     func finishSession() {
@@ -70,7 +72,7 @@ class PomodoroSessionManager: ObservableObject {
     
     func pauseSession() {
         timer.connect().cancel()
-        timer = Timer.publish(every: 1, on: .main, in: .common)
+//        timer = Timer.publish(every: 1, on: .main, in: .common)
         isPaused = true
     }
     
