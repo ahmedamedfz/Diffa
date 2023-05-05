@@ -70,7 +70,13 @@ class PomodoroSessionManager: ObservableObject {
     
     func pauseSession() {
         timer.connect().cancel()
+        timer = Timer.publish(every: 1, on: .main, in: .common)
         isPaused = true
+    }
+    
+    func resumeSession() {
+        startTimer()
+        isPaused = false
     }
     
 }

@@ -20,20 +20,20 @@ struct PomodoroScreenView: View {
     
     @EnvironmentObject var sessionManager: PomodoroSessionManager
     
-//    @State var progress: Double = 0
     @State var passedSeconds: Int = 0
+    
+    @State private var pausedOpacity = 1.0
     
     /// The target duration
     @State var duration: Int = 0
 
     var body: some View {
         VStack(alignment: .leading) {
-//            CircularProgressWatchView(progress: sessionManager.progress - 0.04, lineWidth: 16)
-//                .frame(width: 64)
-            
             Text(sessionManager.session.project?.name ?? "No Project")
                 .font(.system(.title2))
-                .scenePadding()
+                .scenePadding(.horizontal)
+            
+            Spacer()
             
             VStack(alignment: .leading) {
                 Text("Elapsed Time")
@@ -44,15 +44,26 @@ struct PomodoroScreenView: View {
                     .font(.system(.title2))
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.top, 16)
             .scenePadding(.horizontal)
             
+            Spacer()
             
             ProgressBarView(value: $sessionManager.progress)
-                .padding(.top, 32)
                 .scenePadding(.horizontal)
-            
-            Spacer()
+         
+            if sessionManager.isPaused {
+                Text("Paused")
+                .frame(maxWidth: .infinity, alignment: .center)
+                .padding(.top, 4)
+                .opacity(pausedOpacity)
+                .animation(
+                    Animation
+                        .easeInOut(duration: 0.6)
+                        .repeatForever(autoreverses: true),
+                    value: pausedOpacity
+                )
+                .onAppear { self.pausedOpacity = 0.3 }
+            }
         }
         .onAppear {
             self.passedSeconds = Int(Date.now.timeIntervalSince(sessionManager.session.startTime ?? .now))
@@ -62,7 +73,6 @@ struct PomodoroScreenView: View {
             sessionManager.updateProgress(with: passedSeconds)
         }
         .navigationTitle("On Going")
-//        .navigationBarTitleDisplayMode(.large)
     }
 }
 

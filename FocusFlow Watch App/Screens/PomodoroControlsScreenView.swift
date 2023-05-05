@@ -37,10 +37,19 @@ struct PomodoroControlsScreenView: View {
             }
             
             Button {
-                sessionManager.pauseSession()
-                selectedTab = .session
+                if sessionManager.isPaused {
+                    sessionManager.resumeSession()
+                    withAnimation {
+                        selectedTab = .session
+                    }
+                } else {
+                    sessionManager.pauseSession()
+                    withAnimation {
+                        selectedTab = .session
+                    }
+                }
             } label: {
-                Image(systemName: "pause.fill")
+                Image(systemName: sessionManager.isPaused ? "play.fill" :  "pause.fill")
                     .frame(height: 40)
             }
             .tint(.primaryColor)
