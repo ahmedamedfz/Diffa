@@ -21,7 +21,10 @@ struct PomodoroOnGoingView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            PomodoroControlsScreenView().tag(Tab.controls)
+            PomodoroControlsScreenView(
+                selectedTab: $selectedTab
+            )
+            .tag(Tab.controls)
             
             PomodoroScreenView()
             .tag(Tab.session)

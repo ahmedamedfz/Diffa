@@ -11,16 +11,14 @@ struct PomodoroControlsScreenView: View {
     @EnvironmentObject var sessionManager: PomodoroSessionManager
     @EnvironmentObject var mainVM: MainViewModel
     
+    @Binding var selectedTab: PomodoroOnGoingView.Tab
+    
     var body: some View {
         VStack {
             HStack(spacing: 8) {
                 Button {
                     sessionManager.discardSession()
                     mainVM.goToHomeScreen()
-                    
-                    print(mainVM)
-                    
-                    print("trash tapped")
                 } label: {
                     Image(systemName: "trash")
                         .frame(height: 40)
@@ -39,7 +37,8 @@ struct PomodoroControlsScreenView: View {
             }
             
             Button {
-                
+                sessionManager.pauseSession()
+                selectedTab = .session
             } label: {
                 Image(systemName: "pause.fill")
                     .frame(height: 40)
@@ -58,7 +57,7 @@ struct PomodoroControlsScreenView_Previews: PreviewProvider {
             .makeSessionManager()
         let mainVM = MainViewModel()
         
-        PomodoroControlsScreenView()
+        PomodoroControlsScreenView(selectedTab: .constant(.session))
             .environmentObject(sessionManager)
             .environmentObject(mainVM)
     }

@@ -16,6 +16,7 @@ class PomodoroSessionManager: ObservableObject {
     @Published var progress: Double = 0
     @Published var timer = Timer
                             .publish(every: 1, on: .main, in: .common)
+    @Published var isPaused = false
     
     /// Warning: To use PomodoroSessionManager, you have to call startNewSession() or continueActiveSession() first.
     static let shared = PomodoroSessionManager()
@@ -65,7 +66,11 @@ class PomodoroSessionManager: ObservableObject {
 //        self.session = nil
         context.delete(session)
         try? context.save()
-        print(self.session)
+    }
+    
+    func pauseSession() {
+        timer.connect().cancel()
+        isPaused = true
     }
     
 }
