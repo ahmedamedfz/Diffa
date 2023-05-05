@@ -27,6 +27,7 @@
 		135F2B612A041616006DBC9F /* Date+component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B5F2A041616006DBC9F /* Date+component.swift */; };
 		135F2B672A048C42006DBC9F /* WatchPreviewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B662A048C42006DBC9F /* WatchPreviewFactory.swift */; };
 		135F2B692A048DB8006DBC9F /* PomodoroControlsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B682A048DB8006DBC9F /* PomodoroControlsScreenView.swift */; };
+		135F2B6B2A04BD17006DBC9F /* TimeInterval+secondsToHourMinFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B6A2A04BD17006DBC9F /* TimeInterval+secondsToHourMinFormat.swift */; };
 		137FA0882A029AB500473C6B /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FA0862A029AB500473C6B /* Project+CoreDataProperties.swift */; };
 		137FA0892A029AB500473C6B /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FA0872A029AB500473C6B /* Project+CoreDataClass.swift */; };
 		137FA08B2A029B6A00473C6B /* PomodoroSessionPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FA08A2A029B6A00473C6B /* PomodoroSessionPersistence.swift */; };
@@ -98,6 +99,7 @@
 		135F2B5F2A041616006DBC9F /* Date+component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+component.swift"; sourceTree = "<group>"; };
 		135F2B662A048C42006DBC9F /* WatchPreviewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewFactory.swift; sourceTree = "<group>"; };
 		135F2B682A048DB8006DBC9F /* PomodoroControlsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroControlsScreenView.swift; sourceTree = "<group>"; };
+		135F2B6A2A04BD17006DBC9F /* TimeInterval+secondsToHourMinFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+secondsToHourMinFormat.swift"; sourceTree = "<group>"; };
 		137FA0862A029AB500473C6B /* Project+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		137FA0872A029AB500473C6B /* Project+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataClass.swift"; sourceTree = "<group>"; };
 		137FA08A2A029B6A00473C6B /* PomodoroSessionPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroSessionPersistence.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				135F2B662A048C42006DBC9F /* WatchPreviewFactory.swift */,
+				135F2B6A2A04BD17006DBC9F /* TimeInterval+secondsToHourMinFormat.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -537,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13A3771D2A0363A600624352 /* PomodoroSessionCardView.swift in Sources */,
+				135F2B6B2A04BD17006DBC9F /* TimeInterval+secondsToHourMinFormat.swift in Sources */,
 				135F2B5B2A03F0DF006DBC9F /* PomodoroSessionManager.swift in Sources */,
 				13A377272A03680900624352 /* PomodoroSessionPersistence.swift in Sources */,
 				135F2B532A0376ED006DBC9F /* PomodoroNotStartedView.swift in Sources */,

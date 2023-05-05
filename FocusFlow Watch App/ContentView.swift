@@ -51,8 +51,6 @@ class MainViewModel: ObservableObject {
     
     func goToHomeScreen() {
         appState = .home
-        
-//        print(!onGoingPomodoroSession.isEmpty)
     }
 }
 
