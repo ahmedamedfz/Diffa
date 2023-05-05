@@ -100,20 +100,20 @@ struct FinishedView: View {
                             .frame(maxHeight: 80)
                             
                             
-                            Button(action: {
-                                }, label: {
-                                NavigationLink(destination: EmptyView())
-                                {
-                                    HStack {
-                                        Text("Go to analytics")
-                                        Image(systemName: "chevron.right")
-                                    }
-                                    .foregroundColor(.text.secondary)
-                                    .font(.system(.body, design: .rounded))
-                                }
-                                           
-                            })
-                            .padding()
+//                            Button(action: {
+//                                }, label: {
+//                                NavigationLink(destination: EmptyView())
+//                                {
+//                                    HStack {
+//                                        Text("Go to analytics")
+//                                        Image(systemName: "chevron.right")
+//                                    }
+//                                    .foregroundColor(.text.secondary)
+//                                    .font(.system(.body, design: .rounded))
+//                                }
+//
+//                            })
+//                            .padding()
                         }
                         
                         
@@ -143,7 +143,7 @@ struct FinishedView: View {
                         Button(action:{ },label:{
                             NavigationLink(destination: StretchingScroll(allStretchs: MainStretch.allStretch)) {
                                 Text("Finish")
-                                .foregroundColor(.text.primary)
+                                .foregroundColor(.white)
                                 .font(.system(.title3, design: .rounded))
                                 .frame(width: 323, height: 41)
                                 .background(Color.primaryColor)
@@ -154,6 +154,7 @@ struct FinishedView: View {
                 }
             }
         }
+        
         .onAppear {
                     self.counter += 1
                 }

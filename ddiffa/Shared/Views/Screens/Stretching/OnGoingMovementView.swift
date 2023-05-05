@@ -21,7 +21,7 @@ struct OnGoingMovementView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                VStack (spacing: 50) {
+                VStack (spacing: 30) {
                     ZStack (alignment: .bottom) {
                         //Ganti Animation
                         Rectangle()
@@ -31,16 +31,16 @@ struct OnGoingMovementView: View {
                         HStack {
                             Spacer()
                             Image(systemName: "questionmark.circle")
-                                .foregroundColor(.text.secondary)
+                                .foregroundColor(.white)
                                 .padding()
                                 .padding(.trailing,25)
                         }
                     }
                     VStack (spacing: 0) {
                         Text(currentSubStretch.title)
-                            .font(.system(.title2, design: .rounded))
+                            .font(.system(.title, design: .rounded))
                             .foregroundColor(.text.primary)
-                            .padding(.bottom,-5)
+                            .padding(.bottom,-20)
                         ZStack {
                             onGoingTimer
                                 .navigationDestination(isPresented: $timerFinished) {
@@ -52,11 +52,11 @@ struct OnGoingMovementView: View {
                                 }
                         }
                         .padding()
+                        
                     }
                 }
                 .padding()
             }
-            .preferredColorScheme(.dark)
         }
         .onReceive([isTimerRunning].publisher.first()) { (value) in
             if !value {
@@ -66,3 +66,9 @@ struct OnGoingMovementView: View {
     }
 }
 
+
+struct Previews_OnGoingMovementView_Previews: PreviewProvider {
+    static var previews: some View {
+        OnGoingMovementView(index: 1, mainStretch: MainStretch.backAll.first!)
+    }
+}

@@ -66,7 +66,6 @@ struct OnGoingTimer: View {
                }
            }
         }
-        .preferredColorScheme(.dark)
     }
     func stopTimer() {
             self.time.upstream.connect().cancel()

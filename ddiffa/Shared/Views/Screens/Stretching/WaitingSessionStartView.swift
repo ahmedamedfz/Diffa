@@ -43,26 +43,10 @@ struct WaitingSessionStartView: View {
                     OnGoingMovementView(index: index, mainStretch: mainStretch)
                 }
             
-            // MARK: Start Now
-//            Button(action: {
-//                //isTimerRunning = false
-//                waitingTimer?.stopTimer()
-//            }, label: {
-//                NavigationLink(destination: OnGoingMovementView(index: index, mainStretch: mainStretch))
-//                {
-//                    HStack {
-//                        Text("Start now")
-//                        Image(systemName: "chevron.right")
-//                    }
-//                    .foregroundColor(.text.tertiary)
-//                    .font(.system(.title3, design: .rounded))
-//                }
-//
-//            })
+            Spacer()
             
         }
         .padding()
-        .preferredColorScheme(.dark)
         .onReceive([isTimerRunning].publisher.first()) { (value) in
             if !value {
                 waitingTimer?.stopTimer()

@@ -51,6 +51,6 @@ struct RestBetweenSessionView: View {
                 }
                 .padding()
             }
-        }.preferredColorScheme(.dark)
+        }
     }
 }

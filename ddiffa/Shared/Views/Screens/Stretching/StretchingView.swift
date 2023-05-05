@@ -54,7 +54,6 @@ struct StretchingScroll: View {
             }.padding(.top, 20)
         }
         .navigationBarBackButtonHidden(true)
-        .preferredColorScheme(.dark)
     }
 }
 

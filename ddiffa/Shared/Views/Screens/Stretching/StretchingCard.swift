@@ -31,7 +31,7 @@ struct StretchingCard: View {
                     }
                     .font(.system(.caption2, design: .rounded))
                 }
-                .foregroundColor(.text.primary)
+                .foregroundColor(.white)
                 Spacer()
             }
             .shadow(radius: 2)
@@ -43,9 +43,3 @@ struct StretchingCard: View {
 
     }
 }
-//
-//struct StretchingCard_Previews: PreviewProvider {
-//    static var previews: some View {
-//        StretchingCard(mainStretch: MainStretch.all[0], tappedIndex: 1)
-//    }
-//}

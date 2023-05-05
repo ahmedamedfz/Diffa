@@ -49,7 +49,7 @@ struct RestTimer: View {
                 })
                 {
                     Text("Skip")
-                    .foregroundColor(.text.primary)
+                    .foregroundColor(.white)
                     .font(.system(.body, design: .rounded))
                     .frame(width: 117, height: 38)
                     .background(Color.primaryColor)
