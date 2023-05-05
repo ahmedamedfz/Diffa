@@ -23,7 +23,7 @@ struct ContentView: View {
             } else if mainVM.appState == .stretchingSessionOngoing {
                 Text("TODO: on going stretching view")
             } else {
-                PomodoroNotStartedView()
+                HomeScreenView()
             }
         }
         .onAppear {
@@ -58,6 +58,8 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+            .environmentObject(WatchPreviewFactory().makeSessionManager())
+            .environmentObject(MainViewModel())
             .previewDevice("Apple Watch SE (44mm) (2nd generation)")
     }
 }

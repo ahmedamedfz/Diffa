@@ -28,6 +28,10 @@
 		135F2B672A048C42006DBC9F /* WatchPreviewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B662A048C42006DBC9F /* WatchPreviewFactory.swift */; };
 		135F2B692A048DB8006DBC9F /* PomodoroControlsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B682A048DB8006DBC9F /* PomodoroControlsScreenView.swift */; };
 		135F2B6B2A04BD17006DBC9F /* TimeInterval+secondsToHourMinFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B6A2A04BD17006DBC9F /* TimeInterval+secondsToHourMinFormat.swift */; };
+		135F2B6D2A04EAA8006DBC9F /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B6C2A04EAA8006DBC9F /* HomeScreenView.swift */; };
+		135F2B6F2A04EB69006DBC9F /* StretchingMainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B6E2A04EB69006DBC9F /* StretchingMainScreenView.swift */; };
+		135F2B712A04ED37006DBC9F /* TempStretchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B702A04ED37006DBC9F /* TempStretchModel.swift */; };
+		135F2B732A04EDFE006DBC9F /* WatchStretchingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B722A04EDFE006DBC9F /* WatchStretchingCard.swift */; };
 		137FA0882A029AB500473C6B /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FA0862A029AB500473C6B /* Project+CoreDataProperties.swift */; };
 		137FA0892A029AB500473C6B /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FA0872A029AB500473C6B /* Project+CoreDataClass.swift */; };
 		137FA08B2A029B6A00473C6B /* PomodoroSessionPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FA08A2A029B6A00473C6B /* PomodoroSessionPersistence.swift */; };
@@ -100,6 +104,10 @@
 		135F2B662A048C42006DBC9F /* WatchPreviewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewFactory.swift; sourceTree = "<group>"; };
 		135F2B682A048DB8006DBC9F /* PomodoroControlsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroControlsScreenView.swift; sourceTree = "<group>"; };
 		135F2B6A2A04BD17006DBC9F /* TimeInterval+secondsToHourMinFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+secondsToHourMinFormat.swift"; sourceTree = "<group>"; };
+		135F2B6C2A04EAA8006DBC9F /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		135F2B6E2A04EB69006DBC9F /* StretchingMainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingMainScreenView.swift; sourceTree = "<group>"; };
+		135F2B702A04ED37006DBC9F /* TempStretchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempStretchModel.swift; sourceTree = "<group>"; };
+		135F2B722A04EDFE006DBC9F /* WatchStretchingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchStretchingCard.swift; sourceTree = "<group>"; };
 		137FA0862A029AB500473C6B /* Project+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		137FA0872A029AB500473C6B /* Project+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataClass.swift"; sourceTree = "<group>"; };
 		137FA08A2A029B6A00473C6B /* PomodoroSessionPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroSessionPersistence.swift; sourceTree = "<group>"; };
@@ -172,6 +180,7 @@
 			children = (
 				13A3771C2A0363A600624352 /* PomodoroSessionCardView.swift */,
 				135F2B5D2A040F83006DBC9F /* ProgressBarView.swift */,
+				135F2B722A04EDFE006DBC9F /* WatchStretchingCard.swift */,
 				135F2B542A03A68E006DBC9F /* SessionEmptyView.swift */,
 			);
 			path = Components;
@@ -184,6 +193,8 @@
 				135F2B682A048DB8006DBC9F /* PomodoroControlsScreenView.swift */,
 				135F2B562A03BA91006DBC9F /* PomodoroOnGoingView.swift */,
 				135F2B582A03C52A006DBC9F /* PomodoroScreenView.swift */,
+				135F2B6C2A04EAA8006DBC9F /* HomeScreenView.swift */,
+				135F2B6E2A04EB69006DBC9F /* StretchingMainScreenView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -201,6 +212,7 @@
 			children = (
 				135F2B662A048C42006DBC9F /* WatchPreviewFactory.swift */,
 				135F2B6A2A04BD17006DBC9F /* TimeInterval+secondsToHourMinFormat.swift */,
+				135F2B702A04ED37006DBC9F /* TempStretchModel.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -539,6 +551,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				135F2B6F2A04EB69006DBC9F /* StretchingMainScreenView.swift in Sources */,
 				13A3771D2A0363A600624352 /* PomodoroSessionCardView.swift in Sources */,
 				135F2B6B2A04BD17006DBC9F /* TimeInterval+secondsToHourMinFormat.swift in Sources */,
 				135F2B5B2A03F0DF006DBC9F /* PomodoroSessionManager.swift in Sources */,
@@ -546,6 +559,7 @@
 				135F2B532A0376ED006DBC9F /* PomodoroNotStartedView.swift in Sources */,
 				135F2B692A048DB8006DBC9F /* PomodoroControlsScreenView.swift in Sources */,
 				13A3770E2A0358C400624352 /* ContentView.swift in Sources */,
+				135F2B6D2A04EAA8006DBC9F /* HomeScreenView.swift in Sources */,
 				13A377232A03665000624352 /* Model.xcdatamodeld in Sources */,
 				13A377252A03668000624352 /* Project+CoreDataProperties.swift in Sources */,
 				135F2B672A048C42006DBC9F /* WatchPreviewFactory.swift in Sources */,
@@ -554,7 +568,9 @@
 				13A3770C2A0358C400624352 /* FocusFlowApp.swift in Sources */,
 				135F2B592A03C52A006DBC9F /* PomodoroScreenView.swift in Sources */,
 				135F2B612A041616006DBC9F /* Date+component.swift in Sources */,
+				135F2B712A04ED37006DBC9F /* TempStretchModel.swift in Sources */,
 				13A377262A0366A300624352 /* PersistenceController.swift in Sources */,
+				135F2B732A04EDFE006DBC9F /* WatchStretchingCard.swift in Sources */,
 				135F2B552A03A68E006DBC9F /* SessionEmptyView.swift in Sources */,
 				135F2B5E2A040F83006DBC9F /* ProgressBarView.swift in Sources */,
 				135F2B572A03BA91006DBC9F /* PomodoroOnGoingView.swift in Sources */,
