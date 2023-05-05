@@ -17,8 +17,8 @@ struct PomodoroControlsScreenView: View {
         VStack {
             HStack(spacing: 8) {
                 Button {
-                    sessionManager.discardSession()
-                    mainVM.goToHomeScreen()
+                    sessionManager.isShowingSheet = true
+                    sessionManager.isShowingFinishSheet = false
                 } label: {
                     Image(systemName: "trash")
                         .frame(height: 40)
@@ -27,7 +27,8 @@ struct PomodoroControlsScreenView: View {
                 .buttonStyle(.bordered)
                 
                 Button {
-                    
+                    sessionManager.isShowingSheet = true
+                    sessionManager.isShowingFinishSheet = true
                 } label: {
                     Image(systemName: "stop.fill")
                         .frame(height: 40)

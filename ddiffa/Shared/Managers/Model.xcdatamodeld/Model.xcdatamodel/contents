@@ -4,6 +4,7 @@
         <attribute name="duration" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="finishedTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="isOngoing" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="realizedDuration" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="startTime" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="pomodoroSessions" inverseEntity="Project"/>
     </entity>

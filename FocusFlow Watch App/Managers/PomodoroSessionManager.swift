@@ -19,6 +19,10 @@ class PomodoroSessionManager: ObservableObject {
                             .publish(every: 1, on: .main, in: .common)
     @Published var isPaused = false
     
+    @Published var isShowingFinishSheet = false
+    @Published var isShowingSheet = false
+    @Published var isShowingResultSheet = false
+    
     /// Warning: To use PomodoroSessionManager, you have to call startNewSession() or continueActiveSession() first.
     static let shared = PomodoroSessionManager()
     
@@ -61,6 +65,8 @@ class PomodoroSessionManager: ObservableObject {
     func finishSession() {
         session.isOngoing = false
         timer.connect().cancel()
+        session.realizedDuration = Int64(passedSeconds)
+        try? context.save()
     }
     
     func discardSession() {
