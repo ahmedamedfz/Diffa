@@ -14,7 +14,7 @@ struct StretchingScroll: View {
     
     var body: some View {
         NavigationStack{
-            VStack (spacing: 0) {
+            VStack (spacing: 30) {
                 
                 VStack(spacing:0) {
                     Text("Stretch")
@@ -27,14 +27,15 @@ struct StretchingScroll: View {
                 }
                 
                 VStack(alignment: .leading, spacing: 10) {
-                    List(allStretchs, id: \.self) { allStretch in
+                    ForEach(allStretchs, id: \.self) { allStretch in
                         Text(allStretch.first!.category)
+                            .padding(.top)
                             .font(.system(.title3, design: .rounded))
                             .bold()
                             .foregroundColor(.text.primary)
                             .listRowBackground(Color.clear)
                         ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 10) {
+                            HStack(spacing: 20) {
                                 ForEach(allStretch) { someMainStretch in
                                     NavigationLink {
                                         WaitingSessionStartView(index: 0, mainStretch: someMainStretch)
@@ -44,12 +45,13 @@ struct StretchingScroll: View {
                                 }
                             }
                         }
-                        .listRowSeparator(.hidden)
-                        .listRowBackground(Color.clear)
+                        
                     }
+                    .padding(.leading, 30)
                     
                 }
-            }
+                Spacer()
+            }.padding(.top, 20)
         }
         .navigationBarBackButtonHidden(true)
         .preferredColorScheme(.dark)

@@ -154,7 +154,6 @@ struct FinishedView: View {
                 }
             }
         }
-        .preferredColorScheme(.dark)
         .onAppear {
                     self.counter += 1
                 }
