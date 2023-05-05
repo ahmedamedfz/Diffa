@@ -55,9 +55,17 @@ class PomodoroSessionManager: ObservableObject {
         progress = Double(secondsPassed) / Double(durationTarget)
     }
     
-    func stopSession() {
+    func finishSession() {
         session.isOngoing = false
         timer.connect().cancel()
+    }
+    
+    func discardSession() {
+        timer.connect().cancel()
+//        self.session = nil
+        context.delete(session)
+        try? context.save()
+        print(self.session)
     }
     
 }

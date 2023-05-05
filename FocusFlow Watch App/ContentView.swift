@@ -17,7 +17,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            if  !onGoingPomodoroSession.isEmpty || mainVM.appState == .pomodoroSessionOnGoing {
+            if  !onGoingPomodoroSession.isEmpty {
                 PomodoroOnGoingView()
                     .environmentObject(pomodoroSessionManager)
             } else if mainVM.appState == .stretchingSessionOngoing {
@@ -40,14 +40,19 @@ class MainViewModel: ObservableObject {
     enum AppState {
         case pomodoroSessionOnGoing
         case stretchingSessionOngoing
-        case nothing
+        case home
     }
     
-    @Published var appState: AppState = .nothing
+    @Published private(set) var appState: AppState = .home
     
-    // TODO: handle transition to pomodoro on going
     func goToPomodoroOngoingScreen() {
         appState = .pomodoroSessionOnGoing
+    }
+    
+    func goToHomeScreen() {
+        appState = .home
+        
+//        print(!onGoingPomodoroSession.isEmpty)
     }
 }
 

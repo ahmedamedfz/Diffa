@@ -27,9 +27,13 @@ struct PomodoroScreenView: View {
     @State var duration: Int = 0
 
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
 //            CircularProgressWatchView(progress: sessionManager.progress - 0.04, lineWidth: 16)
 //                .frame(width: 64)
+            
+            Text(sessionManager.session.project?.name ?? "No Project")
+                .font(.system(.title2))
+                .scenePadding()
             
             VStack(alignment: .leading) {
                 Text("Elapsed Time")
@@ -51,7 +55,7 @@ struct PomodoroScreenView: View {
             Spacer()
         }
         .onAppear {
-            self.passedSeconds = Int(Date.now.timeIntervalSince(sessionManager.session.startTime!))
+            self.passedSeconds = Int(Date.now.timeIntervalSince(sessionManager.session.startTime ?? .now))
         }
         .onReceive(sessionManager.timer) { _ in
             passedSeconds += 1
@@ -64,9 +68,7 @@ struct PomodoroScreenView: View {
 
 struct SessionScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        let project = PersistenceController.projectsPreview.first!
-        let sessionManager = PomodoroSessionManager.preview
-        sessionManager.startNewSession(for: project, withDurationTarget: 1 * 60)
+        let sessionManager = WatchPreviewFactory().makeSessionManager(withDurationTarget: 1 * 60)
         
         return PomodoroScreenView()
             .environmentObject(sessionManager)

@@ -21,7 +21,7 @@ struct PomodoroOnGoingView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            Text("TODO: Controls Screen").tag(Tab.controls)
+            PomodoroControlsScreenView().tag(Tab.controls)
             
             PomodoroScreenView()
             .tag(Tab.session)
@@ -33,11 +33,10 @@ struct PomodoroOnGoingView: View {
 
 struct PomodoroOnGoingView_Previews: PreviewProvider {
     static var previews: some View {
-        let context = PersistenceController.preview.container.viewContext
-        let sessionManager = PomodoroSessionManager.shared
+        let sessionManager = WatchPreviewFactory()
+                                .makeSessionManager(withDurationTarget: 5 * 60)
         
         return PomodoroOnGoingView()
-            .environment(\.managedObjectContext, context)
             .environmentObject(sessionManager)
     }
 }
