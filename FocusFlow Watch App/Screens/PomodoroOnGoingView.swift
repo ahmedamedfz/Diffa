@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import WatchKit
 
 struct PomodoroOnGoingView: View {
     
@@ -30,7 +31,9 @@ struct PomodoroOnGoingView: View {
             PomodoroScreenView()
             .tag(Tab.session)
             
-            Text("TODO: Now Playing Screen").tag(Tab.nowPlaying)
+            NowPlayingView()
+                .edgesIgnoringSafeArea(.all)
+                .tag(Tab.nowPlaying)
         }
         .sheet(isPresented: $sessionManager.isShowingSheet) {
             if sessionManager.isShowingFinishSheet {
