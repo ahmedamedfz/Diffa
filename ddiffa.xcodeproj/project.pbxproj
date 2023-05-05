@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0665BDF12A04EB4000318C98 /* StretchInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665BDF02A04EB4000318C98 /* StretchInfoView.swift */; };
+		0665BDF32A04EB6700318C98 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665BDF22A04EB6700318C98 /* ProjectCardView.swift */; };
 		133AED9429F814E00092FC46 /* TabbedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9329F814E00092FC46 /* TabbedScreenView.swift */; };
 		133AED9629F8157E0092FC46 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9529F8157E0092FC46 /* SettingsManager.swift */; };
 		133AED9829F815F30092FC46 /* UserDefaults+customKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9729F815F30092FC46 /* UserDefaults+customKeys.swift */; };
@@ -90,6 +92,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0665BDF02A04EB4000318C98 /* StretchInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchInfoView.swift; sourceTree = "<group>"; };
+		0665BDF22A04EB6700318C98 /* ProjectCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCardView.swift; path = ddiffa/Shared/Views/ProjectCardView.swift; sourceTree = SOURCE_ROOT; };
 		133AED9329F814E00092FC46 /* TabbedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedScreenView.swift; sourceTree = "<group>"; };
 		133AED9529F8157E0092FC46 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsManager.swift; path = ddiffa/Shared/Views/Screens/TabbedScreenView/SettingsManager.swift; sourceTree = SOURCE_ROOT; };
 		133AED9729F815F30092FC46 /* UserDefaults+customKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserDefaults+customKeys.swift"; path = "ddiffa/Shared/Views/Screens/TabbedScreenView/UserDefaults+customKeys.swift"; sourceTree = SOURCE_ROOT; };
@@ -447,6 +451,8 @@
 			children = (
 				49341D7D2A04F184004EA509 /* Stretching */,
 				49E4B9FE29F7ACBB00830C61 /* ContentView.swift */,
+				0665BDF22A04EB6700318C98 /* ProjectCardView.swift */,
+				0665BDF02A04EB4000318C98 /* StretchInfoView.swift */,
 				13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */,
 				13474D2729F7E3F50034F2C0 /* Onboarding */,
 				133AED9229F814950092FC46 /* TabbedScreenView */,
@@ -628,11 +634,13 @@
 				49341D972A04F6E6004EA509 /* FinishedView.swift in Sources */,
 				135D90AA2A020E4100CB8DB1 /* SessionInformationViewModel.swift in Sources */,
 				135460F129F7C85F00413F74 /* Color+CustomColors.swift in Sources */,
+				0665BDF12A04EB4000318C98 /* StretchInfoView.swift in Sources */,
 				13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */,
 				49341D852A04F257004EA509 /* StretchingView.swift in Sources */,
 				49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */,
 				49341D902A04F438004EA509 /* RestTimer.swift in Sources */,
 				13EBBC1929FFE9C000141F3B /* TagView.swift in Sources */,
+				0665BDF32A04EB6700318C98 /* ProjectCardView.swift in Sources */,
 				13474D2929F7E4120034F2C0 /* OnboardingScreenViewModel.swift in Sources */,
 				49341D872A04F26D004EA509 /* WaitingSessionStartView.swift in Sources */,
 				133AED9629F8157E0092FC46 /* SettingsManager.swift in Sources */,
