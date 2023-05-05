@@ -28,9 +28,9 @@ extension MainStretch{
     static let neckAll = [
         MainStretch(id: UUID(), title: "Healthy Neck", category: "Neck Stretch", thumbnail: "contoh-neck-1", duration: 2,
                                          substretch: [
-                                            SubStretch(id: UUID(), title: "Jumping Neck 1", duration: 20, animation: "", description: ""),
-                                            SubStretch(id: UUID(), title: "Ankle Neck 1", duration: 30, animation: "", description: ""),
-                                            SubStretch(id: UUID(), title: "Plank Neck 1", duration: 40, animation: "", description: "")
+                                            SubStretch(id: UUID(), title: "Jumping Neck 1", duration: 3, animation: "", description: ""),
+                                            SubStretch(id: UUID(), title: "Ankle Neck 1", duration: 2, animation: "", description: ""),
+                                            SubStretch(id: UUID(), title: "Plank Neck 1", duration: 3, animation: "", description: "")
                                          ]),
         MainStretch(id: UUID(), title: "Legging", category: "Neck Stretch", thumbnail: "contoh-neck-2", duration: 4,
                                          substretch: [

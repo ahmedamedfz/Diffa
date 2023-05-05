@@ -26,12 +26,12 @@ struct OnGoingTimer: View {
                 Circle()
                     .trim(from: 0, to: 1)
                     .stroke(Color.gray.opacity(0.1), style: StrokeStyle(lineWidth: 32, lineCap: .round))
-                    .frame(width: 157, height: 157)
+                    .frame(width: 140, height: 140)
                 
                 Circle()
                     .trim(from: 0, to: to ?? 0)
                     .stroke(AngularGradient(gradient: Gradient(colors: [.primaryColor,.secondaryColor, .primaryColor]),center: .center), style: StrokeStyle(lineWidth: 32, lineCap: .round))
-                    .frame(width: 157, height: 157)
+                    .frame(width: 140, height: 140)
                     .rotationEffect(.init(degrees: -90))
                 
                 VStack {

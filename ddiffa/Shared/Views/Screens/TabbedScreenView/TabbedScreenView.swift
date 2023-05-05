@@ -36,7 +36,7 @@ struct TabbedScreenView: View {
                 }
                 .tag(AppTab.pomodoro)
             
-            Text("TODO: stretching")
+            StretchingScroll()
                 .tabItem {
                     Image(systemName: activeTab == .stretching ? "dumbbell.fill" : "dumbbell")
                         .environment(\.symbolVariants, .none)

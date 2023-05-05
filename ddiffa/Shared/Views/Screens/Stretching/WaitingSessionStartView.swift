@@ -44,21 +44,21 @@ struct WaitingSessionStartView: View {
                 }
             
             // MARK: Start Now
-            Button(action: {
-                //isTimerRunning = false
-                waitingTimer?.stopTimer()
-            }, label: {
-                NavigationLink(destination: OnGoingMovementView(index: index, mainStretch: mainStretch))
-                {
-                    HStack {
-                        Text("Start now")
-                        Image(systemName: "chevron.right")
-                    }
-                    .foregroundColor(.text.tertiary)
-                    .font(.system(.title3, design: .rounded))
-                }
-
-            })
+//            Button(action: {
+//                //isTimerRunning = false
+//                waitingTimer?.stopTimer()
+//            }, label: {
+//                NavigationLink(destination: OnGoingMovementView(index: index, mainStretch: mainStretch))
+//                {
+//                    HStack {
+//                        Text("Start now")
+//                        Image(systemName: "chevron.right")
+//                    }
+//                    .foregroundColor(.text.tertiary)
+//                    .font(.system(.title3, design: .rounded))
+//                }
+//
+//            })
             
         }
         .padding()

@@ -14,7 +14,7 @@ struct StretchingScroll: View {
     
     var body: some View {
         NavigationStack{
-            VStack (spacing: 25) {
+            VStack (spacing: 0) {
                 
                 VStack(spacing:0) {
                     Text("Stretch")
@@ -46,9 +46,9 @@ struct StretchingScroll: View {
                         .listRowSeparator(.hidden)
                     }
                 }
-                .padding(.leading)
             }
         }
+        .navigationBarBackButtonHidden(true)
         .preferredColorScheme(.dark)
     }
 }

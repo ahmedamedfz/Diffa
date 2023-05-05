@@ -40,6 +40,7 @@ struct OnGoingMovementView: View {
                         Text(currentSubStretch.title)
                             .font(.system(.title2, design: .rounded))
                             .foregroundColor(.text.primary)
+                            .padding(.bottom,-5)
                         ZStack {
                             onGoingTimer
                                 .navigationDestination(isPresented: $timerFinished) {
@@ -53,6 +54,7 @@ struct OnGoingMovementView: View {
                         .padding()
                     }
                 }
+                .padding()
             }
             .preferredColorScheme(.dark)
         }
