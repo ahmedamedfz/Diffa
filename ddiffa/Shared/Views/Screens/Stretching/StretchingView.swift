@@ -32,6 +32,7 @@ struct StretchingScroll: View {
                             .font(.system(.title3, design: .rounded))
                             .bold()
                             .foregroundColor(.text.primary)
+                            .listRowBackground(Color.clear)
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 10) {
                                 ForEach(allStretch) { someMainStretch in
@@ -44,7 +45,9 @@ struct StretchingScroll: View {
                             }
                         }
                         .listRowSeparator(.hidden)
+                        .listRowBackground(Color.clear)
                     }
+                    
                 }
             }
         }
