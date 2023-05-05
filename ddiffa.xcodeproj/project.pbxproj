@@ -54,6 +54,13 @@
 		49E4BA0529F7ACBB00830C61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E4BA0429F7ACBB00830C61 /* Preview Assets.xcassets */; };
 		49F6CC0829FFF09700ABC9C9 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CC0729FFF09700ABC9C9 /* PersistenceController.swift */; };
 		49F6CC0B29FFF20D00ABC9C9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CC0929FFF20D00ABC9C9 /* Model.xcdatamodeld */; };
+		D63ACFBA2A05165B00AA901A /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFB92A05165B00AA901A /* AnalyticsView.swift */; };
+		D63ACFBC2A05169500AA901A /* AnalyticsViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFBB2A05169500AA901A /* AnalyticsViewDetail.swift */; };
+		D63ACFBF2A0516B500AA901A /* FrequencyChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFBE2A0516B500AA901A /* FrequencyChart.swift */; };
+		D63ACFC12A0516C200AA901A /* CalorieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFC02A0516C200AA901A /* CalorieChart.swift */; };
+		D63ACFC32A0516DC00AA901A /* HeartRateChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFC22A0516DC00AA901A /* HeartRateChart.swift */; };
+		D63ACFC52A0516EB00AA901A /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFC42A0516EB00AA901A /* SignInWithApple.swift */; };
+		D63ACFC82A05171400AA901A /* ExerciseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFC72A05171400AA901A /* ExerciseDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +130,13 @@
 		49E4BA0429F7ACBB00830C61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		49F6CC0729FFF09700ABC9C9 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		49F6CC0A29FFF20D00ABC9C9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D63ACFB92A05165B00AA901A /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
+		D63ACFBB2A05169500AA901A /* AnalyticsViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewDetail.swift; sourceTree = "<group>"; };
+		D63ACFBE2A0516B500AA901A /* FrequencyChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequencyChart.swift; sourceTree = "<group>"; };
+		D63ACFC02A0516C200AA901A /* CalorieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieChart.swift; sourceTree = "<group>"; };
+		D63ACFC22A0516DC00AA901A /* HeartRateChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateChart.swift; sourceTree = "<group>"; };
+		D63ACFC42A0516EB00AA901A /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithApple.swift; sourceTree = "<group>"; };
+		D63ACFC72A05171400AA901A /* ExerciseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,6 +424,7 @@
 		49E4BA1929F7B5B400830C61 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D63ACFC62A0516F000AA901A /* Analytics */,
 				49E4B9FE29F7ACBB00830C61 /* ContentView.swift */,
 				0665BDF22A04EB6700318C98 /* ProjectCardView.swift */,
 				0665BDF02A04EB4000318C98 /* StretchInfoView.swift */,
@@ -417,6 +432,7 @@
 				13474D2729F7E3F50034F2C0 /* Onboarding */,
 				133AED9229F814950092FC46 /* TabbedScreenView */,
 				13EBBBF429F8B00400141F3B /* Pomodoro */,
+				D63ACFC42A0516EB00AA901A /* SignInWithApple.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -438,6 +454,27 @@
 				13A1E4B229F8272900BEB26A /* SpringToTop.swift */,
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		D63ACFBD2A0516A300AA901A /* AnalyticsChart */ = {
+			isa = PBXGroup;
+			children = (
+				D63ACFBE2A0516B500AA901A /* FrequencyChart.swift */,
+				D63ACFC02A0516C200AA901A /* CalorieChart.swift */,
+				D63ACFC22A0516DC00AA901A /* HeartRateChart.swift */,
+			);
+			path = AnalyticsChart;
+			sourceTree = "<group>";
+		};
+		D63ACFC62A0516F000AA901A /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				D63ACFBD2A0516A300AA901A /* AnalyticsChart */,
+				D63ACFB92A05165B00AA901A /* AnalyticsView.swift */,
+				D63ACFBB2A05169500AA901A /* AnalyticsViewDetail.swift */,
+				D63ACFC72A05171400AA901A /* ExerciseDataModel.swift */,
+			);
+			path = Analytics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -577,17 +614,24 @@
 				49F6CC0B29FFF20D00ABC9C9 /* Model.xcdatamodeld in Sources */,
 				135EF6A229F7C40A00C8D41D /* OnboardingScreenView.swift in Sources */,
 				133AED9429F814E00092FC46 /* TabbedScreenView.swift in Sources */,
+				D63ACFC52A0516EB00AA901A /* SignInWithApple.swift in Sources */,
 				137FA0892A029AB500473C6B /* Project+CoreDataClass.swift in Sources */,
 				49F6CC0829FFF09700ABC9C9 /* PersistenceController.swift in Sources */,
+				D63ACFBC2A05169500AA901A /* AnalyticsViewDetail.swift in Sources */,
+				D63ACFBF2A0516B500AA901A /* FrequencyChart.swift in Sources */,
 				13474D2529F7E1380034F2C0 /* OnboardingModel.swift in Sources */,
+				D63ACFBA2A05165B00AA901A /* AnalyticsView.swift in Sources */,
 				135460F329F7C96C00413F74 /* ProgressDotIndicator.swift in Sources */,
 				135D90AA2A020E4100CB8DB1 /* SessionInformationViewModel.swift in Sources */,
 				135460F129F7C85F00413F74 /* Color+CustomColors.swift in Sources */,
 				0665BDF12A04EB4000318C98 /* StretchInfoView.swift in Sources */,
 				13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */,
 				49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */,
+				D63ACFC12A0516C200AA901A /* CalorieChart.swift in Sources */,
 				13EBBC1929FFE9C000141F3B /* TagView.swift in Sources */,
 				0665BDF32A04EB6700318C98 /* ProjectCardView.swift in Sources */,
+				D63ACFC82A05171400AA901A /* ExerciseDataModel.swift in Sources */,
+				D63ACFC32A0516DC00AA901A /* HeartRateChart.swift in Sources */,
 				13474D2929F7E4120034F2C0 /* OnboardingScreenViewModel.swift in Sources */,
 				133AED9629F8157E0092FC46 /* SettingsManager.swift in Sources */,
 				135F2B602A041616006DBC9F /* Date+component.swift in Sources */,
