@@ -17,83 +17,96 @@ struct TimePickerView: View {
     ])
     
     var body: some View {
-        
-        ZStack {
-            Color(red: 3/255, green: 7/255, blue: 18/255).ignoresSafeArea()
+        VStack {
+            Text("How long you want\n  your session last?")
+                .font(.title3)
+                .padding()
+                .foregroundColor(.white)
+                .frame(height: 90)
+                .padding(.vertical, 16)
             
-            VStack {
-                if timerManager.timerMode == .initial {
-                    Text("How long you want\n  your session last?")
-                        .font(.title3)
-                        .padding()
-                        .foregroundColor(.white)
-                        .frame(height: 90)
-                    timerSlider()
-                } else {
-                    timerSlider()
-                    
-                    HStack(spacing: 22) {
-                        Circle()
-                            .fill(Color(red: 241/255, green: 245/255, blue: 249/255, opacity: 0.65))
-                            .frame(width: 74, height: 74)
-                            .overlay(
-                                Image(systemName: "stop.fill")
-                                    .resizable()
-                                    .frame(width: 34, height: 34)
-                                    .foregroundColor(Color(red: 68/255, green: 60/255, blue: 255/255))
-                                    
-                            )
-                            .onTapGesture(perform: {
-                                timerManager.reset()
-                            })
-                        
-                        Image(systemName: timerManager.timerMode == .pause ? "play.fill" : "pause.fill")
-                            .resizable()
-                            .frame(width: 55, height: 55)
-                            .foregroundColor(Color(red: 68/255, green: 60/255, blue: 255/255))
-                            .onTapGesture(perform: {
-                                timerManager.timerMode == .running ? timerManager.pause() : timerManager.start()
-                                
-                                
-                            })
-                    }
-                }
-                
-                if timerManager.timerMode == .initial {
-                    
-                    HStack {
-                        
-                        Spacer()
-                        Circle()
-                            .fill(Color(red: 68/255, green: 60/255, blue: 255/255))
-                            .frame(width: 74, height: 74)
-                            .overlay(
-                                Image(systemName: timerManager.timerMode == .running ? "pause.fill" : "play.fill")
-                                    .resizable()
-                                    .frame(width: 24, height: 24)
-                                .foregroundColor(Color(red: 241/255, green: 245/255, blue: 249/255))
-                            )
-                            .onTapGesture {
-
-                                
-                                if timerManager.timerMode == .initial {
-                                    timerManager.setTimerLength(minutes: timerManager.getTimeDifference() * 60)
-                                    
-                                }
-
-                                timerManager.timerMode == .running ?  timerManager.pause() : timerManager.start()
-                                
-//                                timerManager.requestAuth()
-//
-//                                timerManager.scheduledNotification()
-                            }
-                            .padding()
-                    }
-                }
-            }
+            timerSlider()
         }
-
     }
+    
+//    var body: some View {
+//
+//        ZStack {
+//            Color(red: 3/255, green: 7/255, blue: 18/255).ignoresSafeArea()
+//
+//            VStack {
+//                if timerManager.timerMode == .initial {
+//                    Text("How long you want\n  your session last?")
+//                        .font(.title3)
+//                        .padding()
+//                        .foregroundColor(.white)
+//                        .frame(height: 90)
+//                    timerSlider()
+//                } else {
+//                    timerSlider()
+//
+//                    HStack(spacing: 22) {
+//                        Circle()
+//                            .fill(Color(red: 241/255, green: 245/255, blue: 249/255, opacity: 0.65))
+//                            .frame(width: 74, height: 74)
+//                            .overlay(
+//                                Image(systemName: "stop.fill")
+//                                    .resizable()
+//                                    .frame(width: 34, height: 34)
+//                                    .foregroundColor(Color(red: 68/255, green: 60/255, blue: 255/255))
+//
+//                            )
+//                            .onTapGesture(perform: {
+//                                timerManager.reset()
+//                            })
+//
+//                        Image(systemName: timerManager.timerMode == .pause ? "play.fill" : "pause.fill")
+//                            .resizable()
+//                            .frame(width: 55, height: 55)
+//                            .foregroundColor(Color(red: 68/255, green: 60/255, blue: 255/255))
+//                            .onTapGesture(perform: {
+//                                timerManager.timerMode == .running ? timerManager.pause() : timerManager.start()
+//
+//
+//                            })
+//                    }
+//                }
+//
+//                if timerManager.timerMode == .initial {
+//
+//                    HStack {
+//
+//                        Spacer()
+//                        Circle()
+//                            .fill(Color(red: 68/255, green: 60/255, blue: 255/255))
+//                            .frame(width: 74, height: 74)
+//                            .overlay(
+//                                Image(systemName: timerManager.timerMode == .running ? "pause.fill" : "play.fill")
+//                                    .resizable()
+//                                    .frame(width: 24, height: 24)
+//                                .foregroundColor(Color(red: 241/255, green: 245/255, blue: 249/255))
+//                            )
+//                            .onTapGesture {
+//
+//
+//                                if timerManager.timerMode == .initial {
+//                                    timerManager.setTimerLength(minutes: timerManager.getTimeDifference() * 60)
+//
+//                                }
+//
+//                                timerManager.timerMode == .running ?  timerManager.pause() : timerManager.start()
+//
+////                                timerManager.requestAuth()
+////
+////                                timerManager.scheduledNotification()
+//                            }
+//                            .padding()
+//                    }
+//                }
+//            }
+//        }
+//
+//    }
     
     // MARK: Timer Slider
     @ViewBuilder

@@ -9,6 +9,10 @@ import SwiftUI
 
 struct ProjectCardView: View {
     
+    let projectName: String
+    //    let tag1: String
+    let tags: [String]
+    
     
     var body: some View {
         ZStack {
@@ -29,25 +33,22 @@ struct ProjectCardView: View {
                     }
                     
                     
-                    HStack {
-                        Text ("Work")
-                            .font(.system(.footnote, design: .rounded))
-                            .foregroundColor(Color(red: 249/255, green: 115/255, blue: 22/255))
-                            .frame(width: 53, height: 22, alignment: .center)
-                            .background(Color(red: 249/255, green: 115/255, blue: 2/255, opacity: 0.16))
-                            .cornerRadius(100)
-                        
-                        
-                        
-                        Text ("Programming")
-                            .font(.system(.footnote, design: .rounded))
-                            .foregroundColor(Color(red: 244/255, green: 63/255, blue: 94/255))
-                            .frame(width: 98, height: 22, alignment: .center)
-                            .background(Color(red: 244/255, green: 63/255, blue: 94/255, opacity: 0.16 ))
-                            .cornerRadius(100)
-                        
+                    ScrollView(.horizontal) {
+                        HStack {
+                            ForEach(tags, id: \.self) { tag in
+                                Text (tag)
+                                    .font(.system(.footnote, design: .rounded))
+                                    .foregroundColor(Color(red: 249/255, green: 115/255, blue: 22/255))
+                                    .padding(.horizontal, 8)
+                                    .padding(.vertical, 2)
+//                                    .frame(width: 60, height: 22, alignment: .center)
+                                    .background(Color(red: 249/255, green: 115/255, blue: 2/255, opacity: 0.16))
+                                    .cornerRadius(100)
+                                
+                            }
+                        }
                     }
-                    .frame(width: 168, height: 25, alignment: .leading)
+                    //                    .frame(width: 168, height: 25, alignment: .leading)
                     
                     
                 }
@@ -63,22 +64,22 @@ struct ProjectCardView: View {
             .frame(width: 220, height: 67, alignment: .leading)
             .background {Color(red:14/255 , green: 20/255, blue: 32/255)}
             .cornerRadius(8)
-        
-        
-        
-                        
-                        
-                        
-                    }
-                }
-                
-                
-                
-                struct ProjectCardView_Privews: PreviewProvider {
-                    static var previews: some View {
-                        ProjectCardView()
-                    }
-                }
-            }
-        
+            
+            
+            
+            
+            
+            
+        }
+    }
     
+    
+    
+    struct ProjectCardView_Privews: PreviewProvider {
+        static var previews: some View {
+            ProjectCardView(projectName: "Pre-thesis", tags: ["College", "Programming"])
+        }
+    }
+}
+
+

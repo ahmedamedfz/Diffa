@@ -28,11 +28,37 @@ struct PomodoroNotStartedScreenView: View {
     
     @FocusState var focusedField: FocusedField?
     
+    let projectsNameMock = ["Mini Challenge 1", "Calculus Assignment"]
+    let tagsMock = [["Work", "Programming"], ["College"]]
+    
+    
     var body: some View {
-       TimePickerView()
         ZStack {
             Color.background.base
                 .ignoresSafeArea()
+            
+            ScrollView {
+                ZStack {
+                    TimePickerView()
+                        .frame(maxWidth: .infinity)
+    //                    .background {Color.red}
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            ForEach(0..<2) { index in
+                                ProjectCardView(projectName: projectsNameMock[index], tags: tagsMock[index])
+                            }
+                        }
+                        .frame(height: 67)
+                        .padding(.leading, 16)
+                    }
+                    .offset(y: 140)
+                    
+                    
+//                    Text("dimas")
+                }
+            }
+            .frame(maxWidth: .infinity)
         }
         .onTapGesture {
             focusedField = nil
@@ -60,5 +86,6 @@ struct PomodoroNotStartedScreenView: View {
 struct PomodoroNotStartedScreenView_Previews: PreviewProvider {
     static var previews: some View {
         PomodoroNotStartedScreenView()
+            .preferredColorScheme(.dark)
     }
 }
