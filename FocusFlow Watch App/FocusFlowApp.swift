@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import HealthKit
 
 @main
 struct FocusFlow_Watch_AppApp: App {
+    @StateObject var stretchingManager = StretchSessionManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -16,7 +19,11 @@ struct FocusFlow_Watch_AppApp: App {
                     \.managedObjectContext,
                      PersistenceController.shared.container.viewContext
                 )
+                .onAppear {
+                    stretchingManager.requestAuthorization()
+                }
                 .environmentObject(MainViewModel())
+                .environmentObject(stretchingManager)
 //                .onTapGesture {
 //                    withAnimation {
 //                        createMock()

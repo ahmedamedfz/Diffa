@@ -43,6 +43,7 @@ class PomodoroSessionManager: ObservableObject {
         newSession.duration = Int64(durationTarget)
         self.durationTarget = durationTarget
         self.session = newSession
+        self.passedSeconds = 0
         
         try? context.save()
         
