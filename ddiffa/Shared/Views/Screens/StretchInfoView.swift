@@ -31,7 +31,7 @@ struct StretchInfoView: View {
                                     .foregroundColor(.text.primary)
                                     .bold()
                                 
-                                Text ("Upper Body | **30 secs**")
+                                Text ("Upper Body | ** 20 secs**")
                                     .font(.system(.title2, design: .rounded))
                                     .foregroundColor(.text.secondary)
                                     .padding(.bottom,10)
