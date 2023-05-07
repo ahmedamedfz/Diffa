@@ -20,7 +20,7 @@ struct StretchingMainScreenView: View {
                     HStack(spacing: 12) {
                         ForEach(MainStretch.allStretch[0]) { stretch in
                             NavigationLink {
-                                Text(stretch.title)
+                                StretchingOnGoingScreenView(chosenStretch: stretch)
                             } label: {
                                 WatchStretchingCard(mainStretch: stretch)
                             }
@@ -41,7 +41,7 @@ struct StretchingMainScreenView: View {
                     HStack(spacing: 12) {
                         ForEach(MainStretch.allStretch[1]) { stretch in
                             NavigationLink {
-                                Text(stretch.title)
+                                StretchingOnGoingScreenView(chosenStretch: stretch)
                             } label: {
                                 WatchStretchingCard(mainStretch: stretch)
                             }
@@ -62,7 +62,7 @@ struct StretchingMainScreenView: View {
                     HStack(spacing: 12) {
                         ForEach(MainStretch.allStretch[2]) { stretch in
                             NavigationLink {
-                                Text(stretch.title)
+                                StretchingOnGoingScreenView(chosenStretch: stretch)
                             } label: {
                                 WatchStretchingCard(mainStretch: stretch)
                             }
