@@ -151,10 +151,10 @@ struct OnboardingScreenView_Previews: PreviewProvider {
         Group {
             OnboardingScreenView(finishedOnboardingHandler: {})
                 .previewDisplayName("iPhone 14")
-            
-            OnboardingScreenView(finishedOnboardingHandler: {})
-                .previewDevice("iPhone SE (3rd generation)")
-                .previewDisplayName("iPhone SE (3rd generation)")
+//
+//            OnboardingScreenView(finishedOnboardingHandler: {})
+//                .previewDevice("iPhone SE (3rd generation)")
+//                .previewDisplayName("iPhone SE (3rd generation)")
         }
     }
 }

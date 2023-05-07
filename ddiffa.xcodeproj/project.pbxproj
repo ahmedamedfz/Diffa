@@ -7,11 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131362522A050917002F8AE4 /* StretchingOnGoingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131362512A050917002F8AE4 /* StretchingOnGoingScreenView.swift */; };
+		131362552A050DF9002F8AE4 /* WaitingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131362542A050DF9002F8AE4 /* WaitingScreenView.swift */; };
+		131362572A050F50002F8AE4 /* WatchCircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131362562A050F50002F8AE4 /* WatchCircularProgressView.swift */; };
+		1331E3F22A07885A005981B3 /* StretchingSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1331E3F12A07885A005981B3 /* StretchingSessionManager.swift */; };
+		1331E3F42A07908F005981B3 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1331E3F32A07908F005981B3 /* SummaryView.swift */; };
+		1331E3F62A0791C1005981B3 /* ActivityStretchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1331E3F52A0791C1005981B3 /* ActivityStretchingView.swift */; };
+
 		0665BDF12A04EB4000318C98 /* StretchInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665BDF02A04EB4000318C98 /* StretchInfoView.swift */; };
 		0665BDF32A04EB6700318C98 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665BDF22A04EB6700318C98 /* ProjectCardView.swift */; };
+
 		133AED9429F814E00092FC46 /* TabbedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9329F814E00092FC46 /* TabbedScreenView.swift */; };
 		133AED9629F8157E0092FC46 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9529F8157E0092FC46 /* SettingsManager.swift */; };
 		133AED9829F815F30092FC46 /* UserDefaults+customKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9729F815F30092FC46 /* UserDefaults+customKeys.swift */; };
+		134169002A06991600245E06 /* StretchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134168FF2A06991600245E06 /* StretchingView.swift */; };
+		134169022A0747DC00245E06 /* RestScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134169012A0747DC00245E06 /* RestScreenView.swift */; };
 		13474D2529F7E1380034F2C0 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13474D2429F7E1380034F2C0 /* OnboardingModel.swift */; };
 		13474D2929F7E4120034F2C0 /* OnboardingScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13474D2829F7E4120034F2C0 /* OnboardingScreenViewModel.swift */; };
 		135460F129F7C85F00413F74 /* Color+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135460F029F7C85F00413F74 /* Color+CustomColors.swift */; };
@@ -29,6 +39,11 @@
 		135F2B612A041616006DBC9F /* Date+component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B5F2A041616006DBC9F /* Date+component.swift */; };
 		135F2B672A048C42006DBC9F /* WatchPreviewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B662A048C42006DBC9F /* WatchPreviewFactory.swift */; };
 		135F2B692A048DB8006DBC9F /* PomodoroControlsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B682A048DB8006DBC9F /* PomodoroControlsScreenView.swift */; };
+		135F2B6B2A04BD17006DBC9F /* TimeInterval+secondsToHourMinFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B6A2A04BD17006DBC9F /* TimeInterval+secondsToHourMinFormat.swift */; };
+		135F2B6D2A04EAA8006DBC9F /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B6C2A04EAA8006DBC9F /* HomeScreenView.swift */; };
+		135F2B6F2A04EB69006DBC9F /* StretchingMainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B6E2A04EB69006DBC9F /* StretchingMainScreenView.swift */; };
+		135F2B712A04ED37006DBC9F /* TempStretchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B702A04ED37006DBC9F /* TempStretchModel.swift */; };
+		135F2B732A04EDFE006DBC9F /* WatchStretchingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135F2B722A04EDFE006DBC9F /* WatchStretchingCard.swift */; };
 		137FA0882A029AB500473C6B /* Project+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FA0862A029AB500473C6B /* Project+CoreDataProperties.swift */; };
 		137FA0892A029AB500473C6B /* Project+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FA0872A029AB500473C6B /* Project+CoreDataClass.swift */; };
 		137FA08B2A029B6A00473C6B /* PomodoroSessionPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FA08A2A029B6A00473C6B /* PomodoroSessionPersistence.swift */; };
@@ -81,11 +96,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+
+		131362512A050917002F8AE4 /* StretchingOnGoingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingOnGoingScreenView.swift; sourceTree = "<group>"; };
+		131362542A050DF9002F8AE4 /* WaitingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingScreenView.swift; sourceTree = "<group>"; };
+		131362562A050F50002F8AE4 /* WatchCircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCircularProgressView.swift; sourceTree = "<group>"; };
+		1331E3F12A07885A005981B3 /* StretchingSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingSessionManager.swift; sourceTree = "<group>"; };
+		1331E3F32A07908F005981B3 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		1331E3F52A0791C1005981B3 /* ActivityStretchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStretchingView.swift; sourceTree = "<group>"; };
+
 		0665BDF02A04EB4000318C98 /* StretchInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchInfoView.swift; sourceTree = "<group>"; };
 		0665BDF22A04EB6700318C98 /* ProjectCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCardView.swift; path = ddiffa/Shared/Views/ProjectCardView.swift; sourceTree = SOURCE_ROOT; };
+
 		133AED9329F814E00092FC46 /* TabbedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedScreenView.swift; sourceTree = "<group>"; };
 		133AED9529F8157E0092FC46 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsManager.swift; path = ddiffa/Shared/Views/Screens/TabbedScreenView/SettingsManager.swift; sourceTree = SOURCE_ROOT; };
 		133AED9729F815F30092FC46 /* UserDefaults+customKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserDefaults+customKeys.swift"; path = "ddiffa/Shared/Views/Screens/TabbedScreenView/UserDefaults+customKeys.swift"; sourceTree = SOURCE_ROOT; };
+		134168FF2A06991600245E06 /* StretchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingView.swift; sourceTree = "<group>"; };
+		134169012A0747DC00245E06 /* RestScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestScreenView.swift; sourceTree = "<group>"; };
+		134169032A074D0900245E06 /* FocusFlow-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "FocusFlow-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		134169042A074F2700245E06 /* FocusFlow Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FocusFlow Watch App.entitlements"; sourceTree = "<group>"; };
 		13474D2429F7E1380034F2C0 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		13474D2829F7E4120034F2C0 /* OnboardingScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreenViewModel.swift; sourceTree = "<group>"; };
 		135460F029F7C85F00413F74 /* Color+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Color+CustomColors.swift"; path = "ddiffa/Shared/Views/Screens/Color+CustomColors.swift"; sourceTree = SOURCE_ROOT; };
@@ -102,6 +130,11 @@
 		135F2B5F2A041616006DBC9F /* Date+component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+component.swift"; sourceTree = "<group>"; };
 		135F2B662A048C42006DBC9F /* WatchPreviewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchPreviewFactory.swift; sourceTree = "<group>"; };
 		135F2B682A048DB8006DBC9F /* PomodoroControlsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroControlsScreenView.swift; sourceTree = "<group>"; };
+		135F2B6A2A04BD17006DBC9F /* TimeInterval+secondsToHourMinFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+secondsToHourMinFormat.swift"; sourceTree = "<group>"; };
+		135F2B6C2A04EAA8006DBC9F /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
+		135F2B6E2A04EB69006DBC9F /* StretchingMainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingMainScreenView.swift; sourceTree = "<group>"; };
+		135F2B702A04ED37006DBC9F /* TempStretchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempStretchModel.swift; sourceTree = "<group>"; };
+		135F2B722A04EDFE006DBC9F /* WatchStretchingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchStretchingCard.swift; sourceTree = "<group>"; };
 		137FA0862A029AB500473C6B /* Project+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		137FA0872A029AB500473C6B /* Project+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Project+CoreDataClass.swift"; sourceTree = "<group>"; };
 		137FA08A2A029B6A00473C6B /* PomodoroSessionPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroSessionPersistence.swift; sourceTree = "<group>"; };
@@ -143,6 +176,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		131362502A050820002F8AE4 /* Stretching */ = {
+			isa = PBXGroup;
+			children = (
+				135F2B6E2A04EB69006DBC9F /* StretchingMainScreenView.swift */,
+				131362512A050917002F8AE4 /* StretchingOnGoingScreenView.swift */,
+				134168FF2A06991600245E06 /* StretchingView.swift */,
+				134169012A0747DC00245E06 /* RestScreenView.swift */,
+				131362542A050DF9002F8AE4 /* WaitingScreenView.swift */,
+			);
+			path = Stretching;
+			sourceTree = "<group>";
+		};
 		133AED9229F814950092FC46 /* TabbedScreenView */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +218,11 @@
 			isa = PBXGroup;
 			children = (
 				13A3771C2A0363A600624352 /* PomodoroSessionCardView.swift */,
+				1331E3F32A07908F005981B3 /* SummaryView.swift */,
+				1331E3F52A0791C1005981B3 /* ActivityStretchingView.swift */,
+				131362562A050F50002F8AE4 /* WatchCircularProgressView.swift */,
 				135F2B5D2A040F83006DBC9F /* ProgressBarView.swift */,
+				135F2B722A04EDFE006DBC9F /* WatchStretchingCard.swift */,
 				135F2B542A03A68E006DBC9F /* SessionEmptyView.swift */,
 			);
 			path = Components;
@@ -186,6 +235,8 @@
 				135F2B682A048DB8006DBC9F /* PomodoroControlsScreenView.swift */,
 				135F2B562A03BA91006DBC9F /* PomodoroOnGoingView.swift */,
 				135F2B582A03C52A006DBC9F /* PomodoroScreenView.swift */,
+				135F2B6C2A04EAA8006DBC9F /* HomeScreenView.swift */,
+				131362502A050820002F8AE4 /* Stretching */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -194,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				135F2B5A2A03F0DF006DBC9F /* PomodoroSessionManager.swift */,
+				1331E3F12A07885A005981B3 /* StretchingSessionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -202,6 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				135F2B662A048C42006DBC9F /* WatchPreviewFactory.swift */,
+				135F2B6A2A04BD17006DBC9F /* TimeInterval+secondsToHourMinFormat.swift */,
+				135F2B702A04ED37006DBC9F /* TempStretchModel.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -218,6 +272,8 @@
 		13A3770A2A0358C400624352 /* FocusFlow Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				134169042A074F2700245E06 /* FocusFlow Watch App.entitlements */,
+				134169032A074D0900245E06 /* FocusFlow-Watch-App-Info.plist */,
 				13A3770B2A0358C400624352 /* FocusFlowApp.swift */,
 				13A3770D2A0358C400624352 /* ContentView.swift */,
 				13A377282A036C9800624352 /* Assets.xcassets */,
@@ -542,21 +598,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				134169002A06991600245E06 /* StretchingView.swift in Sources */,
+				1331E3F22A07885A005981B3 /* StretchingSessionManager.swift in Sources */,
+				135F2B6F2A04EB69006DBC9F /* StretchingMainScreenView.swift in Sources */,
+				131362552A050DF9002F8AE4 /* WaitingScreenView.swift in Sources */,
 				13A3771D2A0363A600624352 /* PomodoroSessionCardView.swift in Sources */,
+				135F2B6B2A04BD17006DBC9F /* TimeInterval+secondsToHourMinFormat.swift in Sources */,
 				135F2B5B2A03F0DF006DBC9F /* PomodoroSessionManager.swift in Sources */,
+				1331E3F62A0791C1005981B3 /* ActivityStretchingView.swift in Sources */,
 				13A377272A03680900624352 /* PomodoroSessionPersistence.swift in Sources */,
 				135F2B532A0376ED006DBC9F /* PomodoroNotStartedView.swift in Sources */,
 				135F2B692A048DB8006DBC9F /* PomodoroControlsScreenView.swift in Sources */,
 				13A3770E2A0358C400624352 /* ContentView.swift in Sources */,
+				135F2B6D2A04EAA8006DBC9F /* HomeScreenView.swift in Sources */,
+				131362522A050917002F8AE4 /* StretchingOnGoingScreenView.swift in Sources */,
 				13A377232A03665000624352 /* Model.xcdatamodeld in Sources */,
 				13A377252A03668000624352 /* Project+CoreDataProperties.swift in Sources */,
 				135F2B672A048C42006DBC9F /* WatchPreviewFactory.swift in Sources */,
 				13A377242A03667E00624352 /* Project+CoreDataClass.swift in Sources */,
+				1331E3F42A07908F005981B3 /* SummaryView.swift in Sources */,
+				134169022A0747DC00245E06 /* RestScreenView.swift in Sources */,
 				13A3771E2A03643400624352 /* Color+CustomColors.swift in Sources */,
+				131362572A050F50002F8AE4 /* WatchCircularProgressView.swift in Sources */,
 				13A3770C2A0358C400624352 /* FocusFlowApp.swift in Sources */,
 				135F2B592A03C52A006DBC9F /* PomodoroScreenView.swift in Sources */,
 				135F2B612A041616006DBC9F /* Date+component.swift in Sources */,
+				135F2B712A04ED37006DBC9F /* TempStretchModel.swift in Sources */,
 				13A377262A0366A300624352 /* PersistenceController.swift in Sources */,
+				135F2B732A04EDFE006DBC9F /* WatchStretchingCard.swift in Sources */,
 				135F2B552A03A68E006DBC9F /* SessionEmptyView.swift in Sources */,
 				135F2B5E2A040F83006DBC9F /* ProgressBarView.swift in Sources */,
 				135F2B572A03BA91006DBC9F /* PomodoroOnGoingView.swift in Sources */,
@@ -610,13 +679,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "FocusFlow Watch App/FocusFlow Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FocusFlow Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = H9PJ7U2A6K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FocusFlow-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FocusFlow;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Stretching tracked by FocusFlow on Apple Watch will be saved to HealthKit.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Your workout related data will be used to display your saved workouts in FocusFlow";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.dev.ddiffa.ddiffa;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -624,7 +697,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dev.ddiffa.ddiffa.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.ddiffa.ddiffa.watch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -640,13 +713,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "FocusFlow Watch App/FocusFlow Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FocusFlow Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = H9PJ7U2A6K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FocusFlow-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = FocusFlow;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Stretching tracked by FocusFlow on Apple Watch will be saved to HealthKit.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Your workout related data will be used to display your saved workouts in FocusFlow";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.dev.ddiffa.ddiffa;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -654,7 +731,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dev.ddiffa.ddiffa.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.ddiffa.ddiffa.watch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -790,12 +867,18 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Stretching tracked by FocusFlow on Apple Watch will be saved to HealthKit.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Your workout related data will be used to display your saved workouts in FocusFlow";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -830,12 +913,18 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Stretching tracked by FocusFlow on Apple Watch will be saved to HealthKit.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Your workout related data will be used to display your saved workouts in FocusFlow";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
