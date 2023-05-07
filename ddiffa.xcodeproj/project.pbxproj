@@ -69,6 +69,10 @@
 		49E4BA0529F7ACBB00830C61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E4BA0429F7ACBB00830C61 /* Preview Assets.xcassets */; };
 		49F6CC0829FFF09700ABC9C9 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CC0729FFF09700ABC9C9 /* PersistenceController.swift */; };
 		49F6CC0B29FFF20D00ABC9C9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CC0929FFF20D00ABC9C9 /* Model.xcdatamodeld */; };
+		4CA5290E2A0514E500484AF6 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA5290D2A0514E500484AF6 /* ViewExtension.swift */; };
+		4CA529102A05152B00484AF6 /* TimerMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA5290F2A05152B00484AF6 /* TimerMode.swift */; };
+		4CA529132A05157200484AF6 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA529112A05157200484AF6 /* TimePickerView.swift */; };
+		4CA529142A05157200484AF6 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA529122A05157200484AF6 /* TimerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +160,10 @@
 		49E4BA0429F7ACBB00830C61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		49F6CC0729FFF09700ABC9C9 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		49F6CC0A29FFF20D00ABC9C9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		4CA5290D2A0514E500484AF6 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		4CA5290F2A05152B00484AF6 /* TimerMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerMode.swift; path = ddiffa/Shared/Helpers/Extensions/TimerMode.swift; sourceTree = SOURCE_ROOT; };
+		4CA529112A05157200484AF6 /* TimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
+		4CA529122A05157200484AF6 /* TimerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				13EBBBF729F8B04400141F3B /* PomodoroNotStartedScreenView.swift */,
+				4CA529152A05158900484AF6 /* Component */,
 			);
 			path = Pomodoro;
 			sourceTree = "<group>";
@@ -426,6 +435,7 @@
 			isa = PBXGroup;
 			children = (
 				133AED9729F815F30092FC46 /* UserDefaults+customKeys.swift */,
+				4CA5290F2A05152B00484AF6 /* TimerMode.swift */,
 			);
 			path = Constansts;
 			sourceTree = "<group>";
@@ -434,6 +444,7 @@
 			isa = PBXGroup;
 			children = (
 				135F2B5F2A041616006DBC9F /* Date+component.swift */,
+				4CA5290D2A0514E500484AF6 /* ViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -494,6 +505,15 @@
 				13A1E4B229F8272900BEB26A /* SpringToTop.swift */,
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		4CA529152A05158900484AF6 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				4CA529112A05157200484AF6 /* TimePickerView.swift */,
+				4CA529122A05157200484AF6 /* TimerManager.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -640,6 +660,8 @@
 				137FA08B2A029B6A00473C6B /* PomodoroSessionPersistence.swift in Sources */,
 				49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */,
 				13EBBBF829F8B04400141F3B /* PomodoroNotStartedScreenView.swift in Sources */,
+				4CA5290E2A0514E500484AF6 /* ViewExtension.swift in Sources */,
+				4CA529142A05157200484AF6 /* TimerManager.swift in Sources */,
 				137FA0882A029AB500473C6B /* Project+CoreDataProperties.swift in Sources */,
 				133AED9829F815F30092FC46 /* UserDefaults+customKeys.swift in Sources */,
 				13A1E4B329F8272A00BEB26A /* SpringToTop.swift in Sources */,
@@ -651,11 +673,13 @@
 				13474D2529F7E1380034F2C0 /* OnboardingModel.swift in Sources */,
 				135460F329F7C96C00413F74 /* ProgressDotIndicator.swift in Sources */,
 				135D90AA2A020E4100CB8DB1 /* SessionInformationViewModel.swift in Sources */,
+				4CA529102A05152B00484AF6 /* TimerMode.swift in Sources */,
 				135460F129F7C85F00413F74 /* Color+CustomColors.swift in Sources */,
 				0665BDF12A04EB4000318C98 /* StretchInfoView.swift in Sources */,
 				13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */,
 				49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */,
 				13EBBC1929FFE9C000141F3B /* TagView.swift in Sources */,
+				4CA529132A05157200484AF6 /* TimePickerView.swift in Sources */,
 				0665BDF32A04EB6700318C98 /* ProjectCardView.swift in Sources */,
 				13474D2929F7E4120034F2C0 /* OnboardingScreenViewModel.swift in Sources */,
 				133AED9629F8157E0092FC46 /* SettingsManager.swift in Sources */,
@@ -683,7 +707,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FocusFlow Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = H9PJ7U2A6K;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FocusFlow-Watch-App-Info.plist";
@@ -717,7 +741,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FocusFlow Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = H9PJ7U2A6K;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FocusFlow-Watch-App-Info.plist";
@@ -862,13 +886,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ddiffa/Preview Content\"";
-				DEVELOPMENT_TEAM = H9PJ7U2A6K;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+
+
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Stretching tracked by FocusFlow on Apple Watch will be saved to HealthKit.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Your workout related data will be used to display your saved workouts in FocusFlow";
+
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -908,13 +935,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ddiffa/Preview Content\"";
-				DEVELOPMENT_TEAM = H9PJ7U2A6K;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Stretching tracked by FocusFlow on Apple Watch will be saved to HealthKit.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Your workout related data will be used to display your saved workouts in FocusFlow";
+
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;

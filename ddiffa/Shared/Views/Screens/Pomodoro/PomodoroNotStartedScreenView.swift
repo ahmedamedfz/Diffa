@@ -29,6 +29,7 @@ struct PomodoroNotStartedScreenView: View {
     @FocusState var focusedField: FocusedField?
     
     var body: some View {
+       TimePickerView()
         ZStack {
             Color.background.base
                 .ignoresSafeArea()
