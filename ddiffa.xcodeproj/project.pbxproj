@@ -13,6 +13,10 @@
 		1331E3F22A07885A005981B3 /* StretchingSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1331E3F12A07885A005981B3 /* StretchingSessionManager.swift */; };
 		1331E3F42A07908F005981B3 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1331E3F32A07908F005981B3 /* SummaryView.swift */; };
 		1331E3F62A0791C1005981B3 /* ActivityStretchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1331E3F52A0791C1005981B3 /* ActivityStretchingView.swift */; };
+
+		0665BDF12A04EB4000318C98 /* StretchInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665BDF02A04EB4000318C98 /* StretchInfoView.swift */; };
+		0665BDF32A04EB6700318C98 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665BDF22A04EB6700318C98 /* ProjectCardView.swift */; };
+
 		133AED9429F814E00092FC46 /* TabbedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9329F814E00092FC46 /* TabbedScreenView.swift */; };
 		133AED9629F8157E0092FC46 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9529F8157E0092FC46 /* SettingsManager.swift */; };
 		133AED9829F815F30092FC46 /* UserDefaults+customKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9729F815F30092FC46 /* UserDefaults+customKeys.swift */; };
@@ -92,12 +96,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+
 		131362512A050917002F8AE4 /* StretchingOnGoingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingOnGoingScreenView.swift; sourceTree = "<group>"; };
 		131362542A050DF9002F8AE4 /* WaitingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingScreenView.swift; sourceTree = "<group>"; };
 		131362562A050F50002F8AE4 /* WatchCircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCircularProgressView.swift; sourceTree = "<group>"; };
 		1331E3F12A07885A005981B3 /* StretchingSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingSessionManager.swift; sourceTree = "<group>"; };
 		1331E3F32A07908F005981B3 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		1331E3F52A0791C1005981B3 /* ActivityStretchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStretchingView.swift; sourceTree = "<group>"; };
+
+		0665BDF02A04EB4000318C98 /* StretchInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchInfoView.swift; sourceTree = "<group>"; };
+		0665BDF22A04EB6700318C98 /* ProjectCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCardView.swift; path = ddiffa/Shared/Views/ProjectCardView.swift; sourceTree = SOURCE_ROOT; };
+
 		133AED9329F814E00092FC46 /* TabbedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedScreenView.swift; sourceTree = "<group>"; };
 		133AED9529F8157E0092FC46 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsManager.swift; path = ddiffa/Shared/Views/Screens/TabbedScreenView/SettingsManager.swift; sourceTree = SOURCE_ROOT; };
 		133AED9729F815F30092FC46 /* UserDefaults+customKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserDefaults+customKeys.swift"; path = "ddiffa/Shared/Views/Screens/TabbedScreenView/UserDefaults+customKeys.swift"; sourceTree = SOURCE_ROOT; };
@@ -458,6 +467,8 @@
 			isa = PBXGroup;
 			children = (
 				49E4B9FE29F7ACBB00830C61 /* ContentView.swift */,
+				0665BDF22A04EB6700318C98 /* ProjectCardView.swift */,
+				0665BDF02A04EB4000318C98 /* StretchInfoView.swift */,
 				13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */,
 				13474D2729F7E3F50034F2C0 /* Onboarding */,
 				133AED9229F814950092FC46 /* TabbedScreenView */,
@@ -641,9 +652,11 @@
 				135460F329F7C96C00413F74 /* ProgressDotIndicator.swift in Sources */,
 				135D90AA2A020E4100CB8DB1 /* SessionInformationViewModel.swift in Sources */,
 				135460F129F7C85F00413F74 /* Color+CustomColors.swift in Sources */,
+				0665BDF12A04EB4000318C98 /* StretchInfoView.swift in Sources */,
 				13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */,
 				49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */,
 				13EBBC1929FFE9C000141F3B /* TagView.swift in Sources */,
+				0665BDF32A04EB6700318C98 /* ProjectCardView.swift in Sources */,
 				13474D2929F7E4120034F2C0 /* OnboardingScreenViewModel.swift in Sources */,
 				133AED9629F8157E0092FC46 /* SettingsManager.swift in Sources */,
 				135F2B602A041616006DBC9F /* Date+component.swift in Sources */,
