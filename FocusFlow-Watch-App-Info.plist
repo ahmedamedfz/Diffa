@@ -4,5 +4,11 @@
 <dict>
 	<key>Privacy - Health Update Sha</key>
 	<string></string>
+	<key>UIBackgroundModes</key>
+	<array/>
+	<key>WKBackgroundModes</key>
+	<array>
+		<string>workout-processing</string>
+	</array>
 </dict>
 </plist>

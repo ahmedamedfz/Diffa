@@ -10,6 +10,9 @@
 		131362522A050917002F8AE4 /* StretchingOnGoingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131362512A050917002F8AE4 /* StretchingOnGoingScreenView.swift */; };
 		131362552A050DF9002F8AE4 /* WaitingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131362542A050DF9002F8AE4 /* WaitingScreenView.swift */; };
 		131362572A050F50002F8AE4 /* WatchCircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131362562A050F50002F8AE4 /* WatchCircularProgressView.swift */; };
+		1331E3F22A07885A005981B3 /* StretchingSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1331E3F12A07885A005981B3 /* StretchingSessionManager.swift */; };
+		1331E3F42A07908F005981B3 /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1331E3F32A07908F005981B3 /* SummaryView.swift */; };
+		1331E3F62A0791C1005981B3 /* ActivityStretchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1331E3F52A0791C1005981B3 /* ActivityStretchingView.swift */; };
 		133AED9429F814E00092FC46 /* TabbedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9329F814E00092FC46 /* TabbedScreenView.swift */; };
 		133AED9629F8157E0092FC46 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9529F8157E0092FC46 /* SettingsManager.swift */; };
 		133AED9829F815F30092FC46 /* UserDefaults+customKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133AED9729F815F30092FC46 /* UserDefaults+customKeys.swift */; };
@@ -92,6 +95,9 @@
 		131362512A050917002F8AE4 /* StretchingOnGoingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingOnGoingScreenView.swift; sourceTree = "<group>"; };
 		131362542A050DF9002F8AE4 /* WaitingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingScreenView.swift; sourceTree = "<group>"; };
 		131362562A050F50002F8AE4 /* WatchCircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCircularProgressView.swift; sourceTree = "<group>"; };
+		1331E3F12A07885A005981B3 /* StretchingSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingSessionManager.swift; sourceTree = "<group>"; };
+		1331E3F32A07908F005981B3 /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		1331E3F52A0791C1005981B3 /* ActivityStretchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStretchingView.swift; sourceTree = "<group>"; };
 		133AED9329F814E00092FC46 /* TabbedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedScreenView.swift; sourceTree = "<group>"; };
 		133AED9529F8157E0092FC46 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsManager.swift; path = ddiffa/Shared/Views/Screens/TabbedScreenView/SettingsManager.swift; sourceTree = SOURCE_ROOT; };
 		133AED9729F815F30092FC46 /* UserDefaults+customKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserDefaults+customKeys.swift"; path = "ddiffa/Shared/Views/Screens/TabbedScreenView/UserDefaults+customKeys.swift"; sourceTree = SOURCE_ROOT; };
@@ -203,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				13A3771C2A0363A600624352 /* PomodoroSessionCardView.swift */,
+				1331E3F32A07908F005981B3 /* SummaryView.swift */,
+				1331E3F52A0791C1005981B3 /* ActivityStretchingView.swift */,
 				131362562A050F50002F8AE4 /* WatchCircularProgressView.swift */,
 				135F2B5D2A040F83006DBC9F /* ProgressBarView.swift */,
 				135F2B722A04EDFE006DBC9F /* WatchStretchingCard.swift */,
@@ -228,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				135F2B5A2A03F0DF006DBC9F /* PomodoroSessionManager.swift */,
+				1331E3F12A07885A005981B3 /* StretchingSessionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -579,11 +588,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				134169002A06991600245E06 /* StretchingView.swift in Sources */,
+				1331E3F22A07885A005981B3 /* StretchingSessionManager.swift in Sources */,
 				135F2B6F2A04EB69006DBC9F /* StretchingMainScreenView.swift in Sources */,
 				131362552A050DF9002F8AE4 /* WaitingScreenView.swift in Sources */,
 				13A3771D2A0363A600624352 /* PomodoroSessionCardView.swift in Sources */,
 				135F2B6B2A04BD17006DBC9F /* TimeInterval+secondsToHourMinFormat.swift in Sources */,
 				135F2B5B2A03F0DF006DBC9F /* PomodoroSessionManager.swift in Sources */,
+				1331E3F62A0791C1005981B3 /* ActivityStretchingView.swift in Sources */,
 				13A377272A03680900624352 /* PomodoroSessionPersistence.swift in Sources */,
 				135F2B532A0376ED006DBC9F /* PomodoroNotStartedView.swift in Sources */,
 				135F2B692A048DB8006DBC9F /* PomodoroControlsScreenView.swift in Sources */,
@@ -594,6 +605,7 @@
 				13A377252A03668000624352 /* Project+CoreDataProperties.swift in Sources */,
 				135F2B672A048C42006DBC9F /* WatchPreviewFactory.swift in Sources */,
 				13A377242A03667E00624352 /* Project+CoreDataClass.swift in Sources */,
+				1331E3F42A07908F005981B3 /* SummaryView.swift in Sources */,
 				134169022A0747DC00245E06 /* RestScreenView.swift in Sources */,
 				13A3771E2A03643400624352 /* Color+CustomColors.swift in Sources */,
 				131362572A050F50002F8AE4 /* WatchCircularProgressView.swift in Sources */,
@@ -672,7 +684,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dev.ddiffa.ddiffa.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.ddiffa.ddiffa.watch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -706,7 +718,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dev.ddiffa.ddiffa.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.ddiffa.ddiffa.watch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;

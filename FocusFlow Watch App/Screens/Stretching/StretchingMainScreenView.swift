@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct StretchingMainScreenView: View {
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {

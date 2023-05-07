@@ -50,12 +50,21 @@ struct StretchingView: View {
 //                    .foregroundColor(<#T##color: Color?##Color?#>)
 //            }
             
-            Text("101 bpm")
+            Text(stretchingManager.heartRate.formatted(.number.precision(.fractionLength(0))) + " bpm")
                 .font(.system(.title3))
                 .foregroundColor(.red)
             
-            Text("101 cal")
-                .font(.system(.title3))
+            Text(
+                Measurement(
+                    value: stretchingManager.activeEnergy,
+                    unit: UnitEnergy.kilocalories
+                )
+                .formatted(.measurement(
+                    width: .abbreviated,
+                    usage: .workout,
+                    numberFormatStyle: .number.precision(.fractionLength(0))))
+            )
+            .font(.system(.title3))
                 .foregroundColor(.green)
         }
         .sheet(isPresented: $isShowingDescription) {
