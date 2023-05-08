@@ -60,9 +60,9 @@
 		49341D952A04F4A8004EA509 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 49341D942A04F4A8004EA509 /* ConfettiSwiftUI */; };
 		49341D972A04F6E6004EA509 /* FinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D962A04F6E6004EA509 /* FinishedView.swift */; };
 		49341D9A2A077E1B004EA509 /* DetailAnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D992A077E1B004EA509 /* DetailAnalyticsView.swift */; };
-		49341D9E2A088F98004EA509 /* ExerciseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D9B2A088F98004EA509 /* ExerciseDataModel.swift */; };
 		49341D9F2A088F98004EA509 /* FrequencyChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D9C2A088F98004EA509 /* FrequencyChart.swift */; };
-		49341DA02A088F98004EA509 /* AnalyticsViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D9D2A088F98004EA509 /* AnalyticsViewDetail.swift */; };
+		49341DA42A0899E8004EA509 /* AnalyticsViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341DA12A0899E8004EA509 /* AnalyticsViewDetail.swift */; };
+		49341DA62A0899E8004EA509 /* ExerciseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341DA32A0899E8004EA509 /* ExerciseDataModel.swift */; };
 		49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */; };
 		49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FE29F7ACBB00830C61 /* ContentView.swift */; };
 		49E4BA0129F7ACBB00830C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E4BA0029F7ACBB00830C61 /* Assets.xcassets */; };
@@ -149,9 +149,9 @@
 		49341D962A04F6E6004EA509 /* FinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedView.swift; sourceTree = "<group>"; };
 		49341D982A075E14004EA509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		49341D992A077E1B004EA509 /* DetailAnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAnalyticsView.swift; sourceTree = "<group>"; };
-		49341D9B2A088F98004EA509 /* ExerciseDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExerciseDataModel.swift; path = ../../../../../../../../../Downloads/ExerciseDataModel.swift; sourceTree = "<group>"; };
 		49341D9C2A088F98004EA509 /* FrequencyChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyChart.swift; sourceTree = "<group>"; };
-		49341D9D2A088F98004EA509 /* AnalyticsViewDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnalyticsViewDetail.swift; path = ../../../../../../../../../Downloads/AnalyticsViewDetail.swift; sourceTree = "<group>"; };
+		49341DA12A0899E8004EA509 /* AnalyticsViewDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsViewDetail.swift; sourceTree = "<group>"; };
+		49341DA32A0899E8004EA509 /* ExerciseDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseDataModel.swift; sourceTree = "<group>"; };
 		49E4B9F929F7ACBB00830C61 /* ddiffa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddiffa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ddiffaApp.swift; sourceTree = "<group>"; };
 		49E4B9FE29F7ACBB00830C61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -523,9 +523,9 @@
 				D63ACFB92A05165B00AA901A /* AnalyticsView.swift */,
 				D63ACFBB2A05169500AA901A /* AnalyticViewDetail.swift */,
 				49341D992A077E1B004EA509 /* DetailAnalyticsView.swift */,
-				49341D9D2A088F98004EA509 /* AnalyticsViewDetail.swift */,
+				49341DA12A0899E8004EA509 /* AnalyticsViewDetail.swift */,
+				49341DA32A0899E8004EA509 /* ExerciseDataModel.swift */,
 				D63ACFC72A05171400AA901A /* StretchDataModel.swift */,
-				49341D9B2A088F98004EA509 /* ExerciseDataModel.swift */,
 				D63ACFBD2A0516A300AA901A /* AnalyticsChart */,
 			);
 			path = Analytics;
@@ -665,10 +665,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				135D90A82A020DFF00CB8DB1 /* SessionInformationView.swift in Sources */,
-				49341D9E2A088F98004EA509 /* ExerciseDataModel.swift in Sources */,
 				137FA08B2A029B6A00473C6B /* PomodoroSessionPersistence.swift in Sources */,
 				49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */,
 				13EBBBF829F8B04400141F3B /* PomodoroNotStartedScreenView.swift in Sources */,
+				49341DA62A0899E8004EA509 /* ExerciseDataModel.swift in Sources */,
 				49341D832A04F1E5004EA509 /* StretchingCard.swift in Sources */,
 				137FA0882A029AB500473C6B /* Project+CoreDataProperties.swift in Sources */,
 				133AED9829F815F30092FC46 /* UserDefaults+customKeys.swift in Sources */,
@@ -683,11 +683,11 @@
 				49F6CC0829FFF09700ABC9C9 /* PersistenceController.swift in Sources */,
 				D63ACFBC2A05169500AA901A /* AnalyticViewDetail.swift in Sources */,
 				D63ACFBF2A0516B500AA901A /* FrequentChart.swift in Sources */,
-				49341DA02A088F98004EA509 /* AnalyticsViewDetail.swift in Sources */,
 				13474D2529F7E1380034F2C0 /* OnboardingModel.swift in Sources */,
 				D63ACFBA2A05165B00AA901A /* AnalyticsView.swift in Sources */,
 				135460F329F7C96C00413F74 /* ProgressDotIndicator.swift in Sources */,
 				49341D892A04F297004EA509 /* WaitingTimer.swift in Sources */,
+				49341DA42A0899E8004EA509 /* AnalyticsViewDetail.swift in Sources */,
 				49341D9F2A088F98004EA509 /* FrequencyChart.swift in Sources */,
 				49341D972A04F6E6004EA509 /* FinishedView.swift in Sources */,
 				135D90AA2A020E4100CB8DB1 /* SessionInformationViewModel.swift in Sources */,
