@@ -30,9 +30,6 @@ struct PomodoroNotStartedScreenView: View {
     
     @FocusState var focusedField: FocusedField?
     
-    let projectsNameMock = ["Mini Challenge 1", "Calculus Assignment"]
-    let tagsMock = [["Work", "Programming"], ["College"]]
-    
     
     var body: some View {
         ZStack {
@@ -48,8 +45,8 @@ struct PomodoroNotStartedScreenView: View {
                     if timerManager.timerMode == .initial{
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
-                                ForEach(0..<2) { index in
-                                    ProjectCardView(projectName: projectsNameMock[index], tags: tagsMock[index])
+                                ForEach(0..<lastPomodoroSessions.count) { index in
+                                    ProjectCardView(projectName: lastPomodoroSessions[index].project?.name ?? "No name", tags: lastPomodoroSessions[index].project?.arrayOfTags() ?? [])
                                 }
                             }
                             .frame(height: 67)

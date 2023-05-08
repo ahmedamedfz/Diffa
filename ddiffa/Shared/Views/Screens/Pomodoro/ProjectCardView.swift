@@ -11,7 +11,7 @@ struct ProjectCardView: View {
     
     let projectName: String
     //    let tag1: String
-    let tags: [String]
+    let tags: [Tag]
     
     
     var body: some View {
@@ -23,7 +23,7 @@ struct ProjectCardView: View {
                             .font(.system(size: 6))
                             .foregroundColor(Color(red: 34/255, green: 197/255, blue: 94/255))
                         
-                        Text ("Mini Challenge 1")
+                        Text (projectName)
                             .font(.system(.body, design: .rounded))
                             .foregroundColor(.text.primary)
                             .frame(width: 156, height: 25, alignment: .leading)
@@ -32,16 +32,27 @@ struct ProjectCardView: View {
                     
                     ScrollView(.horizontal) {
                         HStack {
-                            ForEach(tags, id: \.self) { tag in
-                                Text (tag)
+                            if tags.isEmpty {
+                                Text ("No tag")
                                     .font(.system(.footnote, design: .rounded))
-                                    .foregroundColor(Color(red: 249/255, green: 115/255, blue: 22/255))
+                                    .foregroundColor(.text.tertiary)
                                     .padding(.horizontal, 8)
                                     .padding(.vertical, 2)
-//                                    .frame(width: 60, height: 22, alignment: .center)
-                                    .background(Color(red: 249/255, green: 115/255, blue: 2/255, opacity: 0.16))
+                                //                                    .frame(width: 60, height: 22, alignment: .center)
+//                                    .background {Color("\(tag.colorString ?? "rose")-background")}
                                     .cornerRadius(100)
-                                
+                            } else {
+                                ForEach(tags, id: \.self) { tag in
+                                    Text (tag.name ?? "No tag")
+                                        .font(.system(.footnote, design: .rounded))
+                                        .foregroundColor(Color("\(tag.colorString ?? "rose")-foreground"))
+                                        .padding(.horizontal, 8)
+                                        .padding(.vertical, 2)
+                                    //                                    .frame(width: 60, height: 22, alignment: .center)
+                                        .background {Color("\(tag.colorString ?? "rose")-background")}
+                                        .cornerRadius(100)
+                                    
+                                }
                             }
                         }
                     }
@@ -72,11 +83,11 @@ struct ProjectCardView: View {
     
     
     
-    struct ProjectCardView_Privews: PreviewProvider {
-        static var previews: some View {
-            ProjectCardView(projectName: "Pre-thesis", tags: ["College", "Programming"])
-        }
-    }
+//    struct ProjectCardView_Privews: PreviewProvider {
+//        static var previews: some View {
+//            ProjectCardView(projectName: "Pre-thesis", tags: ["College", "Programming"])
+//        }
+//    }
 }
 
 

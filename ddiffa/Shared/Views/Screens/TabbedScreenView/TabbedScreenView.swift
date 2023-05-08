@@ -11,7 +11,7 @@ import SwiftUI
 struct TabbedScreenView: View {
     
     enum AppTab: Equatable {
-        case pomodoro, stretching, profile
+        case pomodoro, stretching, profile, debug
     }
     
     @State private var activeTab: AppTab = .pomodoro
@@ -54,6 +54,16 @@ struct TabbedScreenView: View {
                 .toolbar(.visible, for: .tabBar)
                 .toolbarBackground(Color.background.base, for: .tabBar)
                 .tag(AppTab.profile)
+            
+            DebugCoreData()
+                .tabItem {
+                    Image(systemName: "swift")
+                        .environment(\.symbolVariants, .none)
+                        .tint(.red)
+                }
+                .toolbar(.visible, for: .tabBar)
+                .toolbarBackground(Color.background.base, for: .tabBar)
+                .tag(AppTab.debug)
         }
     }
 }
