@@ -7,15 +7,6 @@
 
 import SwiftUI
 
-extension TimeInterval {
-    static func secondsToHourMinFormat(time: TimeInterval) -> String? {
-        let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.minute, .second]
-        formatter.zeroFormattingBehavior = .pad
-        return formatter.string(from: time)
-    }
-}
-
 struct PomodoroScreenView: View {
     
     @EnvironmentObject var sessionManager: PomodoroSessionManager

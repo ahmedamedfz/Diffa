@@ -41,7 +41,7 @@ struct AnalyticsView: View {
                                 } label: {
                                     Image(systemName: "info.circle")
                                         .imageScale(.small)
-                                        .foregroundColor(Color(red: 150/255, green: 97/255, blue: 32/255))
+                                        .foregroundColor(Color.background.base)
                                 }
                             }
                         }

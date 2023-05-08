@@ -14,6 +14,8 @@ struct SessionInformationView: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
     
+    @EnvironmentObject var timerManager: TimerManager
+    
     @FetchRequest(fetchRequest: PomodoroSessionPersistence.projectQueryFetchRequest) var projectResults: FetchedResults<Project>
     @FetchRequest(fetchRequest: PomodoroSessionPersistence.tagQueryFetchRequest) var tagResults: FetchedResults<Tag>
 
@@ -117,7 +119,13 @@ struct SessionInformationView: View {
                 }
                 
                 Button {
-                    vm.startSession()
+//                    vm.startSession()
+                    if timerManager.timerMode == .initial {
+                        timerManager.setTimerLength(minutes: timerManager.getTimeDifference() * 60)
+
+                    }
+
+                    timerManager.timerMode == .running ?  timerManager.pause() : timerManager.start()
                 } label: {
                     Image(systemName: "play.fill")
                         .resizable()
