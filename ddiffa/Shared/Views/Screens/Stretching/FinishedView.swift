@@ -7,10 +7,16 @@
 
 import SwiftUI
 import ConfettiSwiftUI
+import CoreData
 
 struct FinishedView: View {
+    
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(sortDescriptors: [], animation: .default) private var stretchingFrequencies: FetchedResults<StretchingFrequency>
+    
     @Environment(\.presentationMode) var presentationMode
     @State private var counter: Int = 1
+    var sumTime : Int
     var body: some View {
         ZStack {
             Color.background.base
@@ -46,14 +52,14 @@ struct FinishedView: View {
                             
                             HStack (alignment: .bottom){
                                 HStack (spacing: 0) {
-                                    Text("2")
+                                    Text("\(sumTime/60)")
                                         .font(.system(size: 64, design: .rounded))
                                     Text("min")
                                         .font(.system(.largeTitle, design: .rounded))
                                         .baselineOffset(-20)
                                 }
                                 HStack (spacing: 0) {
-                                    Text("30")
+                                    Text("\(sumTime%60)")
                                         .font(.system(size: 64, design: .rounded))
                                     Text("sec")
                                         .font(.system(.largeTitle, design: .rounded))
@@ -63,59 +69,59 @@ struct FinishedView: View {
                             .foregroundColor(.text.green)
                             .bold()
                         }
-                        
-                        VStack (spacing: 0) {
-                            HStack (spacing: 30) {
-                                VStack {
-                                    Text("Avg Heart Rate")
-                                    HStack (spacing: 0) {
-                                        Text("180")
-                                            .font(.system(.largeTitle, design: .rounded))
-                                        Text("bpm")
-                                            .font(.system(.title3, design: .rounded))
-                                            .baselineOffset(-10)
-                                    }
-                                    .foregroundColor(.text.red)
-                                    .bold()
-                                }
-                                
-                                Divider()
-                                    .frame(width: 1)
-                                    .overlay(.gray)
-                                
-                                VStack {
-                                    Text("Total Calories")
-                                    HStack (spacing: 0) {
-                                        Text("0.7")
-                                            .font(.system(.largeTitle, design: .rounded))
-                                        Text("kcal")
-                                            .font(.system(.title3, design: .rounded))
-                                            .baselineOffset(-10)
-                                    }
-                                    .foregroundColor(.text.orange)
-                                    .bold()
-                                }
-
-                            }
-                            .frame(maxHeight: 80)
-                            
-                            
-//                            Button(action: {
-//                                }, label: {
-//                                NavigationLink(destination: EmptyView())
-//                                {
-//                                    HStack {
-//                                        Text("Go to analytics")
-//                                        Image(systemName: "chevron.right")
-//                                    }
-//                                    .foregroundColor(.text.secondary)
-//                                    .font(.system(.body, design: .rounded))
-//                                }
-//
-//                            })
-//                            .padding()
-                        }
-                        
+                        //MarkDown
+                        //                        VStack (spacing: 0) {
+                        //                            HStack (spacing: 30) {
+                        //                                VStack {
+                        //                                    Text("Avg Heart Rate")
+                        //                                    HStack (spacing: 0) {
+                        //                                        Text("180")
+                        //                                            .font(.system(.largeTitle, design: .rounded))
+                        //                                        Text("bpm")
+                        //                                            .font(.system(.title3, design: .rounded))
+                        //                                            .baselineOffset(-10)
+                        //                                    }
+                        //                                    .foregroundColor(.text.red)
+                        //                                    .bold()
+                        //                                }
+                        //
+                        //                                Divider()
+                        //                                    .frame(width: 1)
+                        //                                    .overlay(.gray)
+                        //
+                        //                                VStack {
+                        //                                    Text("Total Calories")
+                        //                                    HStack (spacing: 0) {
+                        //                                        Text("0.7")
+                        //                                            .font(.system(.largeTitle, design: .rounded))
+                        //                                        Text("kcal")
+                        //                                            .font(.system(.title3, design: .rounded))
+                        //                                            .baselineOffset(-10)
+                        //                                    }
+                        //                                    .foregroundColor(.text.orange)
+                        //                                    .bold()
+                        //                                }
+                        //
+                        //                            }
+                        //                            .frame(maxHeight: 80)
+                        //
+                        //
+                        //                            Button(action: {
+                        //                                }, label: {
+                        //                                NavigationLink(destination: EmptyView())
+                        //                                {
+                        //                                    HStack {
+                        //                                        Text("Go to analytics")
+                        //                                        Image(systemName: "chevron.right")
+                        //                                    }
+                        //                                    .foregroundColor(.text.secondary)
+                        //                                    .font(.system(.body, design: .rounded))
+                        //                                }
+                        //
+                        //                            })
+                        //                            .padding()
+                        //                        }
+                        //
                         
                         VStack (spacing: 10) {
                             Text("How do you feel?")
@@ -143,11 +149,11 @@ struct FinishedView: View {
                         Button(action:{ },label:{
                             NavigationLink(destination: StretchingScroll(allStretchs: MainStretch.allStretch)) {
                                 Text("Finish")
-                                .foregroundColor(.white)
-                                .font(.system(.title3, design: .rounded))
-                                .frame(width: 323, height: 41)
-                                .background(Color.primaryColor)
-                                .cornerRadius(10)
+                                    .foregroundColor(.white)
+                                    .font(.system(.title3, design: .rounded))
+                                    .frame(width: 323, height: 41)
+                                    .background(Color.primaryColor)
+                                    .cornerRadius(10)
                             }
                         })
                     }
@@ -156,14 +162,20 @@ struct FinishedView: View {
         }
         .navigationBarBackButtonHidden(true)
         .onAppear {
-                    self.counter += 1
-                }
-        .confettiCannon(counter: $counter, num: 100, openingAngle: Angle(degrees: 0), closingAngle: Angle(degrees: 360), radius: 250)
-    }
-}
+            self.counter += 1
+            
+            // Save stretching frequency data to Core Data
+            let today = Calendar.current.startOfDay(for: Date())
+            let frequencyFetchRequest: NSFetchRequest<StretchingFrequency> = StretchingFrequency.fetchRequest()
+            frequencyFetchRequest.predicate = NSPredicate(format: "day == %@", today as NSDate)
 
-struct FinishedView_Previews: PreviewProvider {
-    static var previews: some View {
-        FinishedView()
+            let newFrequency = StretchingFrequency(context: viewContext)
+                newFrequency.day = today
+                newFrequency.duration = Int64(sumTime)
+            
+            
+            PersistenceController.shared.save()
+        }
+        .confettiCannon(counter: $counter, num: 100, openingAngle: Angle(degrees: 0), closingAngle: Angle(degrees: 360), radius: 250)
     }
 }

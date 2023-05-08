@@ -11,7 +11,7 @@ struct WaitingSessionStartView: View {
     var index : Int
     var mainStretch : MainStretch
     var subStretch: SubStretch {mainStretch.substretch[index]}
-    
+    var sumTime : Int
     
     @State private var timerFinished = false
     @State private var isTimerRunning = true
@@ -47,7 +47,7 @@ struct WaitingSessionStartView: View {
                 
                 waitingTimer
                     .navigationDestination(isPresented: $timerFinished) {
-                        OnGoingMovementView(index: index, mainStretch: mainStretch)
+                        OnGoingMovementView(index: index, mainStretch: mainStretch, sumTime: sumTime+5)
                     }
                 
                 Spacer()

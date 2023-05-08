@@ -16,7 +16,7 @@ struct CalorieChart: View {
                 ForEach(exerciseDatas) { exerciseData in
                     BarMark(
                         x: .value("Date", exerciseData.date, unit: .day),
-                        y: .value("Calories Burn", exerciseData.caloriesburn)
+                        y: .value("Calories Burn", exerciseData.caloriesburn ?? 0)
                     )
                 }
                 .foregroundStyle(Color.accentColor.gradient)

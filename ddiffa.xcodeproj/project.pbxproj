@@ -59,6 +59,10 @@
 		49341D922A04F44E004EA509 /* RestBetweenSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D912A04F44E004EA509 /* RestBetweenSessionView.swift */; };
 		49341D952A04F4A8004EA509 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 49341D942A04F4A8004EA509 /* ConfettiSwiftUI */; };
 		49341D972A04F6E6004EA509 /* FinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D962A04F6E6004EA509 /* FinishedView.swift */; };
+		49341D9A2A077E1B004EA509 /* DetailAnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D992A077E1B004EA509 /* DetailAnalyticsView.swift */; };
+		49341D9E2A088F98004EA509 /* ExerciseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D9B2A088F98004EA509 /* ExerciseDataModel.swift */; };
+		49341D9F2A088F98004EA509 /* FrequencyChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D9C2A088F98004EA509 /* FrequencyChart.swift */; };
+		49341DA02A088F98004EA509 /* AnalyticsViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D9D2A088F98004EA509 /* AnalyticsViewDetail.swift */; };
 		49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */; };
 		49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FE29F7ACBB00830C61 /* ContentView.swift */; };
 		49E4BA0129F7ACBB00830C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E4BA0029F7ACBB00830C61 /* Assets.xcassets */; };
@@ -66,12 +70,12 @@
 		49F6CC0829FFF09700ABC9C9 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CC0729FFF09700ABC9C9 /* PersistenceController.swift */; };
 		49F6CC0B29FFF20D00ABC9C9 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 49F6CC0929FFF20D00ABC9C9 /* Model.xcdatamodeld */; };
 		D63ACFBA2A05165B00AA901A /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFB92A05165B00AA901A /* AnalyticsView.swift */; };
-		D63ACFBC2A05169500AA901A /* AnalyticsViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFBB2A05169500AA901A /* AnalyticsViewDetail.swift */; };
-		D63ACFBF2A0516B500AA901A /* FrequencyChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFBE2A0516B500AA901A /* FrequencyChart.swift */; };
+		D63ACFBC2A05169500AA901A /* AnalyticViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFBB2A05169500AA901A /* AnalyticViewDetail.swift */; };
+		D63ACFBF2A0516B500AA901A /* FrequentChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFBE2A0516B500AA901A /* FrequentChart.swift */; };
 		D63ACFC12A0516C200AA901A /* CalorieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFC02A0516C200AA901A /* CalorieChart.swift */; };
 		D63ACFC32A0516DC00AA901A /* HeartRateChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFC22A0516DC00AA901A /* HeartRateChart.swift */; };
 		D63ACFC52A0516EB00AA901A /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFC42A0516EB00AA901A /* SignInWithApple.swift */; };
-		D63ACFC82A05171400AA901A /* ExerciseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFC72A05171400AA901A /* ExerciseDataModel.swift */; };
+		D63ACFC82A05171400AA901A /* StretchDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFC72A05171400AA901A /* StretchDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +104,7 @@
 
 /* Begin PBXFileReference section */
 		0665BDF02A04EB4000318C98 /* StretchInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchInfoView.swift; sourceTree = "<group>"; };
-		0665BDF22A04EB6700318C98 /* ProjectCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCardView.swift; path = ddiffa/Shared/Views/ProjectCardView.swift; sourceTree = SOURCE_ROOT; };
+		0665BDF22A04EB6700318C98 /* ProjectCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCardView.swift; path = ddiffa/Shared/Views/Screens/Pomodoro/ProjectCardView.swift; sourceTree = SOURCE_ROOT; };
 		133AED9329F814E00092FC46 /* TabbedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedScreenView.swift; sourceTree = "<group>"; };
 		133AED9529F8157E0092FC46 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsManager.swift; path = ddiffa/Shared/Views/Screens/TabbedScreenView/SettingsManager.swift; sourceTree = SOURCE_ROOT; };
 		133AED9729F815F30092FC46 /* UserDefaults+customKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserDefaults+customKeys.swift"; path = "ddiffa/Shared/Views/Screens/TabbedScreenView/UserDefaults+customKeys.swift"; sourceTree = SOURCE_ROOT; };
@@ -143,6 +147,11 @@
 		49341D8F2A04F438004EA509 /* RestTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTimer.swift; sourceTree = "<group>"; };
 		49341D912A04F44E004EA509 /* RestBetweenSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestBetweenSessionView.swift; sourceTree = "<group>"; };
 		49341D962A04F6E6004EA509 /* FinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedView.swift; sourceTree = "<group>"; };
+		49341D982A075E14004EA509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		49341D992A077E1B004EA509 /* DetailAnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAnalyticsView.swift; sourceTree = "<group>"; };
+		49341D9B2A088F98004EA509 /* ExerciseDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExerciseDataModel.swift; path = ../../../../../../../../../Downloads/ExerciseDataModel.swift; sourceTree = "<group>"; };
+		49341D9C2A088F98004EA509 /* FrequencyChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyChart.swift; sourceTree = "<group>"; };
+		49341D9D2A088F98004EA509 /* AnalyticsViewDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnalyticsViewDetail.swift; path = ../../../../../../../../../Downloads/AnalyticsViewDetail.swift; sourceTree = "<group>"; };
 		49E4B9F929F7ACBB00830C61 /* ddiffa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddiffa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ddiffaApp.swift; sourceTree = "<group>"; };
 		49E4B9FE29F7ACBB00830C61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -152,12 +161,12 @@
 		49F6CC0729FFF09700ABC9C9 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		49F6CC0A29FFF20D00ABC9C9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		D63ACFB92A05165B00AA901A /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
-		D63ACFBB2A05169500AA901A /* AnalyticsViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewDetail.swift; sourceTree = "<group>"; };
-		D63ACFBE2A0516B500AA901A /* FrequencyChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequencyChart.swift; sourceTree = "<group>"; };
+		D63ACFBB2A05169500AA901A /* AnalyticViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticViewDetail.swift; sourceTree = "<group>"; };
+		D63ACFBE2A0516B500AA901A /* FrequentChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequentChart.swift; sourceTree = "<group>"; };
 		D63ACFC02A0516C200AA901A /* CalorieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieChart.swift; sourceTree = "<group>"; };
 		D63ACFC22A0516DC00AA901A /* HeartRateChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateChart.swift; sourceTree = "<group>"; };
 		D63ACFC42A0516EB00AA901A /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithApple.swift; sourceTree = "<group>"; };
-		D63ACFC72A05171400AA901A /* ExerciseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDataModel.swift; sourceTree = "<group>"; };
+		D63ACFC72A05171400AA901A /* StretchDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +286,7 @@
 		13EBBBF429F8B00400141F3B /* Pomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				0665BDF22A04EB6700318C98 /* ProjectCardView.swift */,
 				13EBBBF729F8B04400141F3B /* PomodoroNotStartedScreenView.swift */,
 			);
 			path = Pomodoro;
@@ -295,6 +305,7 @@
 				49341D8F2A04F438004EA509 /* RestTimer.swift */,
 				49341D912A04F44E004EA509 /* RestBetweenSessionView.swift */,
 				49341D962A04F6E6004EA509 /* FinishedView.swift */,
+				0665BDF02A04EB4000318C98 /* StretchInfoView.swift */,
 			);
 			path = Stretching;
 			sourceTree = "<group>";
@@ -320,6 +331,7 @@
 		49E4B9FB29F7ACBB00830C61 /* ddiffa */ = {
 			isa = PBXGroup;
 			children = (
+				49341D982A075E14004EA509 /* Info.plist */,
 				49E4BA0029F7ACBB00830C61 /* Assets.xcassets */,
 				49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */,
 				49E4BA0229F7ACBB00830C61 /* ddiffa.entitlements */,
@@ -466,13 +478,10 @@
 				49341D7D2A04F184004EA509 /* Stretching */,
 				D63ACFC62A0516F000AA901A /* Analytics */,
 				49E4B9FE29F7ACBB00830C61 /* ContentView.swift */,
-				0665BDF22A04EB6700318C98 /* ProjectCardView.swift */,
-				0665BDF02A04EB4000318C98 /* StretchInfoView.swift */,
 				13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */,
 				13474D2729F7E3F50034F2C0 /* Onboarding */,
 				133AED9229F814950092FC46 /* TabbedScreenView */,
 				13EBBBF429F8B00400141F3B /* Pomodoro */,
-				D63ACFC42A0516EB00AA901A /* SignInWithApple.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -499,7 +508,8 @@
 		D63ACFBD2A0516A300AA901A /* AnalyticsChart */ = {
 			isa = PBXGroup;
 			children = (
-				D63ACFBE2A0516B500AA901A /* FrequencyChart.swift */,
+				49341D9C2A088F98004EA509 /* FrequencyChart.swift */,
+				D63ACFBE2A0516B500AA901A /* FrequentChart.swift */,
 				D63ACFC02A0516C200AA901A /* CalorieChart.swift */,
 				D63ACFC22A0516DC00AA901A /* HeartRateChart.swift */,
 			);
@@ -509,10 +519,14 @@
 		D63ACFC62A0516F000AA901A /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				D63ACFBD2A0516A300AA901A /* AnalyticsChart */,
+				D63ACFC42A0516EB00AA901A /* SignInWithApple.swift */,
 				D63ACFB92A05165B00AA901A /* AnalyticsView.swift */,
-				D63ACFBB2A05169500AA901A /* AnalyticsViewDetail.swift */,
-				D63ACFC72A05171400AA901A /* ExerciseDataModel.swift */,
+				D63ACFBB2A05169500AA901A /* AnalyticViewDetail.swift */,
+				49341D992A077E1B004EA509 /* DetailAnalyticsView.swift */,
+				49341D9D2A088F98004EA509 /* AnalyticsViewDetail.swift */,
+				D63ACFC72A05171400AA901A /* StretchDataModel.swift */,
+				49341D9B2A088F98004EA509 /* ExerciseDataModel.swift */,
+				D63ACFBD2A0516A300AA901A /* AnalyticsChart */,
 			);
 			path = Analytics;
 			sourceTree = "<group>";
@@ -651,6 +665,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				135D90A82A020DFF00CB8DB1 /* SessionInformationView.swift in Sources */,
+				49341D9E2A088F98004EA509 /* ExerciseDataModel.swift in Sources */,
 				137FA08B2A029B6A00473C6B /* PomodoroSessionPersistence.swift in Sources */,
 				49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */,
 				13EBBBF829F8B04400141F3B /* PomodoroNotStartedScreenView.swift in Sources */,
@@ -666,16 +681,19 @@
 				D63ACFC52A0516EB00AA901A /* SignInWithApple.swift in Sources */,
 				137FA0892A029AB500473C6B /* Project+CoreDataClass.swift in Sources */,
 				49F6CC0829FFF09700ABC9C9 /* PersistenceController.swift in Sources */,
-				D63ACFBC2A05169500AA901A /* AnalyticsViewDetail.swift in Sources */,
-				D63ACFBF2A0516B500AA901A /* FrequencyChart.swift in Sources */,
+				D63ACFBC2A05169500AA901A /* AnalyticViewDetail.swift in Sources */,
+				D63ACFBF2A0516B500AA901A /* FrequentChart.swift in Sources */,
+				49341DA02A088F98004EA509 /* AnalyticsViewDetail.swift in Sources */,
 				13474D2529F7E1380034F2C0 /* OnboardingModel.swift in Sources */,
 				D63ACFBA2A05165B00AA901A /* AnalyticsView.swift in Sources */,
 				135460F329F7C96C00413F74 /* ProgressDotIndicator.swift in Sources */,
 				49341D892A04F297004EA509 /* WaitingTimer.swift in Sources */,
+				49341D9F2A088F98004EA509 /* FrequencyChart.swift in Sources */,
 				49341D972A04F6E6004EA509 /* FinishedView.swift in Sources */,
 				135D90AA2A020E4100CB8DB1 /* SessionInformationViewModel.swift in Sources */,
 				135460F129F7C85F00413F74 /* Color+CustomColors.swift in Sources */,
 				0665BDF12A04EB4000318C98 /* StretchInfoView.swift in Sources */,
+				49341D9A2A077E1B004EA509 /* DetailAnalyticsView.swift in Sources */,
 				13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */,
 				49341D852A04F257004EA509 /* StretchingView.swift in Sources */,
 				49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */,
@@ -683,7 +701,7 @@
 				D63ACFC12A0516C200AA901A /* CalorieChart.swift in Sources */,
 				13EBBC1929FFE9C000141F3B /* TagView.swift in Sources */,
 				0665BDF32A04EB6700318C98 /* ProjectCardView.swift in Sources */,
-				D63ACFC82A05171400AA901A /* ExerciseDataModel.swift in Sources */,
+				D63ACFC82A05171400AA901A /* StretchDataModel.swift in Sources */,
 				D63ACFC32A0516DC00AA901A /* HeartRateChart.swift in Sources */,
 				13474D2929F7E4120034F2C0 /* OnboardingScreenViewModel.swift in Sources */,
 				49341D872A04F26D004EA509 /* WaitingSessionStartView.swift in Sources */,
@@ -713,7 +731,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FocusFlow Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = H9PJ7U2A6K;
+				DEVELOPMENT_TEAM = C5V5PAM88P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = FocusFlow;
@@ -743,7 +761,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FocusFlow Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = H9PJ7U2A6K;
+				DEVELOPMENT_TEAM = C5V5PAM88P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = FocusFlow;
@@ -885,17 +903,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ddiffa/Preview Content\"";
-				DEVELOPMENT_TEAM = H9PJ7U2A6K;
+				DEVELOPMENT_TEAM = C5V5PAM88P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ddiffa/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -925,17 +948,22 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ddiffa/Preview Content\"";
-				DEVELOPMENT_TEAM = H9PJ7U2A6K;
+				DEVELOPMENT_TEAM = C5V5PAM88P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ddiffa/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

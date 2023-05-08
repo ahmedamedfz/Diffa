@@ -9,24 +9,23 @@ import SwiftUI
 
 struct AnalyticsView: View {
     
-    @State private var frequency = "Daily"
-    var frequencies = ["Daily", "Weekly", "Monthly"]
+    //@State private var frequency = "Daily"
+    
     @State private var isPopUpOpen = false
-
+    @State private var userNames = ""
+    @State private var userEmail = ""
+    @State private var isOn = false
+    
+    init() {
+        // Retrieve saved user data from UserDefaults
+        let defaults = UserDefaults.standard
+        self._userNames = State(initialValue: defaults.string(forKey: "userNames") ?? "")
+        self._userEmail = State(initialValue: defaults.string(forKey: "userEmail") ?? "")
+    }
+    
     var body: some View {
         ZStack {
             VStack (spacing: 30) {
-                HStack{
-                    Spacer()
-                    Button {
-                        self.isPopUpOpen = true
-                    } label: {
-                        Image(systemName: "info.circle")
-                            .imageScale(.large)
-                            .foregroundColor(Color(red: 150/255, green: 97/255, blue: 32/255))
-                    }
-                }
-                
                 HStack {
                     Image(systemName: "person.circle.fill")
                         .font(.system(size: 64, design: .rounded))
@@ -34,15 +33,23 @@ struct AnalyticsView: View {
                     
                     VStack (alignment: .leading) {
                         HStack {
-                            Text("Fallah's")
+                            Text(userNames)
                             Spacer()
-                            Image(systemName: "pencil")
+                            if userNames.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                                Button {
+                                    self.isPopUpOpen = true
+                                } label: {
+                                    Image(systemName: "info.circle")
+                                        .imageScale(.small)
+                                        .foregroundColor(Color(red: 150/255, green: 97/255, blue: 32/255))
+                                }
+                            }
                         }
-                            .font(.system(.largeTitle, design: .rounded))
-                            .foregroundColor(.text.primary)
-                            .bold()
+                        .font(.system(.largeTitle, design: .rounded))
+                        .foregroundColor(.text.primary)
+                        .bold()
                         
-                        Text("appleid_apple.com")
+                        Text(userEmail)
                             .font(.system(.title3, design: .rounded))
                             .foregroundColor(.text.secondary)
                     }
@@ -51,31 +58,41 @@ struct AnalyticsView: View {
                 }
                 
                 VStack {
-                    Picker("Choose the frequency", selection: $frequency) {
-                        ForEach(frequencies, id: \.self) {
-                            Text($0)
-                        }
-                    }
-                    .pickerStyle(.segmented)
                     
-                    DetailAnalyticsView()
+                    Toggle(isOn: $isOn){
+                        Text("debug")
+                    }
+                    if isOn {
+                        DetailAnalyticsView()
+                    } else {
+                        AnalyticsDetailView()
+                    }
                 }
-               
+                
             }
             .padding()
             
             if isPopUpOpen {
-                withAnimation{
-                    LoginView(isPopUpOpen: $isPopUpOpen)
+                withAnimation {
+                    ZStack{
+                        LoginView(isPopUpOpen: $isPopUpOpen, userNames: $userNames, userEmail: $userEmail)
+                            .onDisappear {
+                                // Save user data to UserDefaults when the login view is dismissed
+                                let defaults = UserDefaults.standard
+                                defaults.set(userNames, forKey: "userNames")
+                                defaults.set(userEmail, forKey: "userEmail")
+                            }
+                    }
                 }
+                
             }
             
         }
     }
 }
 
-struct AnalyticsView_Previews: PreviewProvider {
-    static var previews: some View {
-        AnalyticsView()
-    }
+enum Frequency: String, CaseIterable {
+    case daily = "Daily"
+    case weekly = "Weekly"
+    case monthly = "Monthly"
 }

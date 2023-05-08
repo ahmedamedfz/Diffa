@@ -12,10 +12,12 @@ struct RestBetweenSessionView: View {
     var mainStretch: MainStretch
     var index: Int
     var subStretch: SubStretch {mainStretch.substretch[index]}
+    var sumTime : Int
+    @Binding var totalCount : Int
     @State private var isInfoOpen = false
     @State private var timerFinished = false
     
-    var restTimer : RestTimer {RestTimer(timerFinished: $timerFinished)}
+    var restTimer : RestTimer {RestTimer(timerFinished: $timerFinished, totalCount: $totalCount)}
  
     var body: some View {
         ZStack {
@@ -26,7 +28,7 @@ struct RestBetweenSessionView: View {
                     .font(.system(.title, design: .rounded))
                 
                 restTimer.navigationDestination(isPresented: $timerFinished) {
-                    OnGoingMovementView(index: index, mainStretch: mainStretch)
+                    OnGoingMovementView(index: index , mainStretch: mainStretch, sumTime: sumTime+totalCount)
                 }
                 
                 VStack {

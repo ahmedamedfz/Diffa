@@ -16,8 +16,8 @@ struct HeartRateChart: View {
                 ForEach(exerciseDatas) { exerciseData in
                     BarMark(
                         x: .value("Date", exerciseData.date, unit: .day),
-                        yStart: .value("Heart Rate Min", exerciseData.heartratemin),
-                        yEnd: .value("Heart Rate Max", exerciseData.heartratemax)                    )
+                        yStart: .value("Heart Rate Min", exerciseData.heartratemin ?? 0),
+                        yEnd: .value("Heart Rate Max", exerciseData.heartratemax ?? 0)                    )
                 }
                 .foregroundStyle(Color.accentColor.gradient)
                 .cornerRadius(15)

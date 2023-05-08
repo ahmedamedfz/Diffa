@@ -12,10 +12,12 @@ struct OnGoingMovementView: View {
     @State private var timerFinished = false
     @State private var isTimerRunning = true
     @State private var isInfoOpen = false
+    @State private var totalCount:Int = 5
     
     var index: Int
     var mainStretch : MainStretch
     var currentSubStretch: SubStretch {mainStretch.substretch[index]}
+    var sumTime: Int
     private var onGoingTimer : OnGoingTimer? {OnGoingTimer(subStretch: currentSubStretch, timerFinished: $timerFinished)}
     
     
@@ -51,9 +53,9 @@ struct OnGoingMovementView: View {
                             onGoingTimer
                                 .navigationDestination(isPresented: $timerFinished) {
                                     if index == mainStretch.substretch.count-1 {
-                                       FinishedView()
+                                       FinishedView(sumTime: sumTime + currentSubStretch.duration)
                                     } else {
-                                        RestBetweenSessionView(mainStretch: mainStretch, index: index + 1)
+                                        RestBetweenSessionView(mainStretch: mainStretch, index: index + 1, sumTime: sumTime + currentSubStretch.duration, totalCount: $totalCount)
                                     }
                                 }
                         }
@@ -75,12 +77,5 @@ struct OnGoingMovementView: View {
                 onGoingTimer?.stopTimer()
             }
         }
-    }
-}
-
-
-struct Previews_OnGoingMovementView_Previews: PreviewProvider {
-    static var previews: some View {
-        OnGoingMovementView(index: 1, mainStretch: MainStretch.backAll.first!)
     }
 }

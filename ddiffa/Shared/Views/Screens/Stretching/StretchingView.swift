@@ -11,6 +11,7 @@ import SwiftUI
 struct StretchingScroll: View {
     var allStretchs = MainStretch.allStretch
     @State private var path = NavigationPath()
+    var sumTime : Int = 0
     
     var body: some View {
         NavigationStack{
@@ -38,7 +39,7 @@ struct StretchingScroll: View {
                             HStack(spacing: 20) {
                                 ForEach(allStretch) { someMainStretch in
                                     NavigationLink {
-                                        WaitingSessionStartView(index: 0, mainStretch: someMainStretch)
+                                        WaitingSessionStartView(index: 0, mainStretch: someMainStretch, sumTime: sumTime)
                                     } label: {
                                         StretchingCard(mainStretch: someMainStretch)
                                     }

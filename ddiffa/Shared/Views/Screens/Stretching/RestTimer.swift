@@ -11,6 +11,7 @@ struct RestTimer: View {
     @Binding var timerFinished: Bool
     @State var start = true
     @State var count = 5
+    @Binding var totalCount : Int 
     @State var time = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
@@ -26,6 +27,7 @@ struct RestTimer: View {
                 Button(action:
                 {
                     self.count += 5
+                    self.totalCount += 5
                     print("+5s")
                 })
                 {
