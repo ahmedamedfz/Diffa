@@ -306,6 +306,7 @@ struct SessionInformationView: View {
         .padding(EdgeInsets(top: 16, leading: 16, bottom: 24, trailing: 16))
         .frame(maxWidth: .infinity)
         .background{Color.background.translucent}
+//        .background{Color.red}
     }
 }
 
