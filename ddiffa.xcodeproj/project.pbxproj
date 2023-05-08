@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0665BDF12A04EB4000318C98 /* StretchInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665BDF02A04EB4000318C98 /* StretchInfoView.swift */; };
-		0665BDF32A04EB6700318C98 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0665BDF22A04EB6700318C98 /* ProjectCardView.swift */; };
 		131362522A050917002F8AE4 /* StretchingOnGoingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131362512A050917002F8AE4 /* StretchingOnGoingScreenView.swift */; };
 		131362552A050DF9002F8AE4 /* WaitingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131362542A050DF9002F8AE4 /* WaitingScreenView.swift */; };
 		131362572A050F50002F8AE4 /* WatchCircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131362562A050F50002F8AE4 /* WatchCircularProgressView.swift */; };
@@ -61,6 +60,22 @@
 		13A377292A036C9800624352 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13A377282A036C9800624352 /* Assets.xcassets */; };
 		13EBBBF829F8B04400141F3B /* PomodoroNotStartedScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBBBF729F8B04400141F3B /* PomodoroNotStartedScreenView.swift */; };
 		13EBBC1929FFE9C000141F3B /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EBBC1829FFE9C000141F3B /* TagView.swift */; };
+		49341D7F2A04F195004EA509 /* StretchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D7E2A04F195004EA509 /* StretchModel.swift */; };
+		49341D832A04F1E5004EA509 /* StretchingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D822A04F1E5004EA509 /* StretchingCard.swift */; };
+		49341D852A04F257004EA509 /* StretchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D842A04F257004EA509 /* StretchingView.swift */; };
+		49341D872A04F26D004EA509 /* WaitingSessionStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D862A04F26D004EA509 /* WaitingSessionStartView.swift */; };
+		49341D892A04F297004EA509 /* WaitingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D882A04F297004EA509 /* WaitingTimer.swift */; };
+		49341D8B2A04F411004EA509 /* OnGoingMovementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D8A2A04F411004EA509 /* OnGoingMovementView.swift */; };
+		49341D8E2A04F42A004EA509 /* OnGoingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D8D2A04F42A004EA509 /* OnGoingTimer.swift */; };
+		49341D902A04F438004EA509 /* RestTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D8F2A04F438004EA509 /* RestTimer.swift */; };
+		49341D922A04F44E004EA509 /* RestBetweenSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D912A04F44E004EA509 /* RestBetweenSessionView.swift */; };
+		49341D952A04F4A8004EA509 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 49341D942A04F4A8004EA509 /* ConfettiSwiftUI */; };
+		49341D972A04F6E6004EA509 /* FinishedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D962A04F6E6004EA509 /* FinishedView.swift */; };
+		49341D9A2A077E1B004EA509 /* DetailAnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D992A077E1B004EA509 /* DetailAnalyticsView.swift */; };
+		49341D9F2A088F98004EA509 /* FrequencyChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341D9C2A088F98004EA509 /* FrequencyChart.swift */; };
+		49341DA42A0899E8004EA509 /* AnalyticsViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341DA12A0899E8004EA509 /* AnalyticsViewDetail.swift */; };
+		49341DA62A0899E8004EA509 /* ExerciseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341DA32A0899E8004EA509 /* ExerciseDataModel.swift */; };
+		49341DA82A089D82004EA509 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49341DA72A089D82004EA509 /* ProjectCardView.swift */; };
 		49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */; };
 		49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4B9FE29F7ACBB00830C61 /* ContentView.swift */; };
 		49E4BA0129F7ACBB00830C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E4BA0029F7ACBB00830C61 /* Assets.xcassets */; };
@@ -71,6 +86,13 @@
 		4CA529102A05152B00484AF6 /* TimerMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA5290F2A05152B00484AF6 /* TimerMode.swift */; };
 		4CA529132A05157200484AF6 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA529112A05157200484AF6 /* TimePickerView.swift */; };
 		4CA529142A05157200484AF6 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA529122A05157200484AF6 /* TimerManager.swift */; };
+		D63ACFBA2A05165B00AA901A /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFB92A05165B00AA901A /* AnalyticsView.swift */; };
+		D63ACFBC2A05169500AA901A /* AnalyticViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFBB2A05169500AA901A /* AnalyticViewDetail.swift */; };
+		D63ACFBF2A0516B500AA901A /* FrequentChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFBE2A0516B500AA901A /* FrequentChart.swift */; };
+		D63ACFC12A0516C200AA901A /* CalorieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFC02A0516C200AA901A /* CalorieChart.swift */; };
+		D63ACFC32A0516DC00AA901A /* HeartRateChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFC22A0516DC00AA901A /* HeartRateChart.swift */; };
+		D63ACFC52A0516EB00AA901A /* SignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFC42A0516EB00AA901A /* SignInWithApple.swift */; };
+		D63ACFC82A05171400AA901A /* StretchDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63ACFC72A05171400AA901A /* StretchDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +121,6 @@
 
 /* Begin PBXFileReference section */
 		0665BDF02A04EB4000318C98 /* StretchInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchInfoView.swift; sourceTree = "<group>"; };
-		0665BDF22A04EB6700318C98 /* ProjectCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCardView.swift; path = ddiffa/Shared/Views/ProjectCardView.swift; sourceTree = SOURCE_ROOT; };
 		131362512A050917002F8AE4 /* StretchingOnGoingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingOnGoingScreenView.swift; sourceTree = "<group>"; };
 		131362542A050DF9002F8AE4 /* WaitingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingScreenView.swift; sourceTree = "<group>"; };
 		131362562A050F50002F8AE4 /* WatchCircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchCircularProgressView.swift; sourceTree = "<group>"; };
@@ -147,6 +168,22 @@
 		13A377282A036C9800624352 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13EBBBF729F8B04400141F3B /* PomodoroNotStartedScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroNotStartedScreenView.swift; sourceTree = "<group>"; };
 		13EBBC1829FFE9C000141F3B /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TagView.swift; path = ddiffa/Shared/Views/TagView.swift; sourceTree = SOURCE_ROOT; };
+		49341D7E2A04F195004EA509 /* StretchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchModel.swift; sourceTree = "<group>"; };
+		49341D822A04F1E5004EA509 /* StretchingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingCard.swift; sourceTree = "<group>"; };
+		49341D842A04F257004EA509 /* StretchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchingView.swift; sourceTree = "<group>"; };
+		49341D862A04F26D004EA509 /* WaitingSessionStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingSessionStartView.swift; sourceTree = "<group>"; };
+		49341D882A04F297004EA509 /* WaitingTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingTimer.swift; sourceTree = "<group>"; };
+		49341D8A2A04F411004EA509 /* OnGoingMovementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnGoingMovementView.swift; sourceTree = "<group>"; };
+		49341D8D2A04F42A004EA509 /* OnGoingTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnGoingTimer.swift; sourceTree = "<group>"; };
+		49341D8F2A04F438004EA509 /* RestTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTimer.swift; sourceTree = "<group>"; };
+		49341D912A04F44E004EA509 /* RestBetweenSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestBetweenSessionView.swift; sourceTree = "<group>"; };
+		49341D962A04F6E6004EA509 /* FinishedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedView.swift; sourceTree = "<group>"; };
+		49341D982A075E14004EA509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		49341D992A077E1B004EA509 /* DetailAnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAnalyticsView.swift; sourceTree = "<group>"; };
+		49341D9C2A088F98004EA509 /* FrequencyChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrequencyChart.swift; sourceTree = "<group>"; };
+		49341DA12A0899E8004EA509 /* AnalyticsViewDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsViewDetail.swift; sourceTree = "<group>"; };
+		49341DA32A0899E8004EA509 /* ExerciseDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseDataModel.swift; sourceTree = "<group>"; };
+		49341DA72A089D82004EA509 /* ProjectCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
 		49E4B9F929F7ACBB00830C61 /* ddiffa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ddiffa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ddiffaApp.swift; sourceTree = "<group>"; };
 		49E4B9FE29F7ACBB00830C61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -159,6 +196,13 @@
 		4CA5290F2A05152B00484AF6 /* TimerMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimerMode.swift; path = ddiffa/Shared/Helpers/Extensions/TimerMode.swift; sourceTree = SOURCE_ROOT; };
 		4CA529112A05157200484AF6 /* TimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
 		4CA529122A05157200484AF6 /* TimerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		D63ACFB92A05165B00AA901A /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
+		D63ACFBB2A05169500AA901A /* AnalyticViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticViewDetail.swift; sourceTree = "<group>"; };
+		D63ACFBE2A0516B500AA901A /* FrequentChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequentChart.swift; sourceTree = "<group>"; };
+		D63ACFC02A0516C200AA901A /* CalorieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieChart.swift; sourceTree = "<group>"; };
+		D63ACFC22A0516DC00AA901A /* HeartRateChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateChart.swift; sourceTree = "<group>"; };
+		D63ACFC42A0516EB00AA901A /* SignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithApple.swift; sourceTree = "<group>"; };
+		D63ACFC72A05171400AA901A /* StretchDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +217,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49341D952A04F4A8004EA509 /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,10 +345,29 @@
 		13EBBBF429F8B00400141F3B /* Pomodoro */ = {
 			isa = PBXGroup;
 			children = (
+				49341DA72A089D82004EA509 /* ProjectCardView.swift */,
 				13EBBBF729F8B04400141F3B /* PomodoroNotStartedScreenView.swift */,
 				4CA529152A05158900484AF6 /* Component */,
 			);
 			path = Pomodoro;
+			sourceTree = "<group>";
+		};
+		49341D7D2A04F184004EA509 /* Stretching */ = {
+			isa = PBXGroup;
+			children = (
+				49341D7E2A04F195004EA509 /* StretchModel.swift */,
+				49341D822A04F1E5004EA509 /* StretchingCard.swift */,
+				49341D842A04F257004EA509 /* StretchingView.swift */,
+				49341D862A04F26D004EA509 /* WaitingSessionStartView.swift */,
+				49341D882A04F297004EA509 /* WaitingTimer.swift */,
+				49341D8A2A04F411004EA509 /* OnGoingMovementView.swift */,
+				49341D8D2A04F42A004EA509 /* OnGoingTimer.swift */,
+				49341D8F2A04F438004EA509 /* RestTimer.swift */,
+				49341D912A04F44E004EA509 /* RestBetweenSessionView.swift */,
+				49341D962A04F6E6004EA509 /* FinishedView.swift */,
+				0665BDF02A04EB4000318C98 /* StretchInfoView.swift */,
+			);
+			path = Stretching;
 			sourceTree = "<group>";
 		};
 		49E4B9F029F7ACBB00830C61 = {
@@ -327,6 +391,7 @@
 		49E4B9FB29F7ACBB00830C61 /* ddiffa */ = {
 			isa = PBXGroup;
 			children = (
+				49341D982A075E14004EA509 /* Info.plist */,
 				49E4BA0029F7ACBB00830C61 /* Assets.xcassets */,
 				49E4B9FC29F7ACBB00830C61 /* ddiffaApp.swift */,
 				49E4BA0229F7ACBB00830C61 /* ddiffa.entitlements */,
@@ -472,9 +537,9 @@
 		49E4BA1929F7B5B400830C61 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				49341D7D2A04F184004EA509 /* Stretching */,
+				D63ACFC62A0516F000AA901A /* Analytics */,
 				49E4B9FE29F7ACBB00830C61 /* ContentView.swift */,
-				0665BDF22A04EB6700318C98 /* ProjectCardView.swift */,
-				0665BDF02A04EB4000318C98 /* StretchInfoView.swift */,
 				13A1E4B029F8259F00BEB26A /* ContentViewModel.swift */,
 				13474D2729F7E3F50034F2C0 /* Onboarding */,
 				133AED9229F814950092FC46 /* TabbedScreenView */,
@@ -509,6 +574,32 @@
 				4CA529122A05157200484AF6 /* TimerManager.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		D63ACFBD2A0516A300AA901A /* AnalyticsChart */ = {
+			isa = PBXGroup;
+			children = (
+				49341D9C2A088F98004EA509 /* FrequencyChart.swift */,
+				D63ACFBE2A0516B500AA901A /* FrequentChart.swift */,
+				D63ACFC02A0516C200AA901A /* CalorieChart.swift */,
+				D63ACFC22A0516DC00AA901A /* HeartRateChart.swift */,
+			);
+			path = AnalyticsChart;
+			sourceTree = "<group>";
+		};
+		D63ACFC62A0516F000AA901A /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				D63ACFC42A0516EB00AA901A /* SignInWithApple.swift */,
+				D63ACFB92A05165B00AA901A /* AnalyticsView.swift */,
+				D63ACFBB2A05169500AA901A /* AnalyticViewDetail.swift */,
+				49341D992A077E1B004EA509 /* DetailAnalyticsView.swift */,
+				49341DA12A0899E8004EA509 /* AnalyticsViewDetail.swift */,
+				49341DA32A0899E8004EA509 /* ExerciseDataModel.swift */,
+				D63ACFC72A05171400AA901A /* StretchDataModel.swift */,
+				D63ACFBD2A0516A300AA901A /* AnalyticsChart */,
+			);
+			path = Analytics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -546,6 +637,9 @@
 				13A377152A0358C500624352 /* PBXTargetDependency */,
 			);
 			name = ddiffa;
+			packageProductDependencies = (
+				49341D942A04F4A8004EA509 /* ConfettiSwiftUI */,
+			);
 			productName = ddiffa;
 			productReference = 49E4B9F929F7ACBB00830C61 /* ddiffa.app */;
 			productType = "com.apple.product-type.application";
@@ -577,6 +671,9 @@
 				Base,
 			);
 			mainGroup = 49E4B9F029F7ACBB00830C61;
+			packageReferences = (
+				49341D932A04F4A8004EA509 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
 			productRefGroup = 49E4B9FA29F7ACBB00830C61 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -655,30 +752,51 @@
 				137FA08B2A029B6A00473C6B /* PomodoroSessionPersistence.swift in Sources */,
 				49E4B9FF29F7ACBB00830C61 /* ContentView.swift in Sources */,
 				13EBBBF829F8B04400141F3B /* PomodoroNotStartedScreenView.swift in Sources */,
+				49341DA62A0899E8004EA509 /* ExerciseDataModel.swift in Sources */,
+				49341D832A04F1E5004EA509 /* StretchingCard.swift in Sources */,
 				4CA5290E2A0514E500484AF6 /* ViewExtension.swift in Sources */,
 				4CA529142A05157200484AF6 /* TimerManager.swift in Sources */,
 				137FA0882A029AB500473C6B /* Project+CoreDataProperties.swift in Sources */,
 				133AED9829F815F30092FC46 /* UserDefaults+customKeys.swift in Sources */,
+				49341D8B2A04F411004EA509 /* OnGoingMovementView.swift in Sources */,
 				13A1E4B329F8272A00BEB26A /* SpringToTop.swift in Sources */,
 				49F6CC0B29FFF20D00ABC9C9 /* Model.xcdatamodeld in Sources */,
 				135EF6A229F7C40A00C8D41D /* OnboardingScreenView.swift in Sources */,
+				49341D922A04F44E004EA509 /* RestBetweenSessionView.swift in Sources */,
 				133AED9429F814E00092FC46 /* TabbedScreenView.swift in Sources */,
+				D63ACFC52A0516EB00AA901A /* SignInWithApple.swift in Sources */,
 				137FA0892A029AB500473C6B /* Project+CoreDataClass.swift in Sources */,
 				49F6CC0829FFF09700ABC9C9 /* PersistenceController.swift in Sources */,
+				D63ACFBC2A05169500AA901A /* AnalyticViewDetail.swift in Sources */,
+				D63ACFBF2A0516B500AA901A /* FrequentChart.swift in Sources */,
 				13474D2529F7E1380034F2C0 /* OnboardingModel.swift in Sources */,
+				49341DA82A089D82004EA509 /* ProjectCardView.swift in Sources */,
+				D63ACFBA2A05165B00AA901A /* AnalyticsView.swift in Sources */,
 				135460F329F7C96C00413F74 /* ProgressDotIndicator.swift in Sources */,
+				49341D892A04F297004EA509 /* WaitingTimer.swift in Sources */,
+				49341DA42A0899E8004EA509 /* AnalyticsViewDetail.swift in Sources */,
+				49341D9F2A088F98004EA509 /* FrequencyChart.swift in Sources */,
+				49341D972A04F6E6004EA509 /* FinishedView.swift in Sources */,
 				135D90AA2A020E4100CB8DB1 /* SessionInformationViewModel.swift in Sources */,
 				4CA529102A05152B00484AF6 /* TimerMode.swift in Sources */,
 				135460F129F7C85F00413F74 /* Color+CustomColors.swift in Sources */,
 				0665BDF12A04EB4000318C98 /* StretchInfoView.swift in Sources */,
+				49341D9A2A077E1B004EA509 /* DetailAnalyticsView.swift in Sources */,
 				13A1E4B129F8259F00BEB26A /* ContentViewModel.swift in Sources */,
+				49341D852A04F257004EA509 /* StretchingView.swift in Sources */,
 				49E4B9FD29F7ACBB00830C61 /* ddiffaApp.swift in Sources */,
+				49341D902A04F438004EA509 /* RestTimer.swift in Sources */,
+				D63ACFC12A0516C200AA901A /* CalorieChart.swift in Sources */,
 				13EBBC1929FFE9C000141F3B /* TagView.swift in Sources */,
 				4CA529132A05157200484AF6 /* TimePickerView.swift in Sources */,
-				0665BDF32A04EB6700318C98 /* ProjectCardView.swift in Sources */,
+				D63ACFC82A05171400AA901A /* StretchDataModel.swift in Sources */,
+				D63ACFC32A0516DC00AA901A /* HeartRateChart.swift in Sources */,
 				13474D2929F7E4120034F2C0 /* OnboardingScreenViewModel.swift in Sources */,
+				49341D872A04F26D004EA509 /* WaitingSessionStartView.swift in Sources */,
 				133AED9629F8157E0092FC46 /* SettingsManager.swift in Sources */,
 				135F2B602A041616006DBC9F /* Date+component.swift in Sources */,
+				49341D7F2A04F195004EA509 /* StretchModel.swift in Sources */,
+				49341D8E2A04F42A004EA509 /* OnGoingTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,7 +820,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FocusFlow Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = H9PJ7U2A6K;
+				DEVELOPMENT_TEAM = C5V5PAM88P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FocusFlow-Watch-App-Info.plist";
@@ -716,7 +834,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dev.ddiffa.ddiffa.watch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.ddiffa.ddiffa.watchff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -736,7 +854,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FocusFlow Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = H9PJ7U2A6K;
+				DEVELOPMENT_TEAM = C5V5PAM88P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FocusFlow-Watch-App-Info.plist";
@@ -750,7 +868,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dev.ddiffa.ddiffa.watch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.ddiffa.ddiffa.watchff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -881,10 +999,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ddiffa/Preview Content\"";
-				DEVELOPMENT_TEAM = H9PJ7U2A6K;
+				DEVELOPMENT_TEAM = C5V5PAM88P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ddiffa/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Stretching tracked by FocusFlow on Apple Watch will be saved to HealthKit.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Your workout related data will be used to display your saved workouts in FocusFlow";
@@ -927,10 +1046,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ddiffa/Preview Content\"";
-				DEVELOPMENT_TEAM = H9PJ7U2A6K;
+				DEVELOPMENT_TEAM = C5V5PAM88P;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ddiffa/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Stretching tracked by FocusFlow on Apple Watch will be saved to HealthKit.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Your workout related data will be used to display your saved workouts in FocusFlow";
@@ -994,6 +1114,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		49341D932A04F4A8004EA509 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		49341D942A04F4A8004EA509 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49341D932A04F4A8004EA509 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		49F6CC0929FFF20D00ABC9C9 /* Model.xcdatamodeld */ = {

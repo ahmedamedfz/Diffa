@@ -16,6 +16,8 @@ struct PomodoroNotStartedScreenView: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
     
+    @StateObject var timerManager = TimerManager()
+    
     @State var tags: [Tag] = []
     
     @FetchRequest(sortDescriptors: [
@@ -38,24 +40,25 @@ struct PomodoroNotStartedScreenView: View {
                 .ignoresSafeArea()
             
             ScrollView {
-                ZStack {
+                VStack {
                     TimePickerView()
-                        .frame(maxWidth: .infinity)
-    //                    .background {Color.red}
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(0..<2) { index in
-                                ProjectCardView(projectName: projectsNameMock[index], tags: tagsMock[index])
+                        .frame(width: 280, height: 375)
+                        .padding(.vertical, 24)
+                        .padding()
+                    if timerManager.timerMode == .initial{
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(0..<2) { index in
+                                    ProjectCardView(projectName: projectsNameMock[index], tags: tagsMock[index])
+                                }
                             }
+                            .frame(height: 67)
+                            .padding(.leading, 16)
                         }
-                        .frame(height: 67)
-                        .padding(.leading, 16)
+                        
+                        Spacer()
+                            .offset(y: 140)
                     }
-                    .offset(y: 140)
-                    
-                    
-//                    Text("dimas")
                 }
             }
             .frame(maxWidth: .infinity)
@@ -80,12 +83,13 @@ struct PomodoroNotStartedScreenView: View {
                 print("isExpand: \(isExpandInformation)")
             }
         }
+        .environmentObject(timerManager)
     }
 }
 
 struct PomodoroNotStartedScreenView_Previews: PreviewProvider {
     static var previews: some View {
         PomodoroNotStartedScreenView()
-            .preferredColorScheme(.dark)
+//            .preferredColorScheme(.dark)
     }
 }

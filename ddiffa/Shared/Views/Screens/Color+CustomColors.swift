@@ -11,11 +11,15 @@ extension Color {
     static let primaryColor = Color("primary-foreground")
     static let primaryTransluctent = Color("primary-transluctent")
     static let primaryTransluctent48 = Color("primary-background")
+    static let secondaryColor = Color("secondary")
     
     struct text {
         static let primary = Color("text-primary")
         static let secondary = Color("text-secondary")
         static let tertiary = Color("text-tertiary")
+        static let red = Color("text-red")
+        static let green = Color("text-green")
+        static let orange = Color("text-orange")
     }
     
     struct background {

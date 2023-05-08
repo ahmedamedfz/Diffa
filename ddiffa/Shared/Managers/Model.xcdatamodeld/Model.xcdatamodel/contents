@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E261" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E252" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Pomodoro" representedClassName="Pomodoro" syncable="YES" codeGenerationType="class">
         <attribute name="duration" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="finishedTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="isOngoing" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="realizedDuration" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="startTime" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="project" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Project" inverseName="pomodoroSessions" inverseEntity="Project"/>
     </entity>
     <entity name="Project" representedClassName="Project" syncable="YES">
@@ -13,6 +13,13 @@
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="pomodoroSessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pomodoro" inverseName="project" inverseEntity="Pomodoro"/>
         <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tag" inverseName="project" inverseEntity="Tag"/>
+    </entity>
+    <entity name="StretchingFrequency" representedClassName="StretchingFrequency" syncable="YES" codeGenerationType="class">
+        <attribute name="calBurn" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="day" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="heartBeat" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
     </entity>
     <entity name="Tag" representedClassName="Tag" syncable="YES" codeGenerationType="class">
         <attribute name="colorString" optional="YES" attributeType="String"/>
